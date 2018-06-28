@@ -1,0 +1,3 @@
+Pixel: CNM 24-1
+U_bias = 90V
+I_leak =~ 0.22 mA (pixel is known as someone with a high leak current)
