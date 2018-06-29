@@ -392,7 +392,7 @@ void PixTestXray::doPhRun() {
 
   while (fApi->daqStatus(perFull) && fDaq_loop) { //daqStatus change value of perrFull (see api.cc)
     gSystem->ProcessEvents(); //deep operating system fing, function of a Tsytem object, https://root.cern.ch/doc/master/classTSystem.html
-    if (perFull > 80) {
+    if (perFull > 80) { // This if testing if buffer is full, i guess, 80 could be 80 percent -> almoust full
       seconds = t.RealTime();
       LOG(logINFO) << "run duration " << seconds << " seconds, buffer almost full ("
 		   << (int)perFull << "%), pausing triggers.";
@@ -730,17 +730,17 @@ void PixTestXray::readData() {
 }
 
 
-// ----------------------------------------------------------------------
-void PixTestXray::processData(uint16_t numevents) {
-  fDirectory->cd();
+// ----------------------------------------------------------------------// flag_token
+void PixTestXray::processData(uint16_t numevents) { // we open this function always with numevents = 0
+  fDirectory->cd(); // Get pwd, I guess
   PixTest::update();
 
   static long int evtCnt(-1);
   int pixCnt(0);
   LOG(logDEBUG) << "Getting Event Buffer";
-  vector<pxar::Event> daqdat;
+  vector<pxar::Event> daqdat; // Creating Event
 
-  if (numevents > 0) {
+  if (numevents > 0) { // not relevant because numevents = 0
     for (unsigned int i = 0; i < numevents ; i++) {
       pxar::Event evt;
       try { evt = fApi->daqGetEvent(); }
@@ -772,21 +772,21 @@ void PixTestXray::processData(uint16_t numevents) {
     }
 
     for (unsigned int ipix = 0; ipix < it->pixels.size(); ++ipix) {
-      idx = getIdxFromId(it->pixels[ipix].roc());
+      idx = getIdxFromId(it->pixels[ipix].roc()); // Get Roc number, I guess
 
       fHitsVsEvents[idx]->Fill(evtCnt);
       fHitsVsColumn[idx]->Fill(it->pixels[ipix].column());
       fHitsVsEvtCol[idx]->Fill(evtCnt, it->pixels[ipix].column());
 
       if (fPhCalOK) {
-	q = fPhCal.vcal(it->pixels[ipix].roc(),
+	q = fPhCal.vcal(it->pixels[ipix].roc(), // calcule the vcal of every pixel, I guess, vcal is declareted in PHCalibration.hh
 			it->pixels[ipix].column(),
 			it->pixels[ipix].row(),
 			it->pixels[ipix].value());
       } else {
 	q = 0;
       }
-      fHmap[idx]->Fill(it->pixels[ipix].column(), it->pixels[ipix].row());
+        fHmap[idx]->Fill(it->pixels[ipix].column(), it->pixels[ipix].row());
       fQ[idx]->Fill(q);
       fQmap[idx]->Fill(it->pixels[ipix].column(), it->pixels[ipix].row(), q);
 
