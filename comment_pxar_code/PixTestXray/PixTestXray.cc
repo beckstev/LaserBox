@@ -383,8 +383,11 @@ void PixTestXray::doPhRun() {
   int finalPeriod = fApi->daqTriggerLoop(totalPeriod);
   LOG(logINFO) << "PixTestXray::doPhRun start TriggerLoop with trigger frequency " << fParTriggerFrequency
 	       << " kHz, period "  << finalPeriod
-	       << " and duration " << fParRunSeconds << " seconds, "
+	       << " and duration, Hello World " << fParRunSeconds << " seconds, "
 	       << " fEventsMax = " <<   fEventsMax ;
+
+  LOG(logINFO) << "Hello world";
+
 
   t.Start(kTRUE); // Start the stopwatch. If reset is kTRUE reset the stopwatch before starting it (including the stopwatch counter). Use kFALSE to continue timing after a Stop() without resetting the stopwatch.
   fDaq_loop = true;
