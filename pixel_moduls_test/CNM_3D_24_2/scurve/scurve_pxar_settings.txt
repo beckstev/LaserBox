@@ -1,0 +1,6 @@
+ntrig = 75
+dac = Vcal 
+daclo = 25
+dachi = 50
+dacs/step = -1
+ntrig/step = -1

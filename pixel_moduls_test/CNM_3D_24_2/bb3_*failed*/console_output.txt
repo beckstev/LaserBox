@@ -1,0 +1,353 @@
+[14:53:01.618]     INFO: ######################################################################
+[14:53:01.618]     INFO: PixTestBB3Map::doTest() Ntrig = 5, VcalS = 250 (high range)
+[14:53:01.618]     INFO: ######################################################################
+[14:53:01.625]     INFO: ---> dac: VthrComp name: calSMap ntrig: 5 dacrange: 0 .. 149 (-1/-1) hits flags = 514 (plus default)
+[14:53:01.632]     INFO:   dacScan split into 1 runs with ntrig = 5
+[14:53:01.632]     INFO:     run 1 of 1
+[14:53:01.656]     INFO: Expecting 3120000 events.
+[14:53:19.547]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:19.547]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:19.547]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 22 48ea 
+[14:53:19.547]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:19.547]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:19.547]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 22 48eb 
+[14:53:19.547]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3f9 
+[14:53:19.547]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 22 48ec 
+[14:53:19.547]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:19.587]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:19.587]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:19.587]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 1d 48eb 
+[14:53:19.587]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87fa 1d 48ec 
+[14:53:19.587]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 1d 48eb 
+[14:53:19.587]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:19.587]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87fc 1d 48ec 
+[14:53:19.587]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 1d 48eb 
+[14:53:19.587]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 1d 48ec 
+[14:53:19.892]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:19.892]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:19.892]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fa 
+[14:53:19.892]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:19.892]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:19.892]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:19.892]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fc 
+[14:53:19.892]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:19.892]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:20.277]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:20.277]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:20.277]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 4 46eb 
+[14:53:20.277]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:20.277]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 4 46ec 
+[14:53:20.277]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 4 46ec 
+[14:53:20.277]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87fd 804 46eb 
+[14:53:20.277]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:20.277]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.162]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:21.162]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:21.162]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.162]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 52 4aea 
+[14:53:21.163]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 52 4aea 
+[14:53:21.163]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 52 4aea 
+[14:53:21.163]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87fd 52 4ae9 
+[14:53:21.163]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87fb 52 4aea 
+[14:53:21.163]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 52 4aea 
+[14:53:21.362]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:21.362]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:21.362]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.362]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.362]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:21.362]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fa 
+[14:53:21.362]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fc 
+[14:53:21.362]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.362]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.400]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:21.400]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:21.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:21.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fc 
+[14:53:21.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fa 
+[14:53:21.723]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:21.723]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:21.723]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:21.723]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.723]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.723]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:21.723]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fc 
+[14:53:21.723]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.723]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:21.970]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:21.970]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:21.970]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:21.970]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.970]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.970]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:21.970]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fc 
+[14:53:21.970]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:21.970]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:22.423]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:22.423]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:22.423]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:22.423]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 cc 40ec 
+[14:53:22.423]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:22.423]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 cc 40ec 
+[14:53:22.423]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3f9 
+[14:53:22.423]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:22.423]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:22.501]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:22.501]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:22.501]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:22.502]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:22.502]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:22.502]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:22.502]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3fc 
+[14:53:22.502]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:22.502]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:22.544]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:22.545]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:53:22.545]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:22.545]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:22.545]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:53:22.545]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:22.545]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3fc 
+[14:53:22.545]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:53:22.545]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fb 
+[14:53:22.545]    ERROR: <datapipe.cc/Read:L176> Channel 0: Reached 100 dumped events, stopping now...
+[14:53:22.745]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:22.892]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:22.961]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.218]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.221]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.243]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.243]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.295]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.321]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.440]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.462]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.487]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.536]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.637]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.658]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.681]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.681]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.800]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.900]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.900]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.902]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:23.927]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.120]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.121]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.193]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.267]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.293]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.316]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.318]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.340]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.585]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.585]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.655]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.730]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.878]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.925]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:24.000]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.073]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.074]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.121]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.236]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.238]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.238]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.264]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.414]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.527]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.554]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.649]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.797]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:25.868]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:26.131]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:26.343]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:26.368]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:26.486]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:26.894]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:27.009]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:27.031]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:27.253]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:27.255]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:27.393]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:27.514]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:27.561]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:27.658]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:27.717]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:27.932]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:28.026]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:28.107]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:28.197]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:28.371]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:28.610]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:28.632]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:28.707]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:28.775]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:28.798]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:28.873]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:28.896]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.039]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.111]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.182]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.301]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.354]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.468]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.544]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.613]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.704]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.771]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.914]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.935]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.937]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.959]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:29.960]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:30.053]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:30.359]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:30.359]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:30.403]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:30.403]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:30.405]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.296]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.337]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.363]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.432]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.503]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.549]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.600]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.647]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.720]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.791]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.793]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.817]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:31.844]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:32.108]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:32.133]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:32.304]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:32.496]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:32.670]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:33.343]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:33.373]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:33.866]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:34.113]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:36.432]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:36.644]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:36.646]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:36.670]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:36.003]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.068]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.091]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.093]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.322]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.372]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.420]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.495]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.541]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.632]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.656]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.771]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.796]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.916]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.964]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:37.989]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:38.112]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:38.161]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:53:38.805]     INFO: 3120000 events read in total (36885ms).
+[14:53:38.864]     INFO: Test took 37229ms.
+
+ *** Break *** segmentation violation
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+
+Thread 6 (Thread 0x7f5b248a7700 (LWP 16918)):
+#0  pthread_cond_wait
+
+GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f5b27f50da1 in EventWait () from /usr/local/lib/libftd2xx.so
+#2  0x00007f5b27f4d46e in write_thread () from /usr/local/lib/libftd2xx.so
+#3  0x00007f5b293fe6ba in start_thread (arg=0x7f5b248a7700) at pthread_create.c:333
+#4  0x00007f5b2b30441d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 5 (Thread 0x7f5b250a8700 (LWP 16917)):
+#0  pthread_cond_timedwait
+
+GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_timedwait.S:225
+#1  0x00007f5b27f50e9b in EventWait () from /usr/local/lib/libftd2xx.so
+#2  0x00007f5b27f53df2 in processor_thread () from /usr/local/lib/libftd2xx.so
+#3  0x00007f5b293fe6ba in start_thread (arg=0x7f5b250a8700) at pthread_create.c:333
+#4  0x00007f5b2b30441d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 4 (Thread 0x7f5b258a9700 (LWP 16916)):
+#0  pthread_cond_timedwait
+
+GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_timedwait.S:225
+#1  0x00007f5b27f50e9b in EventWait () from /usr/local/lib/libftd2xx.so
+#2  0x00007f5b27f53b60 in reader_thread () from /usr/local/lib/libftd2xx.so
+#3  0x00007f5b293fe6ba in start_thread (arg=0x7f5b258a9700) at pthread_create.c:333
+#4  0x00007f5b2b30441d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 3 (Thread 0x7f5b260aa700 (LWP 16913)):
+#0  0x00007f5b2b2f874d in poll () at ../sysdeps/unix/syscall-template.S:84
+#1  0x00007f5b28188bc5 in ?? () from /lib/x86_64-linux-gnu/libusb-1.0.so.0
+#2  0x00007f5b28189b53 in libusb_handle_events_timeout_completed () from /lib/x86_64-linux-gnu/libusb-1.0.so.0
+#3  0x00007f5b27f4a46a in poll_async_libusb () from /usr/local/lib/libftd2xx.so
+#4  0x00007f5b293fe6ba in start_thread (arg=0x7f5b260aa700) at pthread_create.c:333
+#5  0x00007f5b2b30441d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 2 (Thread 0x7f5b268ab700 (LWP 16912)):
+#0  0x00007f5b2b2f874d in poll () at ../sysdeps/unix/syscall-template.S:84
+#1  0x00007f5b2818f64c in ?? () from /lib/x86_64-linux-gnu/libusb-1.0.so.0
+#2  0x00007f5b293fe6ba in start_thread (arg=0x7f5b268ab700) at pthread_create.c:333
+#3  0x00007f5b2b30441d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 1 (Thread 0x7f5b2e89b140 (LWP 16911)):
+#0  0x00007f5b2b2c90cb in __GI___waitpid (pid=18606, stat_loc=stat_loc
+entry=0x7ffe0c4ec0c0, options=options
+entry=0) at ../sysdeps/unix/sysv/linux/waitpid.c:29
+#1  0x00007f5b2b241fbb in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:148
+#2  0x00007f5b2d6a5d24 in TUnixSystem::StackTrace() () from /usr/local/lib/root/libCore.so
+#3  0x00007f5b2d6a7f8c in TUnixSystem::DispatchSignals(ESignals) () from /usr/local/lib/root/libCore.so
+#4  <signal handler called>
+#5  PixTestBB3Map::doTest (this=0x7f5b1d9fc010) at /home/laser/LaserBox/pxar/tests/PixTestBB3Map.cc:303
+#6  0x00007f5b2c4d1075 in G__testsDict_809_0_7 (result7=0x23e6760, funcname=<optimized out>, libp=<optimized out>, hash=<optimized out>) at /home/laser/LaserBox/pxar/build/tests/testsDict.cxx:6933
+#7  0x00007f5b2a9354bb in Cint::G__CallFunc::Execute(void*) () from /usr/local/lib/root/libCint.so
+#8  0x00007f5b2d67160c in TCint::CallFunc_Exec(void*, void*) const () from /usr/local/lib/root/libCore.so
+#9  0x00007f5b2d62d033 in TQConnection::ExecuteMethod() () from /usr/local/lib/root/libCore.so
+#10 0x00007f5b2d5f4839 in TQObject::Emit(char const*) () from /usr/local/lib/root/libCore.so
+#11 0x00007f5b2e06df82 in TGButton::EmitSignals(bool) () from /usr/local/lib/root/libGui.so
+#12 0x00007f5b2e0718eb in TGButton::HandleButton(Event_t*) () from /usr/local/lib/root/libGui.so
+#13 0x00007f5b2e09e2ff in TGFrame::HandleEvent(Event_t*) () from /usr/local/lib/root/libGui.so
+#14 0x00007f5b2dfda5a8 in TGClient::HandleEvent(Event_t*) () from /usr/local/lib/root/libGui.so
+#15 0x00007f5b2dfda8c5 in TGClient::ProcessOneEvent() () from /usr/local/lib/root/libGui.so
+#16 0x00007f5b2dfda92d in TGClient::HandleInput() () from /usr/local/lib/root/libGui.so
+#17 0x00007f5b2d6a8228 in TUnixSystem::DispatchOneEvent(bool) () from /usr/local/lib/root/libCore.so
+#18 0x00007f5b2d5fd104 in TSystem::InnerLoop() () from /usr/local/lib/root/libCore.so
+#19 0x00007f5b2d5fb3df in TSystem::Run() () from /usr/local/lib/root/libCore.so
+#20 0x00007f5b2d609d4f in TApplication::Run(bool) () from /usr/local/lib/root/libCore.so
+#21 0x000000000040db72 in runGui (a=..., argc=argc
+entry=4, argv=argv
+entry=0x7ffe0c4f4d08) at /home/laser/LaserBox/pxar/main/pXar.cc:410
+#22 0x000000000040ac30 in main (argc=<optimized out>, argv=0x7ffe0c4f4d08) at /home/laser/LaserBox/pxar/main/pXar.cc:231
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+If they do not help you then please submit a bug report at
+http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  PixTestBB3Map::doTest (this=0x7f5b1d9fc010) at /home/laser/LaserBox/pxar/tests/PixTestBB3Map.cc:303
+===========================================================
+
+
+
+
