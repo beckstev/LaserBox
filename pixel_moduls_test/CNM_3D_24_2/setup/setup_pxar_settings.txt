@@ -1,0 +1,2 @@
+desermax = 7
+clkmax = 19

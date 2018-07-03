@@ -1,0 +1,7 @@
+targetia = 24
+iterations = 100
+pix = 11,20
+vcal = 250
+deltavthrcomp = 50
+fraccaldel = 0.5
+ntrig = 5

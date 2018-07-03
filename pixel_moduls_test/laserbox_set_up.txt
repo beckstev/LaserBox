@@ -1,0 +1,1 @@
+The black box is always closed during the test. 

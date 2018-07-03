@@ -1,0 +1,47 @@
+This is the console output we get after starting pxar with ./pXar -d roc -g.
+
+--------------------------------------------------------
+
+laser@pewpew:~/LaserBox/pxar/bin$ ./pXar -d roc -g
+[13:32:07.116]     INFO: *** Welcome to pxar ***
+[13:32:07.116]     INFO: no rootlogon.C found, live with the defaults provided
+[13:32:07.116]     INFO: pxar: reading config parameters from roc/configParameters.dat
+[13:32:07.117]     INFO: pxar: dumping results into roc/pxar.root logfile = roc/pxar.log
+[13:32:07.117]     INFO: creating backup files for previous run: roc/pxar_20180703_133204.root and roc/pxar_20180703_133204.log
+[13:32:07.128]     INFO: *** Welcome to pxar ***
+[13:32:07.128]     INFO: *** Today: 2018/07/03
+[13:32:07.134]     INFO: *** Version: v2.7.6-71-g2d14-dirty
+[13:32:07.135]     INFO: readRocDacs: roc/dacParameters_C0.dat .. roc/dacParameters_C0.dat
+[13:32:07.135]     INFO: readTbmDacs: roc/tbmParameters_C0a.dat .. roc/tbmParameters_C4294967295b.dat
+[13:32:07.135]     INFO: readMaskFile: roc/defaultMaskFile.dat
+[13:32:07.135]     INFO: readTrimFile: roc/trimParameters_C0.dat .. roc/trimParameters_C0.dat
+[13:32:07.138]     INFO:         clk: 2
+[13:32:07.138]     INFO:         ctr: 2
+[13:32:07.138]     INFO:         sda: 17
+[13:32:07.138]     INFO:         tin: 7
+[13:32:07.138]     INFO:         level: 15
+[13:32:07.138]     INFO:         deser160phase: 4
+[13:32:07.138]    QUIET: Instanciating API for pxar v2.7.6+71~g2d1449a
+[13:32:07.138]     INFO: Log level: INFO
+[13:32:07.295]    QUIET: Connection to board DTB_WRMPSF opened.
+[13:32:07.307]     INFO: DTB startup information
+--- DTB info------------------------------------------
+Board id:    45
+HW version:  DTB1.2
+FW version:  4.6
+SW version:  4.7
+Options:
+USB id:      DTB_WRMPSF
+MAC address: 40D85511802D
+Hostname:    pixelDTB045
+Comment:
+------------------------------------------------------
+[13:32:07.327]     INFO: RPC call hashes of host and DTB match: 486171790
+[13:32:08.666]     INFO: DUT info:
+[13:32:08.666]     INFO: The DUT currently contains the following objects:
+[13:32:08.666]     INFO:  0 TBM Cores  (0 ON)
+[13:32:08.666]     INFO:  1 ROCs psi46digv21respin (1 ON) with 4160 pixelConfigs
+[13:32:08.666]     INFO: 	ROC 0: 19 DACs set, Pixels: 0 masked, 0 active.
+[13:32:09.233]     INFO: PixTestCmd::init()
+[13:32:09.251]     INFO: readGainPedestalParameters roc/phCalibrationFitErr_C0.dat .. roc/phCalibrationFitErr_C0.dat
+[13:32:09.305]     INFO: readReadbackCal: roc/readbackCal_C0.dat .. roc/readbackCal_C0.dat
