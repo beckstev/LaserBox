@@ -1,1 +1,4 @@
 The black box is always closed during the test. 
+
+The folder roc is rebuild was rebuild after every pixel change.
+

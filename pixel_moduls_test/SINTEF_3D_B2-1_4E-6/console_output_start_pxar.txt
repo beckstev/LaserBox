@@ -1,0 +1,41 @@
+laser@pewpew:~/LaserBox/pxar/bin$ ./pXar -d roc -g
+[15:11:02.935]     INFO: *** Welcome to pxar ***
+[15:11:02.936]     INFO: no rootlogon.C found, live with the defaults provided
+[15:11:02.936]     INFO: pxar: reading config parameters from roc/configParameters.dat
+[15:11:02.936]     INFO: pxar: dumping results into roc/pxar.root logfile = roc/pxar.log
+[15:11:02.936]     INFO: creating backup files for previous run: roc/pxar_20180703_151058.root and roc/pxar_20180703_151058.log
+[15:11:02.946]     INFO: *** Welcome to pxar ***
+[15:11:02.946]     INFO: *** Today: 2018/07/03
+[15:11:02.953]     INFO: *** Version: v2.7.6-71-g2d14-dirty
+[15:11:02.953]     INFO: readRocDacs: roc/dacParameters_C0.dat .. roc/dacParameters_C0.dat
+[15:11:02.953]     INFO: readTbmDacs: roc/tbmParameters_C0a.dat .. roc/tbmParameters_C4294967295b.dat
+[15:11:02.954]     INFO: readMaskFile: roc/defaultMaskFile.dat
+[15:11:02.954]     INFO: readTrimFile: roc/trimParameters_C0.dat .. roc/trimParameters_C0.dat
+[15:11:02.957]     INFO:         clk: 4
+[15:11:02.957]     INFO:         ctr: 4
+[15:11:02.957]     INFO:         sda: 19
+[15:11:02.957]     INFO:         tin: 9
+[15:11:02.957]     INFO:         level: 15
+[15:11:02.957]     INFO:         deser160phase: 4
+[15:11:02.957]    QUIET: Instanciating API for pxar v2.7.6+71~g2d1449a
+[15:11:02.957]     INFO: Log level: INFO
+[15:11:03.118]    QUIET: Connection to board DTB_WRMPSF opened.
+[15:11:03.124]     INFO: DTB startup information
+--- DTB info------------------------------------------
+Board id:    45
+HW version:  DTB1.2
+FW version:  4.6
+SW version:  4.7
+Options:     
+USB id:      DTB_WRMPSF
+MAC address: 40D85511802D
+Hostname:    pixelDTB045
+Comment:     
+------------------------------------------------------
+[15:11:03.147]     INFO: RPC call hashes of host and DTB match: 486171790
+[15:11:04.502]     INFO: DUT info: 
+[15:11:04.502]     INFO: The DUT currently contains the following objects:
+[15:11:04.502]     INFO:  0 TBM Cores  (0 ON)
+[15:11:04.502]     INFO:  1 ROCs psi46digv21respin (1 ON) with 4160 pixelConfigs
+[15:11:04.502]     INFO: 	ROC 0: 19 DACs set, Pixels: 0 masked, 0 active.
+

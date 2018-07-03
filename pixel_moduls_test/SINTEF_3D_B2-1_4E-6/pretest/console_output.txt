@@ -1,0 +1,33 @@
+[13:40:16.983]     INFO: ######################################################################
+[13:40:16.984]     INFO: PixTestPretest::doTest()
+[13:40:16.984]     INFO: ######################################################################
+[13:40:16.995]     INFO:    ----------------------------------------------------------------------
+[13:40:16.995]     INFO:    PixTestPretest::programROC()
+[13:40:16.995]     INFO:    ----------------------------------------------------------------------
+[13:40:20.035]     INFO: PixTestPretest::programROC() done: ROCs are all programmable
+[13:40:20.035]     INFO: IA differences per ROC:  20.9
+[13:40:20.230]     INFO:    ----------------------------------------------------------------------
+[13:40:20.230]     INFO:    PixTestPretest::setVana() target Ia = 24 mA/ROC
+[13:40:20.230]     INFO:    ----------------------------------------------------------------------
+[13:40:20.922]     INFO: PixTestPretest::setVana() done, Module Ia 23.3 mA = 23.3 mA/ROC
+[13:40:20.922]     INFO: i(loss) [mA/ROC]:     21.7
+[13:40:21.044]  WARNING: No timing test implemented for ! Do something on your own.
+[13:40:21.061]     INFO:    ----------------------------------------------------------------------
+[13:40:21.061]     INFO:    PixTestPretest::findWorkingPixel()
+[13:40:21.061]     INFO:    ----------------------------------------------------------------------
+[13:40:21.088]     INFO: Expecting 231680 events.
+[13:40:23.692]     INFO: 231680 events read in total (2336ms).
+[13:40:23.700]     INFO: Test took 2634ms.
+[13:40:23.989]     INFO: Found working pixel in all ROCs: col/row = 12/22
+[13:40:24.218]     INFO:    ----------------------------------------------------------------------
+[13:40:24.218]     INFO:    PixTestPretest::setVthrCompCalDel()
+[13:40:24.218]     INFO:    ----------------------------------------------------------------------
+[13:40:24.262]     INFO: Expecting 231680 events.
+[13:40:25.981]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[13:40:26.857]     INFO: 231680 events read in total (2331ms).
+[13:40:26.864]     INFO: Test took 2621ms.
+[13:40:27.254]     INFO: PixTestPretest::setVthrCompCalDel() done
+[13:40:27.254]     INFO: CalDel:      111
+[13:40:27.254]     INFO: VthrComp:     51
+[13:40:27.312]     INFO: write dac parameters into roc/dacParameters_C0.dat
+[13:40:27.312]     INFO: PixTestPretest::doTest() done, duration: 10 seconds
