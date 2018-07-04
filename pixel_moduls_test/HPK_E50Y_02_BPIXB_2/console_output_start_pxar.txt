@@ -1,0 +1,49 @@
+laser@pewpew:~/LaserBox/pxar/bin$ ./pXar -d roc -g
+[16:04:25.466]     INFO: *** Welcome to pxar ***
+[16:04:25.466]     INFO: no rootlogon.C found, live with the defaults provided
+[16:04:25.466]     INFO: pxar: reading config parameters from roc/configParameters.dat
+[16:04:25.466]     INFO: pxar: dumping results into roc/pxar.root logfile = roc/pxar.log
+[16:04:25.474]     INFO: *** Welcome to pxar ***
+[16:04:25.474]     INFO: *** Today: 2018/07/04
+[16:04:25.482]     INFO: *** Version: v2.7.6-71-g2d14-dirty
+[16:04:25.482]     INFO: readRocDacs: roc/dacParameters_C0.dat .. roc/dacParameters_C0.dat
+[16:04:25.482]     INFO: readTbmDacs: roc/tbmParameters_C0a.dat .. roc/tbmParameters_C4294967295b.dat
+[16:04:25.482]     INFO: readMaskFile: roc/defaultMaskFile.dat
+[16:04:25.482]     INFO: readTrimFile: roc/trimParameters_C0.dat .. roc/trimParameters_C0.dat
+[16:04:25.485]     INFO:         clk: 4
+[16:04:25.485]     INFO:         ctr: 4
+[16:04:25.485]     INFO:         sda: 19
+[16:04:25.485]     INFO:         tin: 9
+[16:04:25.485]     INFO:         level: 15
+[16:04:25.485]     INFO:         deser160phase: 4
+[16:04:25.485]    QUIET: Instanciating API for pxar v2.7.6+71~g2d1449a
+[16:04:25.485]     INFO: Log level: INFO
+[16:04:25.646]    QUIET: Connection to board DTB_WRMPSF opened.
+[16:04:25.654]     INFO: DTB startup information
+--- DTB info------------------------------------------
+Board id:    45
+HW version:  DTB1.2
+FW version:  4.6
+SW version:  4.7
+Options:     
+USB id:      DTB_WRMPSF
+MAC address: 40D85511802D
+Hostname:    pixelDTB045
+Comment:     
+------------------------------------------------------
+[16:04:25.677]     INFO: RPC call hashes of host and DTB match: 486171790
+[16:04:27.032]     INFO: DUT info: 
+[16:04:27.032]     INFO: The DUT currently contains the following objects:
+[16:04:27.032]     INFO:  0 TBM Cores  (0 ON)
+[16:04:27.032]     INFO:  1 ROCs psi46digv21respin (1 ON) with 4160 pixelConfigs
+[16:04:27.032]     INFO: 	ROC 0: 19 DACs set, Pixels: 0 masked, 0 active.
+[16:04:27.606]     INFO: PixTestCmd::init()
+[16:04:27.629]     INFO: readGainPedestalParameters roc/phCalibrationFitErr_C0.dat .. roc/phCalibrationFitErr_C0.dat
+[16:04:27.629]    ERROR: <ConfigParameters.cc/readGainPedestalParameters:L1005> cannot open roc/phCalibrationFitErr_C0.dat for reading PH calibration constants
+[16:04:27.675]     INFO: readReadbackCal: roc/readbackCal_C0.dat .. roc/readbackCal_C0.dat
+[16:04:27.675]     INFO: readGainPedestalParameters roc/phCalibrationFitErr_C0.dat .. roc/phCalibrationFitErr_C0.dat
+[16:04:27.675]    ERROR: <ConfigParameters.cc/readGainPedestalParameters:L1005> cannot open roc/phCalibrationFitErr_C0.dat for reading PH calibration constants
+[16:04:27.698]     INFO: readGainPedestalParameters roc/phCalibrationFitErr_C0.dat .. roc/phCalibrationFitErr_C0.dat
+[16:04:27.698]    ERROR: <ConfigParameters.cc/readGainPedestalParameters:L1005> cannot open roc/phCalibrationFitErr_C0.dat for reading PH calibration constants
+
+

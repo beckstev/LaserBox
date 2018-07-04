@@ -1,0 +1,42 @@
+[16:26:32.265]     INFO: ######################################################################
+[16:26:32.265]     INFO: PixTestPhOptimization::doTest() Ntrig = 10
+[16:26:32.265]     INFO: ######################################################################
+[16:26:32.299]     INFO: Expecting 41600 events.
+[16:26:33.352]     INFO: 41600 events read in total (788ms).
+[16:26:33.357]     INFO: Test took 1082ms.
+[16:26:33.609]     INFO: Expecting 41600 events.
+[16:26:34.640]     INFO: 41600 events read in total (766ms).
+[16:26:34.641]     INFO: Test took 1253ms.
+[16:26:34.896]     INFO: Expecting 41600 events.
+[16:26:35.929]     INFO: 41600 events read in total (770ms).
+[16:26:35.933]     INFO: Test took 1268ms.
+[16:26:36.185]     INFO: Expecting 2560 events.
+[16:26:36.505]     INFO: 2560 events read in total (57ms).
+[16:26:36.508]     INFO: Test took 568ms.
+[16:26:36.778]     INFO: Expecting 655360 events.
+[16:26:46.786]     INFO: 655360 events read in total (9743ms).
+[16:26:46.806]     INFO: Test took 10285ms.
+[16:26:46.872]     INFO: Expecting 655360 events.
+HPK_E50Y_02_BPIXB_2[16:26:57.279]     INFO: 655360 events read in total (10138ms).
+[16:26:57.298]     INFO: Test took 10455ms.
+[16:26:57.378]     INFO: safety margin for low PH: adding 0, margin is now 20
+[16:26:57.498]     INFO: write dac parameters into roc/dacParameters35_C0.dat
+[16:26:57.532]     INFO: Expecting 41600 events.
+[16:26:58.460]     INFO: 41600 events read in total (664ms).
+[16:26:58.466]     INFO: Test took 956ms.
+[16:26:58.718]     INFO: Expecting 41600 events.
+[16:26:59.629]     INFO: 41600 events read in total (647ms).
+[16:26:59.633]     INFO: Test took 1154ms.
+[16:26:59.888]     INFO: Expecting 41600 events.
+[16:27:00.815]     INFO: 41600 events read in total (662ms).
+[16:27:00.819]     INFO: Test took 1172ms.
+[16:27:01.076]     INFO: Expecting 2560 events.
+[16:27:01.515]     INFO: 2560 events read in total (170ms).
+[16:27:01.523]     INFO: Test took 696ms.
+[16:27:01.791]     INFO: Expecting 2560 events.
+[16:27:02.120]     INFO: 2560 events read in total (62ms).
+[16:27:02.123]     INFO: Test took 592ms.
+[16:27:03.037]     INFO: PixTestPhOptimization::doTest() done, duration: 30 seconds
+[16:27:03.037]     INFO: PH scale (per ROC):    63
+[16:27:03.037]     INFO: PH offset (per ROC):  216
+

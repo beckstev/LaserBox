@@ -1,0 +1,6 @@
+Setting of the power supply (Keithly 2410):
+U_bias = 90 V
+I_max = 10 mA
+
+Measured I_leak: 
+I_leak = 0.18 muA 

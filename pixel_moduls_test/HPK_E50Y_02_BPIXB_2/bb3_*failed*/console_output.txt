@@ -1,0 +1,100 @@
+[16:38:32.867]     INFO: ######################################################################
+[16:38:32.867]     INFO: PixTestBB3Map::doTest() Ntrig = 5, VcalS = 250 (high range)
+[16:38:32.867]     INFO: ######################################################################
+[16:38:32.878]     INFO: ---> dac: VthrComp name: calSMap ntrig: 5 dacrange: 0 .. 149 (-1/-1) hits flags = 514 (plus default)
+[16:38:32.885]     INFO:   dacScan split into 1 runs with ntrig = 5
+[16:38:32.886]     INFO:     run 1 of 1
+[16:38:32.911]     INFO: Expecting 3120000 events.
+[16:39:31.771]     INFO: 3120000 events read in total (58597ms).
+[16:39:31.853]     INFO: Test took 58964ms.
+
+ *** Break *** segmentation violation
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+
+Thread 6 (Thread 0x7f299effd700 (LWP 8137)):
+#0  pthread_cond_wait
+
+GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f29a6e9cda1 in EventWait () from /usr/local/lib/libftd2xx.so
+#2  0x00007f29a6e9946e in write_thread () from /usr/local/lib/libftd2xx.so
+#3  0x00007f29a834a6ba in start_thread (arg=0x7f299effd700) at pthread_create.c:333
+#4  0x00007f29aa25041d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 5 (Thread 0x7f299f7fe700 (LWP 8136)):
+#0  pthread_cond_timedwait
+
+GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_timedwait.S:225
+#1  0x00007f29a6e9ce9b in EventWait () from /usr/local/lib/libftd2xx.so
+#2  0x00007f29a6e9fdf2 in processor_thread () from /usr/local/lib/libftd2xx.so
+#3  0x00007f29a834a6ba in start_thread (arg=0x7f299f7fe700) at pthread_create.c:333
+#4  0x00007f29aa25041d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 4 (Thread 0x7f299ffff700 (LWP 8135)):
+#0  pthread_cond_timedwait
+
+GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_timedwait.S:225
+#1  0x00007f29a6e9ce9b in EventWait () from /usr/local/lib/libftd2xx.so
+#2  0x00007f29a6e9fb60 in reader_thread () from /usr/local/lib/libftd2xx.so
+#3  0x00007f29a834a6ba in start_thread (arg=0x7f299ffff700) at pthread_create.c:333
+#4  0x00007f29aa25041d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 3 (Thread 0x7f29a4ff6700 (LWP 8132)):
+#0  0x00007f29aa24474d in poll () at ../sysdeps/unix/syscall-template.S:84
+#1  0x00007f29a70d4bc5 in ?? () from /lib/x86_64-linux-gnu/libusb-1.0.so.0
+#2  0x00007f29a70d5b53 in libusb_handle_events_timeout_completed () from /lib/x86_64-linux-gnu/libusb-1.0.so.0
+#3  0x00007f29a6e9646a in poll_async_libusb () from /usr/local/lib/libftd2xx.so
+#4  0x00007f29a834a6ba in start_thread (arg=0x7f29a4ff6700) at pthread_create.c:333
+#5  0x00007f29aa25041d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 2 (Thread 0x7f29a57f7700 (LWP 8131)):
+#0  0x00007f29aa24474d in poll () at ../sysdeps/unix/syscall-template.S:84
+#1  0x00007f29a70db64c in ?? () from /lib/x86_64-linux-gnu/libusb-1.0.so.0
+#2  0x00007f29a834a6ba in start_thread (arg=0x7f29a57f7700) at pthread_create.c:333
+#3  0x00007f29aa25041d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 1 (Thread 0x7f29ad7e7140 (LWP 8130)):
+#0  0x00007f29aa2150cb in __GI___waitpid (pid=10217, stat_loc=stat_loc
+entry=0x7fff61b5ffc0, options=options
+entry=0) at ../sysdeps/unix/sysv/linux/waitpid.c:29
+#1  0x00007f29aa18dfbb in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:148
+#2  0x00007f29ac5f1d24 in TUnixSystem::StackTrace() () from /usr/local/lib/root/libCore.so
+#3  0x00007f29ac5f3f8c in TUnixSystem::DispatchSignals(ESignals) () from /usr/local/lib/root/libCore.so
+#4  <signal handler called>
+#5  PixTestBB3Map::doTest (this=0x7f29a40eb010) at /home/laser/LaserBox/pxar/tests/PixTestBB3Map.cc:303
+#6  0x00007f29ab41d075 in G__testsDict_809_0_7 (result7=0x273f750, funcname=<optimized out>, libp=<optimized out>, hash=<optimized out>) at /home/laser/LaserBox/pxar/build/tests/testsDict.cxx:6933
+#7  0x00007f29a98814bb in Cint::G__CallFunc::Execute(void*) () from /usr/local/lib/root/libCint.so
+#8  0x00007f29ac5bd60c in TCint::CallFunc_Exec(void*, void*) const () from /usr/local/lib/root/libCore.so
+#9  0x00007f29ac579033 in TQConnection::ExecuteMethod() () from /usr/local/lib/root/libCore.so
+#10 0x00007f29ac540839 in TQObject::Emit(char const*) () from /usr/local/lib/root/libCore.so
+#11 0x00007f29acfb9f82 in TGButton::EmitSignals(bool) () from /usr/local/lib/root/libGui.so
+#12 0x00007f29acfbd8eb in TGButton::HandleButton(Event_t*) () from /usr/local/lib/root/libGui.so
+#13 0x00007f29acfea2ff in TGFrame::HandleEvent(Event_t*) () from /usr/local/lib/root/libGui.so
+#14 0x00007f29acf265a8 in TGClient::HandleEvent(Event_t*) () from /usr/local/lib/root/libGui.so
+#15 0x00007f29acf268c5 in TGClient::ProcessOneEvent() () from /usr/local/lib/root/libGui.so
+#16 0x00007f29acf2692d in TGClient::HandleInput() () from /usr/local/lib/root/libGui.so
+#17 0x00007f29ac5f4228 in TUnixSystem::DispatchOneEvent(bool) () from /usr/local/lib/root/libCore.so
+#18 0x00007f29ac549104 in TSystem::InnerLoop() () from /usr/local/lib/root/libCore.so
+#19 0x00007f29ac5473df in TSystem::Run() () from /usr/local/lib/root/libCore.so
+#20 0x00007f29ac555d4f in TApplication::Run(bool) () from /usr/local/lib/root/libCore.so
+#21 0x000000000040db72 in runGui (a=..., argc=argc
+entry=4, argv=argv
+entry=0x7fff61b68be8) at /home/laser/LaserBox/pxar/main/pXar.cc:410
+#22 0x000000000040ac30 in main (argc=<optimized out>, argv=0x7fff61b68be8) at /home/laser/LaserBox/pxar/main/pXar.cc:231
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+If they do not help you then please submit a bug report at
+http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  PixTestBB3Map::doTest (this=0x7f29a40eb010) at /home/laser/LaserBox/pxar/tests/PixTestBB3Map.cc:303
+===========================================================
+

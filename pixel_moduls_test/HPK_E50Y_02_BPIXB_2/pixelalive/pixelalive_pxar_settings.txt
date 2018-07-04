@@ -1,0 +1,3 @@
+ntrig = 10
+vcal = 200
+maskfilename = default

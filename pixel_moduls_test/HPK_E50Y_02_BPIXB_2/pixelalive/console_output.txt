@@ -1,0 +1,31 @@
+[16:10:51.243]     INFO: ######################################################################
+[16:10:51.243]     INFO: PixTestAlive::doTest()
+[16:10:51.243]     INFO: ######################################################################
+[16:10:51.255]     INFO:    ----------------------------------------------------------------------
+[16:10:51.255]     INFO:    PixTestAlive::aliveTest() ntrig = 10, vcal = 200 (ctrlreg = 0)
+[16:10:51.255]     INFO:    ----------------------------------------------------------------------
+[16:10:51.287]     INFO: Expecting 41600 events.
+[16:10:52.352]     INFO: 41600 events read in total (798ms).
+[16:10:52.355]     INFO: Test took 1089ms.
+[16:10:52.699]     INFO: PixTestAlive::aliveTest() done
+[16:10:52.699]     INFO: number of dead pixels (per ROC):     3
+[16:10:52.736]     INFO:    ----------------------------------------------------------------------
+[16:10:52.736]     INFO:    PixTestAlive::maskTest() ntrig = 10, vcal = 200 (ctrlreg = 0)
+[16:10:52.736]     INFO:    ----------------------------------------------------------------------
+[16:10:52.770]     INFO: Expecting 41600 events.
+[16:10:53.543]     INFO: 41600 events read in total (507ms).
+[16:10:53.546]     INFO: Test took 798ms.
+[16:10:53.546]     INFO: mask vs. old pixelAlive PixelAlive_C0_V0 ..  PixelAlive_C0_V0
+[16:10:53.905]     INFO: PixTestAlive::maskTest() done
+[16:10:53.905]     INFO: number of mask-defect pixels (per ROC):     0
+[16:10:53.943]     INFO:    ----------------------------------------------------------------------
+[16:10:53.943]     INFO:    PixTestAlive::addressDecodingTest() ntrig = 10, vcal = 200 (ctrlreg = 0)
+[16:10:53.944]     INFO:    ----------------------------------------------------------------------
+[16:10:53.979]     INFO: Expecting 41600 events.
+[16:10:55.019]     INFO: 41600 events read in total (768ms).
+[16:10:55.025]     INFO: Test took 1070ms.
+[16:10:55.378]     INFO: PixTestAlive::addressDecodingTest() done
+[16:10:55.378]     INFO: number of address-decoding pixels (per ROC):     0
+[16:10:55.378]     INFO: PixTestAlive::doTest() done, duration: 4 seconds
+
+
