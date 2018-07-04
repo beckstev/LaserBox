@@ -1,0 +1,77 @@
+[14:10:32.879]     INFO: ######################################################################
+[14:10:32.879]     INFO: PixTestPretest::doTest()
+[14:10:32.880]     INFO: ######################################################################
+[14:10:32.890]     INFO:    ----------------------------------------------------------------------
+[14:10:32.890]     INFO:    PixTestPretest::programROC() 
+[14:10:32.890]     INFO:    ----------------------------------------------------------------------
+[14:10:35.928]     INFO: PixTestPretest::programROC() done: ROCs are all programmable
+[14:10:35.928]     INFO: IA differences per ROC:  13.6
+[14:10:36.099]     INFO:    ----------------------------------------------------------------------
+[14:10:36.099]     INFO:    PixTestPretest::setVana() target Ia = 24 mA/ROC
+[14:10:36.099]     INFO:    ----------------------------------------------------------------------
+[14:10:37.015]     INFO: PixTestPretest::setVana() done, Module Ia 23.3 mA = 23.3 mA/ROC
+[14:10:37.015]     INFO: i(loss) [mA/ROC]:     19.3
+[14:10:37.140]  WARNING: No timing test implemented for ! Do something on your own.
+[14:10:37.162]     INFO:    ----------------------------------------------------------------------
+[14:10:37.162]     INFO:    PixTestPretest::findWorkingPixel()
+[14:10:37.162]     INFO:    ----------------------------------------------------------------------
+[14:10:37.191]     INFO: Expecting 231680 events.
+[14:10:38.938]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:38.968]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:38.992]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.021]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.046]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.073]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.126]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.127]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.207]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.257]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.302]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.325]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.350]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.420]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.547]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.548]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.579]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.625]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.807]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.833]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:39.896]     INFO: 231680 events read in total (2441ms).
+[14:10:39.904]     INFO: Test took 2738ms.
+[14:10:40.184]     INFO: Found working pixel in all ROCs: col/row = 12/22
+[14:10:40.414]     INFO:    ----------------------------------------------------------------------
+[14:10:40.414]     INFO:    PixTestPretest::setVthrCompCalDel()
+[14:10:40.415]     INFO:    ----------------------------------------------------------------------
+[14:10:40.459]     INFO: Expecting 231680 events.
+[14:10:42.248]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.305]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.305]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.337]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.387]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.387]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.411]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.438]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.470]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.501]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.572]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.592]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.692]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.692]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.831]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:42.909]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:43.094]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:43.374]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:43.414]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:43.467]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:43.514]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:43.515]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:43.519]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:43.569]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:10:43.651]     INFO: 231680 events read in total (2928ms).
+[14:10:43.660]     INFO: Test took 3217ms.
+[14:10:44.057]     INFO: PixTestPretest::setVthrCompCalDel() done
+[14:10:44.057]     INFO: CalDel:      124
+[14:10:44.057]     INFO: VthrComp:     51
+[14:10:44.114]     INFO: write dac parameters into roc/dacParameters_C0.dat
+[14:10:44.114]     INFO: PixTestPretest::doTest() done, duration: 11 seconds
+

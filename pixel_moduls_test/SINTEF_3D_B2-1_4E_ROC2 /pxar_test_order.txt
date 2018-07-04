@@ -1,0 +1,13 @@
+This document include the order of tests in pxar:
+
+1. Setup
+2. Pretest
+3. PixelAlive
+4. Trim 
+5. PHOptimize
+6. GainPedestal
+7. Scurve
+8. BB3
+
+This order is equal to the Fulltest order meantioned in "fpix_module_testing_reference_guide.pdf"
+

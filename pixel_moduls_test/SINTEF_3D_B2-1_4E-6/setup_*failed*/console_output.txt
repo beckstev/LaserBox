@@ -1,0 +1,28 @@
+[16:54:11.030]     INFO: PixTestSetup:: pg set to RES|TOK
+[16:54:11.030]     INFO:        0       1       2       3       4       5       6       7
+[17:13:23.880]     INFO:  0:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[17:32:26.696]     INFO:  1:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[17:52:43.558]     INFO:  2:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[18:13:52.155]     INFO:  3:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[18:34:35.664]     INFO:  4:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[18:56:25.627]     INFO:  5:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[19:18:26.469]     INFO:  6:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[19:41:31.517]     INFO:  7:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[20:01:53.202]     INFO:  8:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[20:21:21.957]     INFO:  9:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[20:42:37.948]     INFO: 10:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[21:04:10.990]     INFO: 11:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[21:25:43.049]     INFO: 12:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[21:46:27.509]     INFO: 13:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[22:06:40.348]     INFO: 14:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[22:29:14.515]     INFO: 15:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[22:50:18.825]     INFO: 16:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[23:11:28.893]     INFO: 17:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[23:32:52.498]     INFO: 18:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[23:54:04.314]     INFO: 19:  ffc     ffc     ffc     ffc     ffc     ffc     ffc     ffc    
+[23:54:04.575]     INFO: DTB Delay Setup could not find any good delays.
+[23:54:04.575]     INFO: Falling back to default values.
+[23:54:04.606]     INFO: PixTestSetup:: Write Tb parameters to file.
+[23:54:04.606]     INFO: write dtb parameters into roc/tbParameters.dat
+[23:54:04.611]     INFO: PixTestSetup::doTest() done for.
+

@@ -1,0 +1,348 @@
+[14:15:13.753]     INFO: ######################################################################
+[14:15:13.754]     INFO: PixTestTrim::doTest()
+[14:15:13.754]     INFO: ######################################################################
+[14:15:13.764]     INFO:    ----------------------------------------------------------------------
+[14:15:13.764]     INFO:    PixTestTrim::trimTest() ntrig = 8, vcal = 35
+[14:15:13.764]     INFO:    ----------------------------------------------------------------------
+[14:15:13.782]     INFO: ---> VthrComp thr map (minimal VthrComp)
+[14:15:13.782]     INFO: ---> dac: vthrcomp name: TrimThr0 ntrig: 8 dacrange: 10 .. 160 (-1/-1) hits flags = 528 (plus default)
+[14:15:13.806]     INFO:   dacScan split into 1 runs with ntrig = 8
+[14:15:13.806]     INFO:     run 1 of 1
+[14:15:13.833]     INFO: Expecting 5025280 events.
+[14:15:41.116]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:41.117]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:41.117]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:41.117]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:41.117]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:41.117]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fa 
+[14:15:41.117]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3fc 
+[14:15:41.117]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:41.117]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:41.602]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:41.602]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:41.602]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:41.602]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:41.602]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:41.602]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:41.602]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== cbf9 
+[14:15:41.602]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:41.602]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:42.025]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:42.025]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:42.025]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:42.025]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:42.025]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:42.025]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:42.025]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3f8 
+[14:15:42.025]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:42.025]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:42.400]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:42.400]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:42.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 59 40ed 
+[14:15:42.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 59 40ed 
+[14:15:42.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 59 40ef 
+[14:15:42.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87fb 59 40ed 
+[14:15:42.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 83f8 59 4100 
+[14:15:42.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 59 40ef 
+[14:15:42.400]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 59 40ed 
+[14:15:42.599]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:42.599]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:42.599]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 4d 44ed 
+[14:15:42.599]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87fa 4d 44ee 
+[14:15:42.599]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 4d 44ed 
+[14:15:42.599]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 4d 44ed 
+[14:15:42.599]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 83f8 4d 4500 
+[14:15:42.599]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 4d 44ed 
+[14:15:42.599]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 4d 44ed 
+[14:15:42.712]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:42.712]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:42.712]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:42.712]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:42.712]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:42.712]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:42.712]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== cbf9 
+[14:15:42.712]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:42.712]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:42.978]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:42.978]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:42.978]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 62 42ed 
+[14:15:42.978]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 62 42ed 
+[14:15:42.978]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:42.978]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 62 42ef 
+[14:15:42.978]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 877c 832 42ef 
+[14:15:42.978]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 62 42ef 
+[14:15:42.978]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 62 42ed 
+[14:15:43.995]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:43.995]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:43.995]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:43.995]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:43.995]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:43.995]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:43.995]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3f9 
+[14:15:43.995]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:43.995]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:44.564]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:44.565]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:44.565]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:44.565]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:44.565]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:44.565]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:44.565]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== cbf8 
+[14:15:44.565]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:44.565]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:44.717]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:44.717]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:44.717]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 e2 4100 
+[14:15:44.717]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 e2 40ef 
+[14:15:44.717]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 e2 4100 
+[14:15:44.717]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:44.717]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 83fc 72 4102 
+[14:15:44.717]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 e2 4100 
+[14:15:44.717]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 e2 4100 
+[14:15:48.093]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:48.093]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:48.094]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:48.094]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:48.094]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:48.094]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87fb 145 42ed 
+[14:15:48.094]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f4 
+[14:15:48.094]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:48.094]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:48.553]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:48.553]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:48.553]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:48.553]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:48.553]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:48.553]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:48.554]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3f8 
+[14:15:48.554]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:48.554]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:48.862]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:48.862]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:48.862]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 21d 42ef 
+[14:15:48.862]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 21d 42ef 
+[14:15:48.862]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 21d 42ef 
+[14:15:48.862]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 21d 42ed 
+[14:15:48.862]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 83f9 21d 4300 
+[14:15:48.862]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 21d 42ef 
+[14:15:48.862]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 21d 42ed 
+[14:15:48.910]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:48.910]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:48.910]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:48.910]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fa 
+[14:15:48.910]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:48.910]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:48.910]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3fc 
+[14:15:48.910]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:48.910]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:50.164]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:50.164]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:50.164]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:50.164]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:50.164]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:50.164]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:50.164]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3fc 
+[14:15:50.164]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:50.164]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:50.318]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:50.318]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:50.319]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:50.319]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:50.319]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fa 
+[14:15:50.319]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:50.319]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== cbf8 
+[14:15:50.319]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:50.319]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:51.006]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:51.006]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:51.006]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:51.006]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:15:51.006]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:51.006]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fb 
+[14:15:51.006]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== cbf8 
+[14:15:51.006]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:51.006]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:15:52.159]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:15:52.159]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:15:52.159]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 2e0 40ef 
+[14:15:52.160]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 2e0 40ee 
+[14:15:52.160]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 2e0 40ee 
+[14:15:52.160]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 2e0 40ef 
+[14:15:52.160]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 8bf9 2e0 4102 
+[14:15:52.160]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 2e0 40ee 
+[14:15:52.160]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 2e0 40ee 
+[14:16:05.442]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:16:05.442]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:16:05.442]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:05.442]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:05.442]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:05.443]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:05.443]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3f8 
+[14:16:05.443]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:05.443]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:06.666]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:16:06.666]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:16:06.666]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:06.666]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:06.666]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:06.666]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:06.666]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== cbf8 
+[14:16:06.667]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:06.667]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:06.817]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:16:06.817]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:16:06.817]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:06.817]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:06.817]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:06.817]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:06.817]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== cbf8 
+[14:16:06.817]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:06.817]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:06.928]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:16:06.928]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:16:06.928]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:06.928]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:06.928]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:06.928]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:06.928]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c778 
+[14:16:06.928]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:06.928]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fb 
+[14:16:07.059]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:16:07.059]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:16:07.059]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:07.059]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:07.059]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:07.059]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:07.059]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== cbf8 
+[14:16:07.059]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:07.059]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:08.053]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:16:08.053]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:16:08.053]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:08.053]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:08.053]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:08.053]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:08.053]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== cbf8 
+[14:16:08.053]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:08.053]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:10.328]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[14:16:10.328]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[14:16:10.328]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:10.328]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:10.328]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:10.328]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[14:16:10.328]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c3f8 
+[14:16:10.328]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[14:16:10.328]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fb 
+[14:16:15.885]     INFO: 5025280 events read in total (61788ms).
+[14:16:15.943]     INFO: Test took 62135ms.
+[14:16:17.713]     INFO: ROC 0 VthrComp = 51
+[14:16:17.718]     INFO: ---> Vcal thr map (pixel with maximum Vcal thr)
+[14:16:17.718]     INFO: ---> dac: vcal name: TrimThr1 ntrig: 8 dacrange: 10 .. 160 (-1/-1) hits flags = 528 (plus default)
+[14:16:17.726]     INFO:   dacScan split into 1 runs with ntrig = 8
+[14:16:17.741]     INFO:     run 1 of 1
+[14:16:17.765]     INFO: Expecting 5025280 events.
+[14:17:39.454]     INFO: 5025280 events read in total (81423ms).
+[14:17:39.548]     INFO: Test took 81804ms.
+[14:17:43.147]     INFO:    roc 0 with ID = 0  has maximal Vcal 77.8826 for pixel 27/0 mean/min/max = 53.6046/29.3099/77.8993
+[14:17:43.163]     INFO: Expecting 411648 events.
+[14:17:47.820]     INFO: 411648 events read in total (4394ms).
+[14:17:47.834]     INFO: Test took 4685ms.
+[14:17:48.055]     INFO: ---> dac: vcal name: TrimThr2 ntrig: 8 dacrange: 0 .. 150 (-1/-1) hits flags = 528 (plus default)
+[14:17:48.067]     INFO:   dacScan split into 1 runs with ntrig = 8
+[14:17:48.074]     INFO:     run 1 of 1
+[14:17:48.096]     INFO: Expecting 5025280 events.
+[14:19:07.461]     INFO: 5025280 events read in total (79102ms).
+[14:19:07.555]     INFO: Test took 79480ms.
+[14:19:10.944]     INFO: ---> TrimStepCorr4 extremal thresholds: 2.500000 .. 64.262303
+[14:19:10.973]     INFO: Expecting 208000 events.
+[14:19:14.545]     INFO: 208000 events read in total (3306ms).
+[14:19:14.550]     INFO: Test took 3600ms.
+[14:19:14.553]     INFO: ---> dac: vcal name: trimStepCorr4 ntrig: 8 dacrange: 2 .. 74 (-1/-1) hits flags = 528 (plus default)
+[14:19:14.560]     INFO:   dacScan split into 1 runs with ntrig = 8
+[14:19:14.771]     INFO:     run 1 of 1
+[14:19:14.792]     INFO: Expecting 2429440 events.
+[14:19:51.580]     INFO: 2429440 events read in total (36524ms).
+[14:19:51.626]     INFO: Test took 36852ms.
+[14:19:53.903]     INFO: ---> TrimStepCorr2 extremal thresholds: 27.308686 .. 52.725621
+[14:19:53.938]     INFO: Expecting 208000 events.
+[14:19:59.027]     INFO: 208000 events read in total (4823ms).
+[14:19:59.032]     INFO: Test took 5117ms.
+[14:19:59.036]     INFO: ---> dac: vcal name: trimStepCorr2 ntrig: 8 dacrange: 17 .. 62 (-1/-1) hits flags = 528 (plus default)
+[14:19:59.046]     INFO:   dacScan split into 1 runs with ntrig = 8
+[14:19:59.256]     INFO:     run 1 of 1
+[14:19:59.287]     INFO: Expecting 1530880 events.
+[14:20:22.837]     INFO: 1530880 events read in total (23282ms).
+[14:20:22.869]     INFO: Test took 23608ms.
+[14:20:24.937]     INFO: ---> TrimStepCorr1a extremal thresholds: 27.759890 .. 55.409113
+[14:20:24.969]     INFO: Expecting 208000 events.
+[14:20:28.992]     INFO: 208000 events read in total (3758ms).
+[14:20:28.000]     INFO: Test took 4052ms.
+[14:20:28.003]     INFO: ---> dac: vcal name: trimStepCorr1a ntrig: 8 dacrange: 17 .. 65 (-1/-1) hits flags = 528 (plus default)
+[14:20:29.011]     INFO:   dacScan split into 1 runs with ntrig = 8
+[14:20:29.219]     INFO:     run 1 of 1
+[14:20:29.244]     INFO: Expecting 1630720 events.
+[14:20:54.624]     INFO: 1630720 events read in total (25114ms).
+[14:20:54.657]     INFO: Test took 25436ms.
+[14:20:56.737]     INFO: ---> TrimStepCorr1b extremal thresholds: 27.208173 .. 59.051038
+[14:20:56.771]     INFO: Expecting 208000 events.
+[14:21:00.827]     INFO: 208000 events read in total (3793ms).
+[14:21:00.834]     INFO: Test took 4085ms.
+[14:21:00.837]     INFO: ---> dac: vcal name: trimStepCorr1b ntrig: 8 dacrange: 17 .. 69 (-1/-1) hits flags = 528 (plus default)
+[14:21:00.845]     INFO:   dacScan split into 1 runs with ntrig = 8
+[14:21:01.054]     INFO:     run 1 of 1
+[14:21:01.080]     INFO: Expecting 1763840 events.
+[14:21:26.852]     INFO: 1763840 events read in total (25509ms).
+[14:21:26.888]     INFO: Test took 25831ms.
+[14:21:29.028]     INFO: ---> TrimThrFinal extremal thresholds: 15 .. 55
+[14:21:29.028]     INFO: ---> dac: vcal name: TrimThrFinal ntrig: 8 dacrange: 15 .. 55 (-1/-1) hits flags = 528 (plus default)
+[14:21:29.036]     INFO:   dacScan split into 1 runs with ntrig = 8
+[14:21:29.046]     INFO:     run 1 of 1
+[14:21:29.074]     INFO: Expecting 1364480 events.
+[14:21:47.760]     INFO: 1364480 events read in total (18420ms).
+[14:21:47.786]     INFO: Test took 18734ms.
+[14:21:49.001]     INFO: write dac parameters into roc/dacParameters35_C0.dat
+[14:21:49.002]     INFO: write trim parameters into roc/trimParameters35_C0.dat
+[14:21:50.009]     INFO: PixTestTrim::trimTest() done
+[14:21:50.009]     INFO: vtrim:     111 
+[14:21:50.009]     INFO: vthrcomp:   51 
+[14:21:50.009]     INFO: vcal mean:  35.32 
+[14:21:50.009]     INFO: vcal RMS:    2.65 
+[14:21:50.009]     INFO: bits mean:   8.48 
+[14:21:50.009]     INFO: bits RMS:    2.95 
+[14:21:50.095]     INFO:    ----------------------------------------------------------------------
+[14:21:50.095]     INFO:    PixTestTrim::trimBitTest() ntrig = 5, vtrims = 254 126 63 32
+[14:21:50.095]     INFO:    ----------------------------------------------------------------------
+[14:21:50.101]     INFO: ---> dac: Vcal name: TrimBitsThr0 ntrig: 5 dacrange: 0 .. 199 (-1/-1) hits flags = 528 (plus default)
+[14:21:50.108]     INFO:   dacScan split into 1 runs with ntrig = 5
+[14:21:50.115]     INFO:     run 1 of 1
+[14:21:50.141]     INFO: Expecting 4160000 events.
+[14:22:52.282]     INFO: 4160000 events read in total (61878ms).
+[14:22:52.379]     INFO: Test took 62258ms.
+[14:22:57.097]     INFO: ---> dac: Vcal name: TrimThr_trim14 ntrig: 5 dacrange: 0 .. 168 (-1/-1) hits flags = 528 (plus default)
+[14:22:57.105]     INFO:   dacScan split into 1 runs with ntrig = 5
+[14:22:57.115]     INFO:     run 1 of 1
+[14:22:57.144]     INFO: Expecting 3515200 events.
+[14:23:49.723]     INFO: 3515200 events read in total (52311ms).
+[14:23:49.807]     INFO: Test took 52688ms.
+[14:23:53.894]     INFO: ---> dac: Vcal name: TrimThr_trim13 ntrig: 5 dacrange: 0 .. 146 (-1/-1) hits flags = 528 (plus default)
+[14:23:53.904]     INFO:   dacScan split into 1 runs with ntrig = 5
+[14:23:53.917]     INFO:     run 1 of 1
+[14:23:53.943]     INFO: Expecting 3057600 events.
+[14:24:37.731]     INFO: 3057600 events read in total (43522ms).
+[14:24:37.812]     INFO: Test took 43891ms.
+[14:24:41.640]     INFO: ---> dac: Vcal name: TrimThr_trim11 ntrig: 5 dacrange: 0 .. 145 (-1/-1) hits flags = 528 (plus default)
+[14:24:41.650]     INFO:   dacScan split into 1 runs with ntrig = 5
+[14:24:41.657]     INFO:     run 1 of 1
+[14:24:41.681]     INFO: Expecting 3036800 events.
+[14:25:27.791]     INFO: 3036800 events read in total (45844ms).
+[14:25:27.871]     INFO: Test took 46212ms.
+[14:25:31.577]     INFO: ---> dac: Vcal name: TrimThr_trim7 ntrig: 5 dacrange: 0 .. 134 (-1/-1) hits flags = 528 (plus default)
+[14:25:31.585]     INFO:   dacScan split into 1 runs with ntrig = 5
+[14:25:31.595]     INFO:     run 1 of 1
+[14:25:31.624]     INFO: Expecting 2808000 events.
+[14:26:20.680]     INFO: 2808000 events read in total (48791ms).
+[14:26:20.756]     INFO: Test took 49155ms.
+[14:26:24.268]     INFO: PixTestTrim::trimBitTest() done 
+[14:26:24.295]     INFO: PixTestTrim::doTest() done, duration: 670 seconds
+
