@@ -1,0 +1,4 @@
+ntrig = 10
+safetymarginlow = 20 
+saturationvcal = 100
+quantilesaturation = 0.98

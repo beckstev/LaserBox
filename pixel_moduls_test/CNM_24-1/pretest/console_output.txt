@@ -1,0 +1,33 @@
+[15:15:58.214]     INFO: ######################################################################
+[15:15:58.214]     INFO: PixTestPretest::doTest()
+[15:15:58.214]     INFO: ######################################################################
+[15:15:58.223]     INFO:    ----------------------------------------------------------------------
+[15:15:58.223]     INFO:    PixTestPretest::programROC() 
+[15:15:58.223]     INFO:    ----------------------------------------------------------------------
+[15:16:01.262]     INFO: PixTestPretest::programROC() done: ROCs are all programmable
+[15:16:01.262]     INFO: IA differences per ROC:  15.2
+[15:16:01.431]     INFO:    ----------------------------------------------------------------------
+[15:16:01.431]     INFO:    PixTestPretest::setVana() target Ia = 24 mA/ROC
+[15:16:01.431]     INFO:    ----------------------------------------------------------------------
+[15:16:02.234]     INFO: PixTestPretest::setVana() done, Module Ia 24.1 mA = 24.1 mA/ROC
+[15:16:02.234]     INFO: i(loss) [mA/ROC]:     20.9
+[15:16:02.370]  WARNING: No timing test implemented for ! Do something on your own.
+[15:16:02.401]     INFO:    ----------------------------------------------------------------------
+[15:16:02.401]     INFO:    PixTestPretest::findWorkingPixel()
+[15:16:02.401]     INFO:    ----------------------------------------------------------------------
+[15:16:02.438]     INFO: Expecting 231680 events.
+[15:16:05.154]     INFO: 231680 events read in total (2449ms).
+[15:16:05.167]     INFO: Test took 2760ms.
+[15:16:05.452]     INFO: Found working pixel in all ROCs: col/row = 12/22
+[15:16:05.682]     INFO:    ----------------------------------------------------------------------
+[15:16:05.682]     INFO:    PixTestPretest::setVthrCompCalDel()
+[15:16:05.682]     INFO:    ----------------------------------------------------------------------
+[15:16:05.717]     INFO: Expecting 231680 events.
+[15:16:08.340]     INFO: 231680 events read in total (2355ms).
+[15:16:08.347]     INFO: Test took 2647ms.
+[15:16:08.742]     INFO: PixTestPretest::setVthrCompCalDel() done
+[15:16:08.742]     INFO: CalDel:      141
+[15:16:08.742]     INFO: VthrComp:     51
+[15:16:08.809]     INFO: write dac parameters into roc/dacParameters_C0.dat
+[15:16:08.809]     INFO: PixTestPretest::doTest() done, duration: 10 seconds
+

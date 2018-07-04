@@ -1,0 +1,124 @@
+[15:43:23.133]     INFO: ######################################################################
+[15:43:23.133]     INFO: PixTestGainPedestal::doTest() ntrig = 10
+[15:43:23.133]     INFO: ######################################################################
+[15:43:23.143]     INFO: scanning low vcal = 10
+[15:43:23.171]     INFO: Expecting 41600 events.
+[15:43:24.219]     INFO: 41600 events read in total (784ms).
+[15:43:24.224]     INFO: Test took 1076ms.
+[15:43:24.227]     INFO: scanning low vcal = 20
+[15:43:24.485]     INFO: Expecting 41600 events.
+[15:43:25.501]     INFO: 41600 events read in total (753ms).
+[15:43:25.506]     INFO: Test took 1272ms.
+[15:43:25.508]     INFO: scanning low vcal = 30
+[15:43:25.771]     INFO: Expecting 41600 events.
+[15:43:26.793]     INFO: 41600 events read in total (756ms).
+[15:43:26.798]     INFO: Test took 1285ms.
+[15:43:26.804]     INFO: scanning low vcal = 40
+[15:43:27.052]     INFO: Expecting 41600 events.
+[15:43:28.237]     INFO: 41600 events read in total (917ms).
+[15:43:28.240]     INFO: Test took 1431ms.
+[15:43:28.246]     INFO: scanning low vcal = 50
+[15:43:28.490]     INFO: Expecting 41600 events.
+[15:43:29.685]     INFO: 41600 events read in total (929ms).
+[15:43:29.688]     INFO: Test took 1437ms.
+[15:43:29.692]     INFO: scanning low vcal = 60
+[15:43:29.940]     INFO: Expecting 41600 events.
+[15:43:31.150]     INFO: 41600 events read in total (945ms).
+[15:43:31.154]     INFO: Test took 1456ms.
+[15:43:31.158]     INFO: scanning low vcal = 70
+[15:43:31.407]     INFO: Expecting 41600 events.
+[15:43:32.631]     INFO: 41600 events read in total (957ms).
+[15:43:32.635]     INFO: Test took 1471ms.
+[15:43:32.638]     INFO: scanning low vcal = 80
+[15:43:32.883]     INFO: Expecting 41600 events.
+[15:43:34.118]     INFO: 41600 events read in total (970ms).
+[15:43:34.122]     INFO: Test took 1481ms.
+[15:43:34.127]     INFO: scanning low vcal = 90
+[15:43:34.372]     INFO: Expecting 41600 events.
+[15:43:35.664]     INFO: 41600 events read in total (1029ms).
+[15:43:35.668]     INFO: Test took 1536ms.
+[15:43:35.673]     INFO: scanning low vcal = 100
+[15:43:35.923]     INFO: Expecting 41600 events.
+[15:43:37.193]     INFO: 41600 events read in total (1004ms).
+[15:43:37.197]     INFO: Test took 1520ms.
+[15:43:37.202]     INFO: scanning low vcal = 110
+[15:43:37.451]     INFO: Expecting 41600 events.
+[15:43:38.713]     INFO: 41600 events read in total (998ms).
+[15:43:38.716]     INFO: Test took 1510ms.
+[15:43:38.721]     INFO: scanning low vcal = 120
+[15:43:38.969]     INFO: Expecting 41600 events.
+[15:43:40.334]     INFO: 41600 events read in total (1102ms).
+[15:43:40.339]     INFO: Test took 1613ms.
+[15:43:40.342]     INFO: scanning low vcal = 130
+[15:43:40.592]     INFO: Expecting 41600 events.
+[15:43:41.843]     INFO: 41600 events read in total (987ms).
+[15:43:41.846]     INFO: Test took 1501ms.
+[15:43:41.852]     INFO: scanning low vcal = 140
+[15:43:42.101]     INFO: Expecting 41600 events.
+[15:43:43.325]     INFO: 41600 events read in total (958ms).
+[15:43:43.327]     INFO: Test took 1470ms.
+[15:43:43.333]     INFO: scanning low vcal = 150
+[15:43:43.579]     INFO: Expecting 41600 events.
+[15:43:44.799]     INFO: 41600 events read in total (955ms).
+[15:43:44.801]     INFO: Test took 1463ms.
+[15:43:44.806]     INFO: scanning low vcal = 160
+[15:43:45.056]     INFO: Expecting 41600 events.
+[15:43:46.536]     INFO: 41600 events read in total (1216ms).
+[15:43:46.539]     INFO: Test took 1727ms.
+[15:43:46.542]     INFO: scanning low vcal = 170
+[15:43:46.796]     INFO: Expecting 41600 events.
+[15:43:47.998]     INFO: 41600 events read in total (937ms).
+[15:43:47.002]     INFO: Test took 1455ms.
+[15:43:48.006]     INFO: scanning low vcal = 180
+[15:43:48.257]     INFO: Expecting 41600 events.
+[15:43:49.556]     INFO: 41600 events read in total (1032ms).
+[15:43:49.557]     INFO: Test took 1545ms.
+[15:43:49.562]     INFO: scanning low vcal = 190
+[15:43:49.814]     INFO: Expecting 41600 events.
+[15:43:51.052]     INFO: 41600 events read in total (974ms).
+[15:43:51.055]     INFO: Test took 1487ms.
+[15:43:51.060]     INFO: scanning low vcal = 200
+[15:43:51.309]     INFO: Expecting 41600 events.
+[15:43:52.601]     INFO: 41600 events read in total (1028ms).
+[15:43:52.605]     INFO: Test took 1540ms.
+[15:43:52.609]     INFO: scanning low vcal = 210
+[15:43:52.861]     INFO: Expecting 41600 events.
+[15:43:54.067]     INFO: 41600 events read in total (943ms).
+[15:43:54.070]     INFO: Test took 1456ms.
+[15:43:54.075]     INFO: scanning low vcal = 220
+[15:43:54.323]     INFO: Expecting 41600 events.
+[15:43:55.578]     INFO: 41600 events read in total (990ms).
+[15:43:55.582]     INFO: Test took 1501ms.
+[15:43:55.586]     INFO: scanning low vcal = 230
+[15:43:55.835]     INFO: Expecting 41600 events.
+[15:43:57.061]     INFO: 41600 events read in total (961ms).
+[15:43:57.066]     INFO: Test took 1475ms.
+[15:43:57.071]     INFO: scanning low vcal = 240
+[15:43:57.318]     INFO: Expecting 41600 events.
+[15:43:58.540]     INFO: 41600 events read in total (953ms).
+[15:43:58.542]     INFO: Test took 1465ms.
+[15:43:58.548]     INFO: scanning low vcal = 250
+[15:43:58.796]     INFO: Expecting 41600 events.
+[15:44:00.074]     INFO: 41600 events read in total (1013ms).
+[15:44:00.077]     INFO: Test took 1525ms.
+[15:44:00.087]     INFO: scanning high vcal = 30 (= 210 in low range)
+[15:44:00.329]     INFO: Expecting 41600 events.
+[15:44:01.650]     INFO: 41600 events read in total (1055ms).
+[15:44:01.655]     INFO: Test took 1564ms.
+[15:44:01.659]     INFO: scanning high vcal = 50 (= 350 in low range)
+[15:44:01.907]     INFO: Expecting 41600 events.
+[15:44:03.208]     INFO: 41600 events read in total (1037ms).
+[15:44:03.211]     INFO: Test took 1549ms.
+[15:44:03.214]     INFO: scanning high vcal = 70 (= 490 in low range)
+[15:44:03.467]     INFO: Expecting 41600 events.
+[15:44:05.061]     INFO: 41600 events read in total (1329ms).
+[15:44:05.065]     INFO: Test took 1847ms.
+[15:44:05.069]     INFO: scanning high vcal = 90 (= 630 in low range)
+[15:44:05.317]     INFO: Expecting 41600 events.
+[15:44:06.729]     INFO: 41600 events read in total (1149ms).
+[15:44:06.733]     INFO: Test took 1658ms.
+[15:44:06.736]     INFO: scanning high vcal = 200 (= 1400 in low range)
+[15:44:06.988]     INFO: Expecting 41600 events.
+[15:44:08.178]     INFO: 41600 events read in total (925ms).
+[15:44:08.184]     INFO: Test took 1443ms.
+[15:44:08.533]     INFO: PixTestGainPedestal::measure() done 

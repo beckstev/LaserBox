@@ -1,0 +1,141 @@
+[15:39:47.515]     INFO: ######################################################################
+[15:39:47.515]     INFO: PixTestPhOptimization::doTest() Ntrig = 10
+[15:39:47.515]     INFO: ######################################################################
+[15:39:47.555]     INFO: Expecting 41600 events.
+[15:39:48.560]     INFO: 41600 events read in total (737ms).
+[15:39:48.564]     INFO: Test took 1035ms.
+[15:39:48.820]     INFO: Expecting 41600 events.
+[15:39:49.616]     INFO: 41600 events read in total (529ms).
+[15:39:49.620]     INFO: Test took 1019ms.
+[15:39:49.882]     INFO: Expecting 41600 events.
+[15:39:50.902]     INFO: 41600 events read in total (756ms).
+[15:39:50.907]     INFO: Test took 1267ms.
+[15:39:51.162]     INFO: Expecting 2560 events.
+[15:39:51.498]     INFO: 2560 events read in total (68ms).
+[15:39:51.500]     INFO: Test took 586ms.
+[15:39:51.764]     INFO: Expecting 655360 events.
+[15:40:01.772]     INFO: 655360 events read in total (9742ms).
+[15:40:01.791]     INFO: Test took 10278ms.
+[15:40:01.857]     INFO: Expecting 655360 events.
+[15:40:10.921]     INFO: 655360 events read in total (8799ms).
+[15:40:10.944]     INFO: Test took 9109ms.
+[15:40:11.027]     INFO: safety margin for low PH: adding 0, margin is now 20
+[15:40:11.042]     INFO: safety margin for low PH: adding 1, margin is now 21
+[15:40:11.056]     INFO: safety margin for low PH: adding 2, margin is now 22
+[15:40:11.070]     INFO: safety margin for low PH: adding 3, margin is now 23
+[15:40:11.084]     INFO: safety margin for low PH: adding 4, margin is now 24
+[15:40:11.099]     INFO: safety margin for low PH: adding 5, margin is now 25
+[15:40:11.118]     INFO: safety margin for low PH: adding 6, margin is now 26
+[15:40:11.133]     INFO: safety margin for low PH: adding 7, margin is now 27
+[15:40:11.147]     INFO: safety margin for low PH: adding 8, margin is now 28
+[15:40:11.160]     INFO: safety margin for low PH: adding 9, margin is now 29
+[15:40:11.174]     INFO: safety margin for low PH: adding 10, margin is now 30
+[15:40:11.187]     INFO: safety margin for low PH: adding 11, margin is now 31
+[15:40:11.200]     INFO: safety margin for low PH: adding 12, margin is now 32
+[15:40:11.214]     INFO: safety margin for low PH: adding 13, margin is now 33
+[15:40:11.228]     INFO: safety margin for low PH: adding 14, margin is now 34
+[15:40:11.242]     INFO: safety margin for low PH: adding 15, margin is now 35
+[15:40:11.256]     INFO: safety margin for low PH: adding 16, margin is now 36
+[15:40:11.269]     INFO: safety margin for low PH: adding 17, margin is now 37
+[15:40:11.283]     INFO: safety margin for low PH: adding 18, margin is now 38
+[15:40:11.296]     INFO: safety margin for low PH: adding 19, margin is now 39
+[15:40:11.309]     INFO: safety margin for low PH: adding 20, margin is now 40
+[15:40:11.323]     INFO: safety margin for low PH: adding 21, margin is now 41
+[15:40:11.338]     INFO: safety margin for low PH: adding 22, margin is now 42
+[15:40:11.357]     INFO: safety margin for low PH: adding 23, margin is now 43
+[15:40:11.372]     INFO: safety margin for low PH: adding 24, margin is now 44
+[15:40:11.386]     INFO: safety margin for low PH: adding 25, margin is now 45
+[15:40:11.400]     INFO: safety margin for low PH: adding 26, margin is now 46
+[15:40:11.417]     INFO: safety margin for low PH: adding 27, margin is now 47
+[15:40:11.432]     INFO: safety margin for low PH: adding 28, margin is now 48
+[15:40:11.447]     INFO: safety margin for low PH: adding 29, margin is now 49
+[15:40:11.462]     INFO: safety margin for low PH: adding 30, margin is now 50
+[15:40:11.478]     INFO: safety margin for low PH: adding 31, margin is now 51
+[15:40:11.494]     INFO: safety margin for low PH: adding 32, margin is now 52
+[15:40:11.509]     INFO: safety margin for low PH: adding 33, margin is now 53
+[15:40:11.523]     INFO: safety margin for low PH: adding 34, margin is now 54
+[15:40:11.538]     INFO: safety margin for low PH: adding 35, margin is now 55
+[15:40:11.553]     INFO: safety margin for low PH: adding 36, margin is now 56
+[15:40:11.569]     INFO: safety margin for low PH: adding 37, margin is now 57
+[15:40:11.583]     INFO: safety margin for low PH: adding 38, margin is now 58
+[15:40:11.599]     INFO: safety margin for low PH: adding 39, margin is now 59
+[15:40:11.615]     INFO: safety margin for low PH: adding 40, margin is now 60
+[15:40:11.632]     INFO: safety margin for low PH: adding 41, margin is now 61
+[15:40:11.647]     INFO: safety margin for low PH: adding 42, margin is now 62
+[15:40:11.661]     INFO: safety margin for low PH: adding 43, margin is now 63
+[15:40:11.676]     INFO: safety margin for low PH: adding 44, margin is now 64
+[15:40:11.690]     INFO: safety margin for low PH: adding 45, margin is now 65
+[15:40:11.704]     INFO: safety margin for low PH: adding 46, margin is now 66
+[15:40:11.717]     INFO: safety margin for low PH: adding 47, margin is now 67
+[15:40:11.732]     INFO: safety margin for low PH: adding 48, margin is now 68
+[15:40:11.746]     INFO: safety margin for low PH: adding 49, margin is now 69
+[15:40:11.760]     INFO: safety margin for low PH: adding 50, margin is now 70
+[15:40:11.774]     INFO: safety margin for low PH: adding 51, margin is now 71
+[15:40:11.788]     INFO: safety margin for low PH: adding 52, margin is now 72
+[15:40:11.802]     INFO: safety margin for low PH: adding 53, margin is now 73
+[15:40:11.815]     INFO: safety margin for low PH: adding 54, margin is now 74
+[15:40:11.829]     INFO: safety margin for low PH: adding 55, margin is now 75
+[15:40:11.843]     INFO: safety margin for low PH: adding 56, margin is now 76
+[15:40:11.857]     INFO: safety margin for low PH: adding 57, margin is now 77
+[15:40:11.872]     INFO: safety margin for low PH: adding 58, margin is now 78
+[15:40:11.887]     INFO: safety margin for low PH: adding 59, margin is now 79
+[15:40:11.902]     INFO: safety margin for low PH: adding 60, margin is now 80
+[15:40:11.917]     INFO: safety margin for low PH: adding 61, margin is now 81
+[15:40:11.932]     INFO: safety margin for low PH: adding 62, margin is now 82
+[15:40:11.945]     INFO: safety margin for low PH: adding 63, margin is now 83
+[15:40:11.960]     INFO: safety margin for low PH: adding 64, margin is now 84
+[15:40:11.974]     INFO: safety margin for low PH: adding 65, margin is now 85
+[15:40:11.987]     INFO: safety margin for low PH: adding 66, margin is now 86
+[15:40:11.001]     INFO: safety margin for low PH: adding 67, margin is now 87
+[15:40:12.015]     INFO: safety margin for low PH: adding 68, margin is now 88
+[15:40:12.030]     INFO: safety margin for low PH: adding 69, margin is now 89
+[15:40:12.043]     INFO: safety margin for low PH: adding 70, margin is now 90
+[15:40:12.057]     INFO: safety margin for low PH: adding 71, margin is now 91
+[15:40:12.070]     INFO: safety margin for low PH: adding 72, margin is now 92
+[15:40:12.085]     INFO: safety margin for low PH: adding 73, margin is now 93
+[15:40:12.099]     INFO: safety margin for low PH: adding 74, margin is now 94
+[15:40:12.113]     INFO: safety margin for low PH: adding 75, margin is now 95
+[15:40:12.128]     INFO: safety margin for low PH: adding 76, margin is now 96
+[15:40:12.142]     INFO: safety margin for low PH: adding 77, margin is now 97
+[15:40:12.157]     INFO: safety margin for low PH: adding 78, margin is now 98
+[15:40:12.171]     INFO: safety margin for low PH: adding 79, margin is now 99
+[15:40:12.185]     INFO: safety margin for low PH: adding 80, margin is now 100
+[15:40:12.199]     INFO: safety margin for low PH: adding 81, margin is now 101
+[15:40:12.213]     INFO: safety margin for low PH: adding 82, margin is now 102
+[15:40:12.228]     INFO: safety margin for low PH: adding 83, margin is now 103
+[15:40:12.244]     INFO: safety margin for low PH: adding 84, margin is now 104
+[15:40:12.258]     INFO: safety margin for low PH: adding 85, margin is now 105
+[15:40:12.272]     INFO: safety margin for low PH: adding 86, margin is now 106
+[15:40:12.286]     INFO: safety margin for low PH: adding 87, margin is now 107
+[15:40:12.300]     INFO: safety margin for low PH: adding 88, margin is now 108
+[15:40:12.313]     INFO: safety margin for low PH: adding 89, margin is now 109
+[15:40:12.327]     INFO: safety margin for low PH: adding 90, margin is now 110
+[15:40:12.341]     INFO: safety margin for low PH: adding 91, margin is now 111
+[15:40:12.354]     INFO: safety margin for low PH: adding 92, margin is now 112
+[15:40:12.368]     INFO: safety margin for low PH: adding 93, margin is now 113
+[15:40:12.382]     INFO: safety margin for low PH: adding 94, margin is now 114
+[15:40:12.396]     INFO: safety margin for low PH: adding 95, margin is now 115
+[15:40:12.410]     INFO: safety margin for low PH: adding 96, margin is now 116
+[15:40:12.424]     INFO: safety margin for low PH: adding 97, margin is now 117
+[15:40:12.438]     INFO: safety margin for low PH: adding 98, margin is now 118
+[15:40:12.452]     INFO: safety margin for low PH: adding 99, margin is now 119
+[15:40:12.465]     INFO: safety margin for low PH: adding 100, margin is now 120
+[15:40:12.584]     INFO: write dac parameters into roc/dacParameters35_C0.dat
+[15:40:12.622]     INFO: Expecting 41600 events.
+[15:40:13.494]     INFO: 41600 events read in total (607ms).
+[15:40:13.501]     INFO: Test took 903ms.
+[15:40:13.754]     INFO: Expecting 41600 events.
+[15:40:14.630]     INFO: 41600 events read in total (611ms).
+[15:40:14.634]     INFO: Test took 1119ms.
+[15:40:14.891]     INFO: Expecting 41600 events.
+[15:40:15.839]     INFO: 41600 events read in total (678ms).
+[15:40:15.843]     INFO: Test took 1199ms.
+[15:40:16.096]     INFO: Expecting 2560 events.
+[15:40:16.421]     INFO: 2560 events read in total (59ms).
+[15:40:16.426]     INFO: Test took 573ms.
+[15:40:16.686]     INFO: Expecting 2560 events.
+[15:40:17.008]     INFO: 2560 events read in total (57ms).
+[15:40:17.013]     INFO: Test took 578ms.
+[15:40:18.015]     INFO: PixTestPhOptimization::doTest() done, duration: 30 seconds
+[15:40:18.015]     INFO: PH scale (per ROC):   144
+[15:40:18.015]     INFO: PH offset (per ROC):    0

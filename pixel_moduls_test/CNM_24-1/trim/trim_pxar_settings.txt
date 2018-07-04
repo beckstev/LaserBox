@@ -1,0 +1,2 @@
+ntrig = 8
+vcal = 35

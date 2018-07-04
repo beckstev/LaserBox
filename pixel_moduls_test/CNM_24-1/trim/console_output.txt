@@ -1,0 +1,124 @@
+[15:19:32.991]     INFO: ######################################################################
+[15:19:32.991]     INFO: PixTestTrim::doTest()
+[15:19:32.991]     INFO: ######################################################################
+[15:19:32.002]     INFO:    ----------------------------------------------------------------------
+[15:19:32.002]     INFO:    PixTestTrim::trimTest() ntrig = 8, vcal = 35
+[15:19:32.002]     INFO:    ----------------------------------------------------------------------
+[15:19:33.019]     INFO: ---> VthrComp thr map (minimal VthrComp)
+[15:19:33.019]     INFO: ---> dac: vthrcomp name: TrimThr0 ntrig: 8 dacrange: 10 .. 160 (-1/-1) hits flags = 528 (plus default)
+[15:19:33.044]     INFO:   dacScan split into 1 runs with ntrig = 8
+[15:19:33.044]     INFO:     run 1 of 1
+[15:19:33.068]     INFO: Expecting 5025280 events.
+[15:20:35.885]     INFO: 5025280 events read in total (62549ms).
+[15:20:35.956]     INFO: Test took 62907ms.
+[15:20:38.281]     INFO: ROC 0 VthrComp = 37
+[15:20:38.285]     INFO: ---> Vcal thr map (pixel with maximum Vcal thr)
+[15:20:38.285]     INFO: ---> dac: vcal name: TrimThr1 ntrig: 8 dacrange: 10 .. 160 (-1/-1) hits flags = 528 (plus default)
+[15:20:38.292]     INFO:   dacScan split into 1 runs with ntrig = 8
+[15:20:38.305]     INFO:     run 1 of 1
+[15:20:38.335]     INFO: Expecting 5025280 events.
+[15:21:56.835]     INFO: 5025280 events read in total (78234ms).
+[15:21:56.927]     INFO: Test took 78616ms.
+[15:22:00.604]     INFO:    roc 0 with ID = 0  has maximal Vcal 70.2387 for pixel 5/0 mean/min/max = 48.9022/27.0753/70.729
+[15:22:00.624]     INFO: Expecting 411648 events.
+[15:22:05.003]     INFO: 411648 events read in total (5112ms).
+[15:22:06.022]     INFO: Test took 5413ms.
+[15:22:06.234]     INFO: ---> dac: vcal name: TrimThr2 ntrig: 8 dacrange: 0 .. 150 (-1/-1) hits flags = 528 (plus default)
+[15:22:06.241]     INFO:   dacScan split into 1 runs with ntrig = 8
+[15:22:06.252]     INFO:     run 1 of 1
+[15:22:06.280]     INFO: Expecting 5025280 events.
+[15:23:24.699]     INFO: 5025280 events read in total (78154ms).
+[15:23:24.810]     INFO: Test took 78553ms.
+[15:23:28.386]     INFO: ---> TrimStepCorr4 extremal thresholds: 9.676200 .. 124.155417
+[15:23:28.417]     INFO: Expecting 208000 events.
+[15:23:32.029]     INFO: 208000 events read in total (3348ms).
+[15:23:32.034]     INFO: Test took 3638ms.
+[15:23:32.037]     INFO: ---> dac: vcal name: trimStepCorr4 ntrig: 8 dacrange: 9 .. 134 (-1/-1) hits flags = 528 (plus default)
+[15:23:32.046]     INFO:   dacScan split into 1 runs with ntrig = 8
+[15:23:32.258]     INFO:     run 1 of 1
+[15:23:32.282]     INFO: Expecting 4193280 events.
+[15:24:38.760]     INFO: 4193280 events read in total (66212ms).
+[15:24:38.842]     INFO: Test took 66582ms.
+[15:24:42.185]     INFO: ---> TrimStepCorr2 extremal thresholds: 20.921557 .. 43.067951
+[15:24:42.218]     INFO: Expecting 208000 events.
+[15:24:45.915]     INFO: 208000 events read in total (3431ms).
+[15:24:45.921]     INFO: Test took 3724ms.
+[15:24:45.924]     INFO: ---> dac: vcal name: trimStepCorr2 ntrig: 8 dacrange: 10 .. 53 (-1/-1) hits flags = 528 (plus default)
+[15:24:45.933]     INFO:   dacScan split into 1 runs with ntrig = 8
+[15:24:46.135]     INFO:     run 1 of 1
+[15:24:46.167]     INFO: Expecting 1464320 events.
+[15:25:06.213]     INFO: 1464320 events read in total (19778ms).
+[15:25:06.235]     INFO: Test took 20096ms.
+[15:25:07.964]     INFO: ---> TrimStepCorr1a extremal thresholds: 19.925425 .. 50.108837
+[15:25:07.998]     INFO: Expecting 208000 events.
+[15:25:12.146]     INFO: 208000 events read in total (3886ms).
+[15:25:12.151]     INFO: Test took 4176ms.
+[15:25:12.155]     INFO: ---> dac: vcal name: trimStepCorr1a ntrig: 8 dacrange: 9 .. 60 (-1/-1) hits flags = 528 (plus default)
+[15:25:12.165]     INFO:   dacScan split into 1 runs with ntrig = 8
+[15:25:12.367]     INFO:     run 1 of 1
+[15:25:12.397]     INFO: Expecting 1730560 events.
+[15:25:36.170]     INFO: 1730560 events read in total (23507ms).
+[15:25:36.202]     INFO: Test took 23831ms.
+[15:25:38.094]     INFO: ---> TrimStepCorr1b extremal thresholds: 22.704663 .. 56.340983
+[15:25:38.126]     INFO: Expecting 208000 events.
+[15:25:43.026]     INFO: 208000 events read in total (4635ms).
+[15:25:43.033]     INFO: Test took 4929ms.
+[15:25:43.036]     INFO: ---> dac: vcal name: trimStepCorr1b ntrig: 8 dacrange: 12 .. 66 (-1/-1) hits flags = 528 (plus default)
+[15:25:43.044]     INFO:   dacScan split into 1 runs with ntrig = 8
+[15:25:43.252]     INFO:     run 1 of 1
+[15:25:43.282]     INFO: Expecting 1830400 events.
+[15:26:10.373]     INFO: 1830400 events read in total (26822ms).
+[15:26:10.410]     INFO: Test took 27154ms.
+[15:26:12.569]     INFO: ---> TrimThrFinal extremal thresholds: 15 .. 55
+[15:26:12.569]     INFO: ---> dac: vcal name: TrimThrFinal ntrig: 8 dacrange: 15 .. 55 (-1/-1) hits flags = 528 (plus default)
+[15:26:12.578]     INFO:   dacScan split into 1 runs with ntrig = 8
+[15:26:12.588]     INFO:     run 1 of 1
+[15:26:12.614]     INFO: Expecting 1364480 events.
+[15:26:34.121]     INFO: 1364480 events read in total (21239ms).
+[15:26:34.146]     INFO: Test took 21551ms.
+[15:26:36.107]     INFO: write dac parameters into roc/dacParameters35_C0.dat
+[15:26:36.108]     INFO: write trim parameters into roc/trimParameters35_C0.dat
+[15:26:36.115]     INFO: PixTestTrim::trimTest() done
+[15:26:36.115]     INFO: vtrim:     167 
+[15:26:36.115]     INFO: vthrcomp:   37 
+[15:26:36.115]     INFO: vcal mean:  35.25 
+[15:26:36.115]     INFO: vcal RMS:    3.10 
+[15:26:36.115]     INFO: bits mean:  11.25 
+[15:26:36.115]     INFO: bits RMS:    2.06 
+[15:26:36.220]     INFO:    ----------------------------------------------------------------------
+[15:26:36.220]     INFO:    PixTestTrim::trimBitTest() ntrig = 5, vtrims = 254 126 63 32
+[15:26:36.220]     INFO:    ----------------------------------------------------------------------
+[15:26:36.231]     INFO: ---> dac: Vcal name: TrimBitsThr0 ntrig: 5 dacrange: 0 .. 199 (-1/-1) hits flags = 528 (plus default)
+[15:26:36.240]     INFO:   dacScan split into 1 runs with ntrig = 5
+[15:26:36.249]     INFO:     run 1 of 1
+[15:26:36.280]     INFO: Expecting 4160000 events.
+[15:27:41.687]     INFO: 4160000 events read in total (65139ms).
+[15:27:41.797]     INFO: Test took 65542ms.
+[15:27:46.815]     INFO: ---> dac: Vcal name: TrimThr_trim14 ntrig: 5 dacrange: 0 .. 113 (-1/-1) hits flags = 528 (plus default)
+[15:27:46.823]     INFO:   dacScan split into 1 runs with ntrig = 5
+[15:27:46.831]     INFO:     run 1 of 1
+[15:27:46.858]     INFO: Expecting 2371200 events.
+[15:28:22.674]     INFO: 2371200 events read in total (35549ms).
+[15:28:22.735]     INFO: Test took 35898ms.
+[15:28:25.943]     INFO: ---> dac: Vcal name: TrimThr_trim13 ntrig: 5 dacrange: 0 .. 88 (-1/-1) hits flags = 528 (plus default)
+[15:28:25.951]     INFO:   dacScan split into 1 runs with ntrig = 5
+[15:28:25.963]     INFO:     run 1 of 1
+[15:28:25.988]     INFO: Expecting 1851200 events.
+[15:28:53.559]     INFO: 1851200 events read in total (27302ms).
+[15:28:53.603]     INFO: Test took 27635ms.
+[15:28:56.314]     INFO: ---> dac: Vcal name: TrimThr_trim11 ntrig: 5 dacrange: 0 .. 81 (-1/-1) hits flags = 528 (plus default)
+[15:28:56.322]     INFO:   dacScan split into 1 runs with ntrig = 5
+[15:28:56.330]     INFO:     run 1 of 1
+[15:28:56.358]     INFO: Expecting 1705600 events.
+[15:29:20.764]     INFO: 1705600 events read in total (24142ms).
+[15:29:20.802]     INFO: Test took 24467ms.
+[15:29:23.376]     INFO: ---> dac: Vcal name: TrimThr_trim7 ntrig: 5 dacrange: 0 .. 81 (-1/-1) hits flags = 528 (plus default)
+[15:29:23.383]     INFO:   dacScan split into 1 runs with ntrig = 5
+[15:29:23.390]     INFO:     run 1 of 1
+[15:29:23.417]     INFO: Expecting 1705600 events.
+[15:29:49.052]     INFO: 1705600 events read in total (25369ms).
+[15:29:49.091]     INFO: Test took 25699ms.
+[15:29:51.852]     INFO: PixTestTrim::trimBitTest() done 
+[15:29:51.874]     INFO: PixTestTrim::doTest() done, duration: 618 seconds
+
+

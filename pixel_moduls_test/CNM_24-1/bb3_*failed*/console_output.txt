@@ -1,0 +1,119 @@
+[15:52:41.921]     INFO: ######################################################################
+[15:52:41.921]     INFO: PixTestBB3Map::doTest() Ntrig = 5, VcalS = 250 (high range)
+[15:52:41.921]     INFO: ######################################################################
+[15:52:41.930]     INFO: ---> dac: VthrComp name: calSMap ntrig: 5 dacrange: 0 .. 149 (-1/-1) hits flags = 514 (plus default)
+[15:52:41.937]     INFO:   dacScan split into 1 runs with ntrig = 5
+[15:52:41.937]     INFO:     run 1 of 1
+[15:52:41.966]     INFO: Expecting 3120000 events.
+[15:53:09.858]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[15:53:09.859]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[15:53:09.859]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f9 41c 42e9 
+[15:53:09.859]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[15:53:09.859]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[15:53:09.859]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[15:53:09.859]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fc 
+[15:53:09.859]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[15:53:09.859]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[15:53:18.075]    ERROR: <datapipe.cc/CheckEventValidity:L523> Channel 0 Number of ROCs (0) != Token Chain Length (1)
+[15:53:18.075]    ERROR: <datapipe.cc/Read:L170> Dumping the flawed event +- 3 events:
+[15:53:18.075]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[15:53:18.075]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87f8 761 40eb 
+[15:53:18.075]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f9 
+[15:53:18.075]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== 87fb 761 40eb 
+[15:53:18.075]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7fc 
+[15:53:18.075]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[15:53:18.075]    ERROR: <datapipe.cc/Read:L172> ====== 0 ====== c7f8 
+[15:53:20.803]     INFO: 3120000 events read in total (38573ms).
+[15:53:20.861]     INFO: Test took 38920ms.
+
+ *** Break *** segmentation violation
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+
+Thread 6 (Thread 0x7fd2ad024700 (LWP 5533)):
+#0  pthread_cond_wait
+
+GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007fd2b06cdda1 in EventWait () from /usr/local/lib/libftd2xx.so
+#2  0x00007fd2b06ca46e in write_thread () from /usr/local/lib/libftd2xx.so
+#3  0x00007fd2b1b7b6ba in start_thread (arg=0x7fd2ad024700) at pthread_create.c:333
+#4  0x00007fd2b3a8141d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 5 (Thread 0x7fd2ad825700 (LWP 5532)):
+#0  pthread_cond_timedwait
+
+GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_timedwait.S:225
+#1  0x00007fd2b06cde9b in EventWait () from /usr/local/lib/libftd2xx.so
+#2  0x00007fd2b06d0df2 in processor_thread () from /usr/local/lib/libftd2xx.so
+#3  0x00007fd2b1b7b6ba in start_thread (arg=0x7fd2ad825700) at pthread_create.c:333
+#4  0x00007fd2b3a8141d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 4 (Thread 0x7fd2ae026700 (LWP 5531)):
+#0  pthread_cond_timedwait
+
+GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_timedwait.S:225
+#1  0x00007fd2b06cde9b in EventWait () from /usr/local/lib/libftd2xx.so
+#2  0x00007fd2b06d0b60 in reader_thread () from /usr/local/lib/libftd2xx.so
+#3  0x00007fd2b1b7b6ba in start_thread (arg=0x7fd2ae026700) at pthread_create.c:333
+#4  0x00007fd2b3a8141d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 3 (Thread 0x7fd2ae827700 (LWP 5528)):
+#0  0x00007fd2b3a7574d in poll () at ../sysdeps/unix/syscall-template.S:84
+#1  0x00007fd2b0905bc5 in ?? () from /lib/x86_64-linux-gnu/libusb-1.0.so.0
+#2  0x00007fd2b0906b53 in libusb_handle_events_timeout_completed () from /lib/x86_64-linux-gnu/libusb-1.0.so.0
+#3  0x00007fd2b06c746a in poll_async_libusb () from /usr/local/lib/libftd2xx.so
+#4  0x00007fd2b1b7b6ba in start_thread (arg=0x7fd2ae827700) at pthread_create.c:333
+#5  0x00007fd2b3a8141d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 2 (Thread 0x7fd2af028700 (LWP 5527)):
+#0  0x00007fd2b3a7574d in poll () at ../sysdeps/unix/syscall-template.S:84
+#1  0x00007fd2b090c64c in ?? () from /lib/x86_64-linux-gnu/libusb-1.0.so.0
+#2  0x00007fd2b1b7b6ba in start_thread (arg=0x7fd2af028700) at pthread_create.c:333
+#3  0x00007fd2b3a8141d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 1 (Thread 0x7fd2b7018140 (LWP 5526)):
+#0  0x00007fd2b3a460cb in __GI___waitpid (pid=7686, stat_loc=stat_loc
+entry=0x7ffc3f52f700, options=options
+entry=0) at ../sysdeps/unix/sysv/linux/waitpid.c:29
+#1  0x00007fd2b39befbb in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:148
+#2  0x00007fd2b5e22d24 in TUnixSystem::StackTrace() () from /usr/local/lib/root/libCore.so
+#3  0x00007fd2b5e24f8c in TUnixSystem::DispatchSignals(ESignals) () from /usr/local/lib/root/libCore.so
+#4  <signal handler called>
+#5  PixTestBB3Map::doTest (this=0x7fd2ac119010) at /home/laser/LaserBox/pxar/tests/PixTestBB3Map.cc:303
+#6  0x00007fd2b4c4e075 in G__testsDict_809_0_7 (result7=0x22e4740, funcname=<optimized out>, libp=<optimized out>, hash=<optimized out>) at /home/laser/LaserBox/pxar/build/tests/testsDict.cxx:6933
+#7  0x00007fd2b30b24bb in Cint::G__CallFunc::Execute(void*) () from /usr/local/lib/root/libCint.so
+#8  0x00007fd2b5dee60c in TCint::CallFunc_Exec(void*, void*) const () from /usr/local/lib/root/libCore.so
+#9  0x00007fd2b5daa033 in TQConnection::ExecuteMethod() () from /usr/local/lib/root/libCore.so
+#10 0x00007fd2b5d71839 in TQObject::Emit(char const*) () from /usr/local/lib/root/libCore.so
+#11 0x00007fd2b67eaf82 in TGButton::EmitSignals(bool) () from /usr/local/lib/root/libGui.so
+#12 0x00007fd2b67ee8eb in TGButton::HandleButton(Event_t*) () from /usr/local/lib/root/libGui.so
+#13 0x00007fd2b681b2ff in TGFrame::HandleEvent(Event_t*) () from /usr/local/lib/root/libGui.so
+#14 0x00007fd2b67575a8 in TGClient::HandleEvent(Event_t*) () from /usr/local/lib/root/libGui.so
+#15 0x00007fd2b67578c5 in TGClient::ProcessOneEvent() () from /usr/local/lib/root/libGui.so
+#16 0x00007fd2b675792d in TGClient::HandleInput() () from /usr/local/lib/root/libGui.so
+#17 0x00007fd2b5e25228 in TUnixSystem::DispatchOneEvent(bool) () from /usr/local/lib/root/libCore.so
+#18 0x00007fd2b5d7a104 in TSystem::InnerLoop() () from /usr/local/lib/root/libCore.so
+#19 0x00007fd2b5d783df in TSystem::Run() () from /usr/local/lib/root/libCore.so
+#20 0x00007fd2b5d86d4f in TApplication::Run(bool) () from /usr/local/lib/root/libCore.so
+#21 0x000000000040db72 in runGui (a=..., argc=argc
+entry=4, argv=argv
+entry=0x7ffc3f538328) at /home/laser/LaserBox/pxar/main/pXar.cc:410
+#22 0x000000000040ac30 in main (argc=<optimized out>, argv=0x7ffc3f538328) at /home/laser/LaserBox/pxar/main/pXar.cc:231
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+If they do not help you then please submit a bug report at
+http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  PixTestBB3Map::doTest (this=0x7fd2ac119010) at /home/laser/LaserBox/pxar/tests/PixTestBB3Map.cc:303
+===========================================================
+
+

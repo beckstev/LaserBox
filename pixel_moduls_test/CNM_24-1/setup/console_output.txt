@@ -1,0 +1,29 @@
+[15:14:10.613]     INFO: PixTestSetup::doTest() ntrig = 10
+[15:14:10.613]  WARNING: Pattern generator does not contain a trigger signal. No data is expected from the DUT!
+[15:14:10.613]     INFO: PixTestSetup:: pg set to RES|TOK
+[15:14:10.613]     INFO:        0       1       2       3       4       5       6       7
+[15:14:12.829]     INFO:  0:  ffc     ffc     fec     efc    <7f8>[3] f8c    <7f8>[1] ffc    
+[15:14:14.969]     INFO:  1:  8fc     ffc     ff4     f7c    <7f8>[*] f84    <7f8>[3] ffc    
+[15:14:17.115]     INFO:  2:  87c     ffc     ff4     f7c    <7f8>[*] f84    <7f8>[3] ffc    
+[15:14:19.253]     INFO:  3:  87c     ffc     ff4     f7c    <7f8>[*] f84    <7f8>[2] ffc    
+[15:14:21.373]     INFO:  4:  ffc     ffc     ff4     f7c    <7f8>[*] f84    <7f8>[2] ffc    
+[15:14:23.511]     INFO:  5:  ffc     ffc     ff0     f7c    <7f8>[3] f84    <7f8>[1] ffc    
+[15:14:25.647]     INFO:  6:  c7c     ffc     ff8     fbc     bfc     fc0     c3c     ffc    
+[15:14:27.779]     INFO:  7:  ffc     ffc     ff8     fbc     bfc     fc0     c3c     ffc    
+[15:14:29.927]     INFO:  8:  ffc     ffc     ff8     fbc     bfc     fc0     c3c     ffc    
+[15:14:32.077]     INFO:  9:  ffc     ffc     ff8     fbc     bfc     fc0     c3c     ffc    
+[15:14:34.211]     INFO: 10:  c3c     ffc     ff8     f9c     9fc     fe0     e3c     7fc    
+[15:14:36.334]     INFO: 11:  ffc     ffc     ffc     fdc     dfc     fe0     e1c     7fc    
+[15:14:38.481]     INFO: 12:  ffc     ffc     ffc     fdc     dfc     fe0     e1c     7fc    
+[15:14:40.597]     INFO: 13:  ffc     ffc     ffc     fdc     dfc     fe0     e1c     7fc    
+[15:14:42.702]     INFO: 14:  ffc     ffc     ffc     fdc     dfc     fe0     e1c     7fc    
+[15:14:44.843]     INFO: 15:  ffc     ffc     ffc     fdc     dfc     ff0     e1c     7fc    
+[15:14:46.955]     INFO: 16:  ffc     ffc     ffc     fec     efc     ff0     f0c     3fc    
+[15:14:49.062]     INFO: 17:  f0c     ffc     ffc     fec     efc     ff0     f0c     3fc    
+[15:14:51.200]     INFO: 18:  f0c     ffc     ffc     fec     efc     ff0     f0c     3fc    
+[15:14:53.325]     INFO: 19:  ffc     ffc     ffc     fec     efc     ff0     f0c     3fc    
+[15:14:53.585]     INFO: Found good delays at CLK = 2, DESER160 = 4
+[15:14:53.623]     INFO: PixTestSetup:: Write Tb parameters to file.
+[15:14:53.623]     INFO: write dtb parameters into roc/tbParameters.dat
+[15:14:53.628]     INFO: PixTestSetup::doTest() done for.
+

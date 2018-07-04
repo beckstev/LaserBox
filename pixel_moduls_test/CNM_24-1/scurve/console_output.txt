@@ -1,0 +1,16 @@
+[15:45:55.873]     INFO: ######################################################################
+[15:45:55.873]     INFO: PixTestScurves::doTest() ntrig = 75
+[15:45:55.873]     INFO: ######################################################################
+[15:45:55.873]     INFO:    ----------------------------------------------------------------------
+[15:45:55.873]     INFO:    PixTestScurves::scurves(Vcal), ntrig = 75, dacs/step = -1, ntrig/step = -1
+[15:45:55.873]     INFO:    ----------------------------------------------------------------------
+[15:45:55.873]     INFO: ---> dac: Vcal name: scurveVcal ntrig: 75 dacrange: 25 .. 55 (-1/-1) hits flags = 528 (plus default)
+[15:45:55.880]     INFO:   dacScan split into 1 runs with ntrig = 75
+[15:45:55.880]     INFO:     run 1 of 1
+[15:45:55.906]     INFO: Expecting 9672000 events.
+[15:48:27.375]     INFO: 9672000 events read in total (151204ms).
+[15:48:27.428]     INFO: Test took 151542ms.
+[15:48:29.387]     INFO: PixTestScurves::scurves() done 
+[15:48:29.387]     INFO: Vcal mean:  35.78 
+[15:48:29.387]     INFO: Vcal RMS:    2.98 
+
