@@ -156,15 +156,28 @@ void root_6_fit_laser_test(){
   qMap_Ag_C0_V0->Draw("lego2");
   qMap_Ag_C0_V0 -> Fit("g2d");
 
-  //---------------------- Set Legend ----------------------------------------------------
+  //---------------------- Set Legend ---------------------------------------------------
 
-  auto legend = new TLegend(1.8,0.2,1.8,0.2);
-  legend->AddEntry(qMap_Ag_C0_V0,"Pixelsensor","f");
+  auto legend = new TLegend(0.75,0.75,0.98,0.98);
+  legend->AddEntry(qMap_Ag_C0_V0,"Pixel","f");
   legend->AddEntry(g2D,"2D Gaussian Fit","f");
   legend -> Draw();
 
-  //---------------------------------------------------------------------------------------
+  //-------------------------------------------------------------------------------------
 
+
+
+  // ---------------------- Config Labels ------------------------------------------------
+
+  qMap_Ag_C0_V0 -> GetZaxis() -> SetTitle("Mean Vcal"); // Z-Axis
+  qMap_Ag_C0_V0 -> GetZaxis() -> SetTitleOffset(1.2);
+
+  qMap_Ag_C0_V0 -> GetYaxis() -> SetTitleOffset(1.3); //Y-Axis
+
+  // ------------------------------------------------------------------------------------
+
+
+  
   string para_name_list[] = {"Const","X_{0}","sigma_{x}","Y_{0}","sigma_{y}"};
 
   ofstream outFile("my_file.txt");
