@@ -147,12 +147,23 @@ void root_6_fit_laser_test(){
    qMap_Ag_C0_V0->GetZaxis()->SetTitleSize(0.035);
    qMap_Ag_C0_V0->GetZaxis()->SetTitleFont(42);
 
+
   TF2 *g2D =new TF2("g2d",Gaus2D,0,50,0,80,5);
   g2D -> SetParNames("Amplitude","X_{0}","#sigma_{x}","Y_{0}","#sigma_{y}");
   g2D -> SetParameters(200,24,0.75, 46,1);
   //g2d->SetParLimits(3,0, 2)
+
   qMap_Ag_C0_V0->Draw("lego2");
   qMap_Ag_C0_V0 -> Fit("g2d");
+
+  //---------------------- Set Legend ----------------------------------------------------
+
+  auto legend = new TLegend(1.8,0.2,1.8,0.2);
+  legend->AddEntry(qMap_Ag_C0_V0,"Pixelsensor","f");
+  legend->AddEntry(g2D,"2D Gaussian Fit","f");
+  legend -> Draw();
+
+  //---------------------------------------------------------------------------------------
 
   string para_name_list[] = {"Const","X_{0}","sigma_{x}","Y_{0}","sigma_{y}"};
 
@@ -160,8 +171,6 @@ void root_6_fit_laser_test(){
   for ( int i = 0; i < 5; i++){
       outFile <<  para_name_list[i] << ":  " << g2D -> GetParameter(i) << "  " << g2D -> GetParError(i) << "\n";
   }
-
-
 
   TH1D *projy = qMap_Ag_C0_V0 -> ProjectionY();
   //projy-> Fit("gaus");
