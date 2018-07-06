@@ -1,6 +1,8 @@
-#include <Gaus2D.h>
+#include "../steven_test_analyse/Gaus2D.h"
 #include <iostream>
 #include <vector>
+#include <fstream>
+#include <iterator>
 
 using namespace std;
 
@@ -145,14 +147,21 @@ void fit_laser_test(){
    qMap_Ag_C0_V0->GetZaxis()->SetTitleFont(42);
 
   TF2 *g2D =new TF2("g2d",Gaus2D,0,50,0,80,5);
-  g2D->SetParNames("Const","X_{0}","#sigma_{x}","Y_{0}","#sigma_{y}");
-  g2d -> SetParameters(200,24,0.75, 46,1);
+  g2D -> SetParNames("Const","X_{0}","#sigma_{x}","Y_{0}","#sigma_{y}");
+  g2D -> SetParameters(200,24,0.75, 46,1);
   //g2d->SetParLimits(3,0, 2)
+  qMap_Ag_C0_V0->Draw("lego2");
   qMap_Ag_C0_V0 -> Fit("g2d");
 
-  qMap_Ag_C0_V0->Draw("lego2");
-  //g2D->Draw("surf,same");
+  vector < pair< double, double > > fit_parameter;
 
+  for ( int i = 0; i < 5; i++){
+      fit_parameter.push_back( make_pair( g2D -> GetParameter(i), g2D -> GetParError(i) ) );
+  }
+
+  ofstream outFile("my_file.txt");
+  for (const auto & e : fit_parameter) outFile <<  get<0>(e) << " " << get<1>(e) << "\n";
+  
   TH1D *projy = qMap_Ag_C0_V0 -> ProjectionY();
   //projy-> Fit("gaus");
   //projy -> Draw();
