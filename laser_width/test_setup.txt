@@ -1,0 +1,10 @@
+U_bias = 90 V
+
+test_time = 100s
+
+Laserconfig:
+
+DAC: 3%
+Frequency: 100kHz
+
+
