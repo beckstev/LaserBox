@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo Hello
-echo Please tip the name of the folder into the console
+echo Please type the name of the folder into the console
 
 read name_folder
 
