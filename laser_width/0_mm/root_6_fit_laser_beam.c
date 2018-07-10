@@ -778,7 +778,7 @@ void root_6_fit_laser_beam(){
    ci = TColor::GetColor("#000099");
    qMap_Ag_C0_V0->SetLineColor(ci);
    qMap_Ag_C0_V0->GetXaxis()->SetTitle("col");
-   qMap_Ag_C0_V0->GetXaxis()->SetRange(10,36);
+   qMap_Ag_C0_V0->GetXaxis()->SetRange(0,36);
    qMap_Ag_C0_V0->GetXaxis()->SetNdivisions(508);
    qMap_Ag_C0_V0->GetXaxis()->SetLabelFont(42);
    qMap_Ag_C0_V0->GetXaxis()->SetLabelSize(0.05);
@@ -786,7 +786,7 @@ void root_6_fit_laser_beam(){
    qMap_Ag_C0_V0->GetXaxis()->SetTitleOffset(1.1);
    qMap_Ag_C0_V0->GetXaxis()->SetTitleFont(42);
    qMap_Ag_C0_V0->GetYaxis()->SetTitle("row");
-   qMap_Ag_C0_V0->GetYaxis()->SetRange(30,600);
+   qMap_Ag_C0_V0->GetYaxis()->SetRange(30,60);
    qMap_Ag_C0_V0->GetYaxis()->SetLabelFont(42);
    qMap_Ag_C0_V0->GetYaxis()->SetLabelSize(0.05);
    qMap_Ag_C0_V0->GetYaxis()->SetTitleSize(0.05);
@@ -825,7 +825,7 @@ void root_6_fit_laser_beam(){
 
   //------------------------------ Fit Data -------------------------------------------------
 
-  qMap_Ag_C0_V0 -> Fit("g2d");
+  //qMap_Ag_C0_V0 -> Fit("g2d");
 
   //-------------------------------------------------------------------------------------
 
@@ -885,7 +885,9 @@ void root_6_fit_laser_beam(){
 
   //---------------------- Plot ---------------------------------------------------
   TCanvas *c1 = new TCanvas("c1", "c1", 3840, 2160);
-  qMap_Ag_C0_V0->Draw("Lego2"); // Cont0
+  qMap_Ag_C0_V0->GetXaxis()->SetRange(0,36);
+  
+  qMap_Ag_C0_V0->Draw(); // Cont0
   //fitted_function -> Draw("Surf,same"); // Cont3
 
   //-------------------------------------------------------------------------------------
