@@ -1,3 +1,0 @@
-pxar crashed before this test.
-restarted pxar with ./pXar -d roc -T 35 -g
-and checked config of pixel with scurve test
