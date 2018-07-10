@@ -149,7 +149,7 @@ void fit_laser_test(){
   TF2 *g2D =new TF2("g2d",Gaus2D,0,50,0,80,5);
   g2D -> SetParNames("Const","X_{0}","#sigma_{x}","Y_{0}","#sigma_{y}");
   g2D -> SetParameters(200,24,0.75, 46,1);
-  //g2d->SetParLimits(3,0, 2)
+  //g2D->SetParLimits(3,0, 2);
   qMap_Ag_C0_V0->Draw("lego2");
   qMap_Ag_C0_V0 -> Fit("g2d");
 
