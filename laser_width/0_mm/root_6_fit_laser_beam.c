@@ -885,8 +885,8 @@ void root_6_fit_laser_beam(){
 
   //---------------------- Plot ---------------------------------------------------
   TCanvas *c1 = new TCanvas("c1", "c1", 3840, 2160);
-  qMap_Ag_C0_V0->GetXaxis()->SetRange(0,36);
-  
+  qMap_Ag_C0_V0->GetXaxis()->SetRange(10,36);
+
   qMap_Ag_C0_V0->Draw(); // Cont0
   //fitted_function -> Draw("Surf,same"); // Cont3
 
@@ -906,6 +906,15 @@ void root_6_fit_laser_beam(){
 
   c1 -> SaveAs( plot_name.c_str() );
   //fitted_function -> Draw("P,same");
+
+  //---------------- Projection
+
+
+    TH1D *pX_qMap_Ag_C0_V0 = qMap_Ag_C0_V0 -> ProjectionX( "pX_qMap_Ag_C0_V0", 44, 49);
+
+    TCanvas *c2 = new TCanvas("c2", "c2", 700, 700);
+
+    pX_qMap_Ag_C0_V0 -> Draw();
 
 
 
