@@ -7,5 +7,5 @@ Laserconfig:
 DAC: 3%
 Frequency: 100kHz
 
-ac·cu·ra·cy: 0 mm means 0.0 mm, 1mm means 1.0 mm, uncertain·ty 0.05 mm
+accuracy: 0 mm means 0.0 mm, 1mm means 1.0 mm, uncertain·ty 0.05 mm
 
