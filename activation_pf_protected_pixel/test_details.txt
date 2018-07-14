@@ -1,0 +1,3 @@
+runtimee: 60s 
+f of laser: 100kHz
+DAC of Laser: 3%

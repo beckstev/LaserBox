@@ -7,10 +7,10 @@ read name_folder
 
 echo Creating folder with the name $name_folder
 
-mkdir ./$name_folder
+mkdir ./second_position/$name_folder
 
-echo Copy root_6_fit_laser_beam.c into $name_folder
+echo Copy root_6_fit_laser_beam.c into ./second_position/$name_folder
 
-cp ./root_6_fit_laser_beam.c ./$name_folder
+cp ./root_6_fit_laser_beam.c ./second_position/$name_folder
 
 echo Finish. Have fun with $name_folder
