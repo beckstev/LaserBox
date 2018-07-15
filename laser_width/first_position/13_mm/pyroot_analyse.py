@@ -11,116 +11,144 @@ import os
 
 
  ########################## Data of .C file, insert data underneath ######################################
+#!!!!!!!!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!!!!!! At 13 mm I had to use the not zoomed version of .C, becuase the other do not include any data !!!!!!!!!!!!!!!!!!!!!!!!
 
-qMap_Ag_C0_V0 =  root.TProfile2D("qMap_Ag_C0_V0","qMap_Ag_C0 (V0)",52,0,52,80,0,80,0,0);
-qMap_Ag_C0_V0.SetBinEntries(2344,13);
-qMap_Ag_C0_V0.SetBinEntries(2345,3259);
-qMap_Ag_C0_V0.SetBinEntries(2398,14432);
-qMap_Ag_C0_V0.SetBinEntries(2399,14421);
-qMap_Ag_C0_V0.SetBinEntries(2400,12126);
-qMap_Ag_C0_V0.SetBinEntries(2451,14054);
-qMap_Ag_C0_V0.SetBinEntries(2452,30380);
-qMap_Ag_C0_V0.SetBinEntries(2453,32456);
-qMap_Ag_C0_V0.SetBinEntries(2454,14496);
-qMap_Ag_C0_V0.SetBinEntries(2455,3);
-qMap_Ag_C0_V0.SetBinEntries(2505,14405);
-qMap_Ag_C0_V0.SetBinEntries(2506,85997);
-qMap_Ag_C0_V0.SetBinEntries(2507,86887);
-qMap_Ag_C0_V0.SetBinEntries(2508,14652);
-qMap_Ag_C0_V0.SetBinEntries(2509,330);
-qMap_Ag_C0_V0.SetBinEntries(2559,13898);
-qMap_Ag_C0_V0.SetBinEntries(2560,82256);
-qMap_Ag_C0_V0.SetBinEntries(2561,92374);
-qMap_Ag_C0_V0.SetBinEntries(2562,14525);
-qMap_Ag_C0_V0.SetBinEntries(2563,1);
-qMap_Ag_C0_V0.SetBinEntries(2613,1);
-qMap_Ag_C0_V0.SetBinEntries(2614,15132);
-qMap_Ag_C0_V0.SetBinEntries(2615,17206);
-qMap_Ag_C0_V0.SetBinEntries(2616,14498);
-qMap_Ag_C0_V0.SetBinEntries(2668,2811);
-qMap_Ag_C0_V0.SetBinEntries(2669,5128);
-qMap_Ag_C0_V0.SetBinContent(2344,1217);
-qMap_Ag_C0_V0.SetBinContent(2345,249696);
-qMap_Ag_C0_V0.SetBinContent(2398,1593387);
-qMap_Ag_C0_V0.SetBinContent(2399,1609096);
-qMap_Ag_C0_V0.SetBinContent(2400,1039430);
-qMap_Ag_C0_V0.SetBinContent(2451,810094);
-qMap_Ag_C0_V0.SetBinContent(2452,6577174);
-qMap_Ag_C0_V0.SetBinContent(2453,6034978);
-qMap_Ag_C0_V0.SetBinContent(2454,1633967);
-qMap_Ag_C0_V0.SetBinContent(2455,240);
-qMap_Ag_C0_V0.SetBinContent(2505,1135827);
-qMap_Ag_C0_V0.SetBinContent(2506,1.828997e+07);
-qMap_Ag_C0_V0.SetBinContent(2507,2.851462e+07);
-qMap_Ag_C0_V0.SetBinContent(2508,2175345);
-qMap_Ag_C0_V0.SetBinContent(2509,27517);
-qMap_Ag_C0_V0.SetBinContent(2559,1189464);
-qMap_Ag_C0_V0.SetBinContent(2560,1.510106e+07);
-qMap_Ag_C0_V0.SetBinContent(2561,3.20364e+07);
-qMap_Ag_C0_V0.SetBinContent(2562,2030728);
-qMap_Ag_C0_V0.SetBinContent(2563,101);
-qMap_Ag_C0_V0.SetBinContent(2613,85);
-qMap_Ag_C0_V0.SetBinContent(2614,1870582);
-qMap_Ag_C0_V0.SetBinContent(2615,2440443);
-qMap_Ag_C0_V0.SetBinContent(2616,1281466);
-qMap_Ag_C0_V0.SetBinContent(2668,230173);
-qMap_Ag_C0_V0.SetBinContent(2669,397530);
-qMap_Ag_C0_V0.SetBinError(2344,340.1897);
-qMap_Ag_C0_V0.SetBinError(2345,4484.731);
-qMap_Ag_C0_V0.SetBinError(2398,13337.84);
-qMap_Ag_C0_V0.SetBinError(2399,13485.52);
-qMap_Ag_C0_V0.SetBinError(2400,66153.57);
-qMap_Ag_C0_V0.SetBinError(2451,6984.873);
-qMap_Ag_C0_V0.SetBinError(2452,430311.7);
-qMap_Ag_C0_V0.SetBinError(2453,322230.1);
-qMap_Ag_C0_V0.SetBinError(2454,13634.97);
-qMap_Ag_C0_V0.SetBinError(2455,139.9214);
-qMap_Ag_C0_V0.SetBinError(2505,9604.122);
-qMap_Ag_C0_V0.SetBinError(2506,531939.9);
-qMap_Ag_C0_V0.SetBinError(2507,846602.9);
-qMap_Ag_C0_V0.SetBinError(2508,18055.27);
-qMap_Ag_C0_V0.SetBinError(2509,1547.359);
-qMap_Ag_C0_V0.SetBinError(2559,10232.71);
-qMap_Ag_C0_V0.SetBinError(2560,595117.9);
-qMap_Ag_C0_V0.SetBinError(2561,981576.4);
-qMap_Ag_C0_V0.SetBinError(2562,16931.76);
-qMap_Ag_C0_V0.SetBinError(2563,101);
-qMap_Ag_C0_V0.SetBinError(2613,85);
-qMap_Ag_C0_V0.SetBinError(2614,15433.69);
-qMap_Ag_C0_V0.SetBinError(2615,19231.87);
-qMap_Ag_C0_V0.SetBinError(2616,10786.81);
-qMap_Ag_C0_V0.SetBinError(2668,4413.904);
-qMap_Ag_C0_V0.SetBinError(2669,5693.815);
+
+qMap_Ag_C0_V0 = root.TProfile2D("qMap_Ag_C0_V0","qMap_Ag_C0 (V0)",52,0,52,80,0,80,0,0);
+qMap_Ag_C0_V0.SetBinEntries(2344,19);
+qMap_Ag_C0_V0.SetBinEntries(2345,14183);
+qMap_Ag_C0_V0.SetBinEntries(2346,14333);
+qMap_Ag_C0_V0.SetBinEntries(2347,2);
+qMap_Ag_C0_V0.SetBinEntries(2398,16046);
+qMap_Ag_C0_V0.SetBinEntries(2399,17020);
+qMap_Ag_C0_V0.SetBinEntries(2400,14729);
+qMap_Ag_C0_V0.SetBinEntries(2401,14369);
+qMap_Ag_C0_V0.SetBinEntries(2451,14419);
+qMap_Ag_C0_V0.SetBinEntries(2452,32449);
+qMap_Ag_C0_V0.SetBinEntries(2453,32476);
+qMap_Ag_C0_V0.SetBinEntries(2454,25302);
+qMap_Ag_C0_V0.SetBinEntries(2455,14472);
+qMap_Ag_C0_V0.SetBinEntries(2505,14523);
+qMap_Ag_C0_V0.SetBinEntries(2506,44794);
+qMap_Ag_C0_V0.SetBinEntries(2507,51170);
+qMap_Ag_C0_V0.SetBinEntries(2508,33516);
+qMap_Ag_C0_V0.SetBinEntries(2509,20073);
+qMap_Ag_C0_V0.SetBinEntries(2559,14075);
+qMap_Ag_C0_V0.SetBinEntries(2560,48868);
+qMap_Ag_C0_V0.SetBinEntries(2561,58641);
+qMap_Ag_C0_V0.SetBinEntries(2562,42812);
+qMap_Ag_C0_V0.SetBinEntries(2563,17004);
+qMap_Ag_C0_V0.SetBinEntries(2613,14522);
+qMap_Ag_C0_V0.SetBinEntries(2614,51382);
+qMap_Ag_C0_V0.SetBinEntries(2615,50565);
+qMap_Ag_C0_V0.SetBinEntries(2616,44027);
+qMap_Ag_C0_V0.SetBinEntries(2617,21044);
+qMap_Ag_C0_V0.SetBinEntries(2618,26);
+qMap_Ag_C0_V0.SetBinEntries(2668,39093);
+qMap_Ag_C0_V0.SetBinEntries(2669,39409);
+qMap_Ag_C0_V0.SetBinEntries(2670,30846);
+qMap_Ag_C0_V0.SetBinEntries(2671,18157);
+qMap_Ag_C0_V0.SetBinEntries(2723,17396);
+qMap_Ag_C0_V0.SetBinEntries(2724,14476);
+qMap_Ag_C0_V0.SetBinContent(2344,1727);
+qMap_Ag_C0_V0.SetBinContent(2345,1541144);
+qMap_Ag_C0_V0.SetBinContent(2346,1448396);
+qMap_Ag_C0_V0.SetBinContent(2347,188);
+qMap_Ag_C0_V0.SetBinContent(2398,1930663);
+qMap_Ag_C0_V0.SetBinContent(2399,2260151);
+qMap_Ag_C0_V0.SetBinContent(2400,1813706);
+qMap_Ag_C0_V0.SetBinContent(2401,1458013);
+qMap_Ag_C0_V0.SetBinContent(2451,1170875);
+qMap_Ag_C0_V0.SetBinContent(2452,3727473);
+qMap_Ag_C0_V0.SetBinContent(2453,4640774);
+qMap_Ag_C0_V0.SetBinContent(2454,3218252);
+qMap_Ag_C0_V0.SetBinContent(2455,1685736);
+qMap_Ag_C0_V0.SetBinContent(2505,1776388);
+qMap_Ag_C0_V0.SetBinContent(2506,5142724);
+qMap_Ag_C0_V0.SetBinContent(2507,6040486);
+qMap_Ag_C0_V0.SetBinContent(2508,4818365);
+qMap_Ag_C0_V0.SetBinContent(2509,2239111);
+qMap_Ag_C0_V0.SetBinContent(2559,1975378);
+qMap_Ag_C0_V0.SetBinContent(2560,5531553);
+qMap_Ag_C0_V0.SetBinContent(2561,8887634);
+qMap_Ag_C0_V0.SetBinContent(2562,1.672008e+07);
+qMap_Ag_C0_V0.SetBinContent(2563,2151277);
+qMap_Ag_C0_V0.SetBinContent(2613,1603932);
+qMap_Ag_C0_V0.SetBinContent(2614,5852932);
+qMap_Ag_C0_V0.SetBinContent(2615,5665718);
+qMap_Ag_C0_V0.SetBinContent(2616,5689668);
+qMap_Ag_C0_V0.SetBinContent(2617,2508568);
+qMap_Ag_C0_V0.SetBinContent(2618,2136);
+qMap_Ag_C0_V0.SetBinContent(2668,4186165);
+qMap_Ag_C0_V0.SetBinContent(2669,4672891);
+qMap_Ag_C0_V0.SetBinContent(2670,3811861);
+qMap_Ag_C0_V0.SetBinContent(2671,2255823);
+qMap_Ag_C0_V0.SetBinContent(2723,2049516);
+qMap_Ag_C0_V0.SetBinContent(2724,1700067);
+qMap_Ag_C0_V0.SetBinError(2344,402.8734);
+qMap_Ag_C0_V0.SetBinError(2345,12979.8);
+qMap_Ag_C0_V0.SetBinError(2346,12166.45);
+qMap_Ag_C0_V0.SetBinError(2347,134.4024);
+qMap_Ag_C0_V0.SetBinError(2398,93836.64);
+qMap_Ag_C0_V0.SetBinError(2399,161228.9);
+qMap_Ag_C0_V0.SetBinError(2400,114305.9);
+qMap_Ag_C0_V0.SetBinError(2401,12252.54);
+qMap_Ag_C0_V0.SetBinError(2451,9901.228);
+qMap_Ag_C0_V0.SetBinError(2452,147939.1);
+qMap_Ag_C0_V0.SetBinError(2453,293709.8);
+qMap_Ag_C0_V0.SetBinError(2454,218026.8);
+qMap_Ag_C0_V0.SetBinError(2455,14092.93);
+qMap_Ag_C0_V0.SetBinError(2505,14969.22);
+qMap_Ag_C0_V0.SetBinError(2506,26160.92);
+qMap_Ag_C0_V0.SetBinError(2507,198427.4);
+qMap_Ag_C0_V0.SetBinError(2508,246180.4);
+qMap_Ag_C0_V0.SetBinError(2509,16509.44);
+qMap_Ag_C0_V0.SetBinError(2559,16717.33);
+qMap_Ag_C0_V0.SetBinError(2560,27341.63);
+qMap_Ag_C0_V0.SetBinError(2561,366223.7);
+qMap_Ag_C0_V0.SetBinError(2562,886649);
+qMap_Ag_C0_V0.SetBinError(2563,16870.58);
+qMap_Ag_C0_V0.SetBinError(2613,13409.44);
+qMap_Ag_C0_V0.SetBinError(2614,29248.24);
+qMap_Ag_C0_V0.SetBinError(2615,96545.96);
+qMap_Ag_C0_V0.SetBinError(2616,208872.5);
+qMap_Ag_C0_V0.SetBinError(2617,17967.6);
+qMap_Ag_C0_V0.SetBinError(2618,423.1099);
+qMap_Ag_C0_V0.SetBinError(2668,69887.67);
+qMap_Ag_C0_V0.SetBinError(2669,148421.3);
+qMap_Ag_C0_V0.SetBinError(2670,161830.9);
+qMap_Ag_C0_V0.SetBinError(2671,17107.6);
+qMap_Ag_C0_V0.SetBinError(2723,16283.99);
+qMap_Ag_C0_V0.SetBinError(2724,14283.94);
 qMap_Ag_C0_V0.SetMinimum(0);
-qMap_Ag_C0_V0.SetEntries(595741);
+qMap_Ag_C0_V0.SetEntries(896238);
 qMap_Ag_C0_V0.SetStats(0);
 qMap_Ag_C0_V0.SetContour(20);
 qMap_Ag_C0_V0.SetContourLevel(0,0);
-qMap_Ag_C0_V0.SetContourLevel(1,17.34059);
-qMap_Ag_C0_V0.SetContourLevel(2,34.68119);
-qMap_Ag_C0_V0.SetContourLevel(3,52.02178);
-qMap_Ag_C0_V0.SetContourLevel(4,69.36237);
-qMap_Ag_C0_V0.SetContourLevel(5,86.70297);
-qMap_Ag_C0_V0.SetContourLevel(6,104.0436);
-qMap_Ag_C0_V0.SetContourLevel(7,121.3842);
-qMap_Ag_C0_V0.SetContourLevel(8,138.7247);
-qMap_Ag_C0_V0.SetContourLevel(9,156.0653);
-qMap_Ag_C0_V0.SetContourLevel(10,173.4059);
-qMap_Ag_C0_V0.SetContourLevel(11,190.7465);
-qMap_Ag_C0_V0.SetContourLevel(12,208.0871);
-qMap_Ag_C0_V0.SetContourLevel(13,225.4277);
-qMap_Ag_C0_V0.SetContourLevel(14,242.7683);
-qMap_Ag_C0_V0.SetContourLevel(15,260.1089);
-qMap_Ag_C0_V0.SetContourLevel(16,277.4495);
-qMap_Ag_C0_V0.SetContourLevel(17,294.7901);
-qMap_Ag_C0_V0.SetContourLevel(18,312.1307);
-qMap_Ag_C0_V0.SetContourLevel(19,329.4713);
-
+qMap_Ag_C0_V0.SetContourLevel(1,19.52733);
+qMap_Ag_C0_V0.SetContourLevel(2,39.05465);
+qMap_Ag_C0_V0.SetContourLevel(3,58.58198);
+qMap_Ag_C0_V0.SetContourLevel(4,78.10931);
+qMap_Ag_C0_V0.SetContourLevel(5,97.63663);
+qMap_Ag_C0_V0.SetContourLevel(6,117.164);
+qMap_Ag_C0_V0.SetContourLevel(7,136.6913);
+qMap_Ag_C0_V0.SetContourLevel(8,156.2186);
+qMap_Ag_C0_V0.SetContourLevel(9,175.7459);
+qMap_Ag_C0_V0.SetContourLevel(10,195.2733);
+qMap_Ag_C0_V0.SetContourLevel(11,214.8006);
+qMap_Ag_C0_V0.SetContourLevel(12,234.3279);
+qMap_Ag_C0_V0.SetContourLevel(13,253.8552);
+qMap_Ag_C0_V0.SetContourLevel(14,273.3826);
+qMap_Ag_C0_V0.SetContourLevel(15,292.9099);
+qMap_Ag_C0_V0.SetContourLevel(16,312.4372);
+qMap_Ag_C0_V0.SetContourLevel(17,331.9645);
+qMap_Ag_C0_V0.SetContourLevel(18,351.4919);
+qMap_Ag_C0_V0.SetContourLevel(19,371.0192);
 
 ci = root.TColor.GetColor("#000099");
 qMap_Ag_C0_V0.SetLineColor(ci);
 qMap_Ag_C0_V0.GetXaxis().SetTitle("col");
-qMap_Ag_C0_V0.GetXaxis().SetRange(15,30);
+qMap_Ag_C0_V0.GetXaxis().SetRange(1,52);
 qMap_Ag_C0_V0.GetXaxis().SetNdivisions(508);
 qMap_Ag_C0_V0.GetXaxis().SetLabelFont(42);
 qMap_Ag_C0_V0.GetXaxis().SetLabelSize(0.05);
@@ -128,7 +156,7 @@ qMap_Ag_C0_V0.GetXaxis().SetTitleSize(0.05);
 qMap_Ag_C0_V0.GetXaxis().SetTitleOffset(1.1);
 qMap_Ag_C0_V0.GetXaxis().SetTitleFont(42);
 qMap_Ag_C0_V0.GetYaxis().SetTitle("row");
-qMap_Ag_C0_V0.GetYaxis().SetRange(30,60);
+qMap_Ag_C0_V0.GetYaxis().SetRange(1,80);
 qMap_Ag_C0_V0.GetYaxis().SetLabelFont(42);
 qMap_Ag_C0_V0.GetYaxis().SetLabelSize(0.05);
 qMap_Ag_C0_V0.GetYaxis().SetTitleSize(0.05);
@@ -224,8 +252,8 @@ with open( f'../fit_params/{name_of_folder}_fit_parameters_col_xaxis.txt', 'w') 
     for i in range(0,3):
         file.write( name_params[i] + ' ' + str( gaus_fit_col.GetParameter(i) ) + ' ' + str(gaus_fit_col.GetParError(i)) + '\n')
 
-with open( f'../sigma_col_xaxis.txt', 'w') as file:
-        file.write( name_params[i] + '_' + name_of_folder + ' ' + str( gaus_fit_col.GetParameter(1) ) + ' ' + str(gaus_fit_col.GetParError(1)) + '\n')
+with open( f'../sigma_col_xaxis.txt', 'a') as file:
+        file.write( name_params[i] + '_' + name_of_folder + ' ' + str( gaus_fit_col.GetParameter(2) ) + ' ' + str(gaus_fit_col.GetParError(2)) + '\n')
 
 
 c1.SaveAs(f'../plots/{name_of_folder}_erorbar_plot_col.pdf')
@@ -273,24 +301,30 @@ errorbar_plot_rows = root.TGraphErrors( len(x_value), array( 'f', x_value), arra
 ############################### create Canvas ########################################
 c2 = root.TCanvas("c2", "c2", 1980, 1080);
 
+############################## Set axis label of errobar plot ##################################
+
+errorbar_plot_rows.GetXaxis().SetTitle("Row")
+errorbar_plot_rows.GetYaxis().SetTitle("Mean Hit / Vcal")
+
+
 ############################### Plot fucntion and fit #############################################
 errorbar_plot_rows.Fit('gaus')
 errorbar_plot_rows.Draw("ALP")
 
 ##################################### create legend ################################################
-gaus_fit_row = errorbar_plot_col.GetFunction('gaus')
+gaus_fit_row = errorbar_plot_rows.GetFunction('gaus')
 legend = root.TLegend(0.75,0.75,0.98,0.98)
 legend.AddEntry(errorbar_plot_rows,"Mean Mean Vcal of each row","lep")
 legend.AddEntry( gaus_fit_row,"Gaussian Fit","l")
 legend.Draw()
 
 ########################################### saveplot and fit params ########################################
-with open( f'../fit_params/{name_of_folder}_fit_parameters_row_xaxis.txt', 'w') as file:
+with open( f'../fit_params/{name_of_folder}_fit_parameters_row_yaxis.txt', 'w') as file:
     for i in range(0,3):
         file.write( name_params[i] + ' ' + str( gaus_fit_row.GetParameter(i) ) + ' ' + str(gaus_fit_row.GetParError(i)) + '\n')
 
-with open( f'../sigma_row_xaxis.txt', 'w') as file:
-        file.write( name_params[i] +'_' + name_of_folder + ' ' + str( gaus_fit_row.GetParameter(1) ) + ' ' + str(gaus_fit_row.GetParError(1)) + '\n')
+with open( f'../sigma_row_yaxis.txt', 'a') as file:
+        file.write( name_params[i] +'_' + name_of_folder + ' ' + str( gaus_fit_row.GetParameter(2) ) + ' ' + str(gaus_fit_row.GetParError(2)) + '\n')
 
 
 c2.SaveAs(f'../plots/{name_of_folder}_erorbar_plot_row.pdf')
