@@ -10,8 +10,7 @@ from array import array
 import os
 
 
-f = root.TFile("./6_mm_pxar_data.root", "READ")
-
+ ########################## Data of .C file, insert data underneath ######################################
 
 qMap_Ag_C0_V0 =  root.TProfile2D("qMap_Ag_C0_V0","qMap_Ag_C0 (V0)",52,0,52,80,0,80,0,0);
 qMap_Ag_C0_V0.SetBinEntries(2344,13);
@@ -141,24 +140,32 @@ qMap_Ag_C0_V0.GetZaxis().SetTitleSize(0.035);
 qMap_Ag_C0_V0.GetZaxis().SetTitleFont(42);
 
 root.gStyle.SetOptTitle(0)
+##################################################### Insert Data above line #############################
 
-##################### GetMeanProjection of x Axis (Col)
 
-### Get name of folder
+
+
+############################### Get name of folder #################################
 
 name_of_folder = os.path.basename( os.getcwd() )
-###
 
 
-#### Save Data in list
+############################### Save Data in list #######################################
+
 mean_value_col_list = []
 mean_error_col_list = []
 x_value = []
 y_value = []
 
-#### Mean of all columns near the laserspot
 
-#### Set sum area
+##############################################################################################################################
+
+################################### Getting the mean hit value of all columns near the laserspot #############################
+
+###############################################################################################################################
+
+
+################################## Set sum area ###############################
 
 xmin = 18
 xmax = 27
@@ -166,7 +173,7 @@ xmax = 27
 ymin = 40
 ymax = 52
 
-####  calculating mean of each coloum
+####################################  calculating mean of each coloum ################################
 
 for i in range(xmin,xmax): # going thru all col
     content = []
@@ -186,41 +193,32 @@ for i in range(xmin,xmax): # going thru all col
     mean_value_col_list.append( noms(mean_content_col))
     mean_error_col_list.append( stds(mean_content_col))
 
-    #test_hist.Fill(str(i), noms(mean_content_col))
-    #test_hist.SetBinError( i, stds(mean_content_col) )
 
+########################### Create errorbar plot #####################################
 
-
-
-
-
-
-
-# Create errorbar plot
 errorbar_plot_col = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_col_list), array( 'f', y_value), array( 'f', mean_error_col_list) )
 
-### Set axis label of errobar plot
+############################## Set axis label of errobar plot ##################################
 
 errorbar_plot_col.GetXaxis().SetTitle("Col")
 errorbar_plot_col.GetYaxis().SetTitle("Mean Hit / Vcal")
 
+####################### create Canvas ##########################################
 
-# create Canvas
 c1 = root.TCanvas("c1", "c1", 1980, 1080)
 errorbar_plot_col.Fit('gaus')
 errorbar_plot_col.Draw("ALP")
 
 name_params = [ "amplitude/[MeanVcal]", "mean/[Col]", "sigma/[Col]"]
 
-#### Create legend
+############################### Create legend ####################################
 gaus_fit_col = errorbar_plot_col.GetFunction('gaus')
 legend = root.TLegend(0.75,0.75,0.98,0.98)
 legend.AddEntry(errorbar_plot_col,"Coloumn mean hit value","lep")
 legend.AddEntry( gaus_fit_col,"Gaussian Fit","l")
 legend.Draw()
-####
 
-### Save parameter and plot
+############################### Save parameter and plot ###########################################
 
 with open( f'../fit_params/{name_of_folder}_fit_parameters_col_xaxis.txt', 'w') as file:
     for i in range(0,3):
@@ -232,29 +230,32 @@ with open( f'../sigma_col_xaxis.txt', 'w') as file:
 
 c1.SaveAs(f'../plots/{name_of_folder}_erorbar_plot_col.pdf')
 
-######################################################################
 
-######################################################################
 
-######################################################################
+##############################################################################################################################
 
-#Reset lists
+################################### Getting the mean hit value of all rows near the laserspot #############################
+
+###############################################################################################################################
+
+
+############################Reset lists###########################################
 mean_value_col_list = []
 mean_error_col_list = []
 x_value = []
 y_value = []
 
 
-####  calculating mean of each row
+#################################### calculating mean of each row #####################################
 
-for i in range(ymin,ymax): # going thru all col
+for i in range(ymin,ymax): # going thru all rows
     content = []
     error = []
 
     x_value.append(i)
     y_value.append(0)
 
-    for j in range(xmin,xmax): # going thru all rows
+    for j in range(xmin,xmax): # going thru all col
         content.append( qMap_Ag_C0_V0.GetBinContent(j,i))
         error.append( qMap_Ag_C0_V0.GetBinError(j,i)) # Is this the real error
 
@@ -266,26 +267,24 @@ for i in range(ymin,ymax): # going thru all col
     mean_error_col_list.append( stds(mean_content_col))
 
 
-# Create newerrorbar plot
+############################# Create new errorbar plot ####################################
 errorbar_plot_rows = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_col_list), array( 'f', y_value), array( 'f', mean_error_col_list) )
 
-# create Canvas
+############################### create Canvas ########################################
 c2 = root.TCanvas("c2", "c2", 1980, 1080);
-#
 
-# Plot fucntion and fit
+############################### Plot fucntion and fit #############################################
 errorbar_plot_rows.Fit('gaus')
 errorbar_plot_rows.Draw("ALP")
-#
 
-### create legend
+##################################### create legend ################################################
 gaus_fit_row = errorbar_plot_col.GetFunction('gaus')
 legend = root.TLegend(0.75,0.75,0.98,0.98)
 legend.AddEntry(errorbar_plot_rows,"Mean Mean Vcal of each row","lep")
 legend.AddEntry( gaus_fit_row,"Gaussian Fit","l")
 legend.Draw()
 
-## save_plot
+########################################### saveplot and fit params ########################################
 with open( f'../fit_params/{name_of_folder}_fit_parameters_row_xaxis.txt', 'w') as file:
     for i in range(0,3):
         file.write( name_params[i] + ' ' + str( gaus_fit_row.GetParameter(i) ) + ' ' + str(gaus_fit_row.GetParError(i)) + '\n')
