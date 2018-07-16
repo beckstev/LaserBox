@@ -112,6 +112,7 @@ qMap_Ag_C0_V0.GetZaxis().SetLabelSize(0.035);
 qMap_Ag_C0_V0.GetZaxis().SetTitleSize(0.035);
 
 root.gStyle.SetOptTitle(0)
+root.gStyle.SetOptFit(1)
 ##################################################### Insert Data above line #############################
 
 
@@ -155,12 +156,19 @@ for i in range(xmin,xmax): # going thru all col
     y_value.append(0)
 
     for j in range(ymin,ymax): # going thru all rows
-        content.append( qMap_Ag_C0_V0.GetBinContent(i,j))
-        error.append( qMap_Ag_C0_V0.GetBinError(i,j)) # Is this the real error
 
+        if qMap_Ag_C0_V0.GetBinContent(i,j) != 0:
+            content.append( qMap_Ag_C0_V0.GetBinContent(i,j))
+            error.append( qMap_Ag_C0_V0.GetBinError(i,j) ) # Is this the real error
+
+        else:
+            pass
+    print(content)
+    print(error)
     content_bin = unp.uarray( content, error)
     mean_content_col = content_bin.mean() # mean value of each bin in the col
 
+    print('\n','Mean Content', mean_content_col,'\n' )
     # Saving values in lists
     mean_value_col_list.append( noms(mean_content_col))
     mean_error_col_list.append( stds(mean_content_col))
@@ -185,10 +193,10 @@ name_params = [ "amplitude/[MeanVcal]", "mean/[Col]", "sigma/[Col]"]
 
 ############################### Create legend ####################################
 gaus_fit_col = errorbar_plot_col.GetFunction('gaus')
-legend = root.TLegend(0.75,0.75,0.98,0.98)
-legend.AddEntry(errorbar_plot_col,"Coloumn mean hit value","lep")
-legend.AddEntry( gaus_fit_col,"Gaussian Fit","l")
-legend.Draw()
+#legend = root.TLegend(0.75,0.75,0.98,0.98)
+#legend.AddEntry(errorbar_plot_col,"Coloumn mean hit value","lep")
+#legend.AddEntry( gaus_fit_col,"Gaussian Fit","l")
+#legend.Draw()
 
 ############################### Save parameter and plot ###########################################
 
@@ -257,10 +265,10 @@ errorbar_plot_rows.Draw("ALP")
 
 ##################################### create legend ################################################
 gaus_fit_row = errorbar_plot_rows.GetFunction('gaus')
-legend = root.TLegend(0.75,0.75,0.98,0.98)
-legend.AddEntry(errorbar_plot_rows,"Mean Mean Vcal of each row","lep")
-legend.AddEntry( gaus_fit_row,"Gaussian Fit","l")
-legend.Draw()
+#legend = root.TLegend(0.75,0.75,0.98,0.98)
+#legend.AddEntry(errorbar_plot_rows,"Mean Mean Vcal of each row","lep")
+#legend.AddEntry( gaus_fit_row,"Gaussian Fit","l")
+#legend.Draw()
 
 ########################################### saveplot and fit params ########################################
 with open( f'../fit_params/{name_of_folder}_fit_parameters_row_yaxis.txt', 'w') as file:
