@@ -128,7 +128,7 @@ name_of_folder = os.path.basename( os.getcwd() )
 mean_value_col_list = []
 mean_error_col_list = []
 x_value = []
-y_value = []
+x_error = []
 
 
 ##############################################################################################################################
@@ -153,7 +153,7 @@ for i in range(xmin,xmax): # going thru all col
     error = []
 
     x_value.append(i)
-    y_value.append(0)
+    x_error.append(0.5)
 
     for j in range(ymin,ymax): # going thru all rows
 
@@ -166,7 +166,7 @@ for i in range(xmin,xmax): # going thru all col
     print(content)
     print(error)
     content_bin = unp.uarray( content, error)
-    mean_content_col = content_bin.mean() # mean value of each bin in the col
+    mean_content_col = content_bin.sum() # mean value of each bin in the col
 
     print('\n','Mean Content', mean_content_col,'\n' )
     # Saving values in lists
@@ -176,7 +176,7 @@ for i in range(xmin,xmax): # going thru all col
 
 ########################### Create errorbar plot #####################################
 
-errorbar_plot_col = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_col_list), array( 'f', y_value), array( 'f', mean_error_col_list) )
+errorbar_plot_col = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_col_list), array( 'f', x_error), array( 'f', mean_error_col_list) )
 
 ############################## Set axis label of errobar plot ##################################
 
@@ -186,8 +186,12 @@ errorbar_plot_col.GetYaxis().SetTitle("Mean Hit / Vcal")
 ####################### create Canvas ##########################################
 
 c1 = root.TCanvas("c1", "c1", 1980, 1080)
-errorbar_plot_col.Fit('gaus')
-errorbar_plot_col.Draw("ALP")
+errorbar_plot_col.Fit('gaus',"", "", 20,25 )
+errorbar_plot_col.SetMinimum(0)
+errorbar_plot_col.SetMaximum(1200)
+
+errorbar_plot_col.Draw("ap")
+
 
 name_params = [ "amplitude/[MeanVcal]", "mean/[Col]", "sigma/[Col]"]
 
