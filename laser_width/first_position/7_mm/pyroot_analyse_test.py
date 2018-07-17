@@ -111,9 +111,7 @@ qMap_Ag_C0_V0.GetZaxis().SetLabelFont(42);
 qMap_Ag_C0_V0.GetZaxis().SetLabelSize(0.035);
 qMap_Ag_C0_V0.GetZaxis().SetTitleSize(0.035);
 
-
 root.gStyle.SetOptTitle(0)
-root.gStyle.SetTextSize(0.04)
 root.gStyle.SetOptFit(1)
 ##################################################### Insert Data above line #############################
 
@@ -131,6 +129,7 @@ mean_value_col_list = []
 mean_error_col_list = []
 x_value = []
 x_error = []
+
 
 ##############################################################################################################################
 
@@ -152,22 +151,18 @@ ymax = 52
 for i in range(xmin,xmax): # going thru all col
     content = []
     error = []
-    Flag = False
+
     x_value.append(i)
     x_error.append(0.5)
-
 
     for j in range(ymin,ymax): # going thru all rows
 
         if qMap_Ag_C0_V0.GetBinContent(i,j) != 0:
             content.append( qMap_Ag_C0_V0.GetBinContent(i,j))
             error.append( qMap_Ag_C0_V0.GetBinError(i,j) ) # Is this the real error
-            Flag = True
 
         else:
             pass
-
-
     print(content)
     print(error)
     content_bin = unp.uarray( content, error)
@@ -191,10 +186,9 @@ errorbar_plot_col.GetYaxis().SetTitle("Mean Hit / Vcal")
 ####################### create Canvas ##########################################
 
 c1 = root.TCanvas("c1", "c1", 1980, 1080)
-print('X_Value', x_value)
-errorbar_plot_col.Fit('gaus',"", "",  min( x_value )  , max(x_value) )
+errorbar_plot_col.Fit('gaus',"", "", 20,25 )
 errorbar_plot_col.SetMinimum(0)
-errorbar_plot_col.SetMaximum( max( mean_value_col_list) + 0.25 * max(mean_value_col_list) )
+errorbar_plot_col.SetMaximum(1200)
 
 errorbar_plot_col.Draw("ap")
 
@@ -203,11 +197,10 @@ name_params = [ "amplitude/[MeanVcal]", "mean/[Col]", "sigma/[Col]"]
 
 ############################### Create legend ####################################
 gaus_fit_col = errorbar_plot_col.GetFunction('gaus')
-legend = root.TLegend(0.65,0.47,0.98,0.7)
-legend.SetTextSize(0.04)
-legend.AddEntry(errorbar_plot_col,"Coloumn sum hit value","lep")
-legend.AddEntry( gaus_fit_col,"Gaussian Fit","l")
-legend.Draw()
+#legend = root.TLegend(0.75,0.75,0.98,0.98)
+#legend.AddEntry(errorbar_plot_col,"Coloumn mean hit value","lep")
+#legend.AddEntry( gaus_fit_col,"Gaussian Fit","l")
+#legend.Draw()
 
 ############################### Save parameter and plot ###########################################
 
@@ -231,11 +224,10 @@ c1.SaveAs(f'../plots/{name_of_folder}_erorbar_plot_col.pdf')
 
 
 ############################Reset lists###########################################
-mean_value_row_list = []
-mean_error_row_list = []
+mean_value_col_list = []
+mean_error_col_list = []
 x_value = []
-x_error = []
-row_with_hits = []
+y_value = []
 
 
 #################################### calculating mean of each row #####################################
@@ -245,26 +237,22 @@ for i in range(ymin,ymax): # going thru all rows
     error = []
 
     x_value.append(i)
-    x_error.append(0.5)
+    y_value.append(0)
 
     for j in range(xmin,xmax): # going thru all col
-
-        if qMap_Ag_C0_V0.GetBinContent(j,i) != 0:
-            content.append( qMap_Ag_C0_V0.GetBinContent(j,i))
-            error.append( qMap_Ag_C0_V0.GetBinError(j,i)) # Is this the real error
-        else:
-            pass
+        content.append( qMap_Ag_C0_V0.GetBinContent(j,i))
+        error.append( qMap_Ag_C0_V0.GetBinError(j,i)) # Is this the real error
 
     content_bin = unp.uarray( content, error)
-    mean_content_row = content_bin.sum() # mean value of each bin in the col
+    mean_content_col = content_bin.mean() # mean value of each bin in the col
 
     # Saving values in lists
-    mean_value_row_list.append( noms(mean_content_col))
-    mean_error_row_list.append( stds(mean_content_col))
+    mean_value_col_list.append( noms(mean_content_col))
+    mean_error_col_list.append( stds(mean_content_col))
 
 
 ############################# Create new errorbar plot ####################################
-errorbar_plot_rows = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_col_list), array( 'f', x_error), array( 'f', mean_error_col_list) )
+errorbar_plot_rows = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_col_list), array( 'f', y_value), array( 'f', mean_error_col_list) )
 
 ############################### create Canvas ########################################
 c2 = root.TCanvas("c2", "c2", 1980, 1080);
@@ -273,23 +261,18 @@ c2 = root.TCanvas("c2", "c2", 1980, 1080);
 
 errorbar_plot_rows.GetXaxis().SetTitle("Row")
 errorbar_plot_rows.GetYaxis().SetTitle("Mean Hit / Vcal")
-errorbar_plot_rows.SetMinimum(0)
-errorbar_plot_rows.SetMaximum( max(mean_value_col_list) + 0.25 * max(mean_value_col_list) )
 
 
 ############################### Plot fucntion and fit #############################################
-
-
-errorbar_plot_rows.Fit('gaus', "", "", min(x_value) , max( x_value) )
-errorbar_plot_rows.Draw("ap")
+errorbar_plot_rows.Fit('gaus')
+errorbar_plot_rows.Draw("ALP")
 
 ##################################### create legend ################################################
 gaus_fit_row = errorbar_plot_rows.GetFunction('gaus')
-legend = root.TLegend(0.65,0.47,0.98,0.7)
-legend.SetTextSize(0.04)
-legend.AddEntry(errorbar_plot_col,"Row sum hit value","lep")
-legend.AddEntry( gaus_fit_col,"Gaussian Fit","l")
-legend.Draw()
+#legend = root.TLegend(0.75,0.75,0.98,0.98)
+#legend.AddEntry(errorbar_plot_rows,"Mean Mean Vcal of each row","lep")
+#legend.AddEntry( gaus_fit_row,"Gaussian Fit","l")
+#legend.Draw()
 
 ########################################### saveplot and fit params ########################################
 with open( f'../fit_params/{name_of_folder}_fit_parameters_row_yaxis.txt', 'w') as file:
