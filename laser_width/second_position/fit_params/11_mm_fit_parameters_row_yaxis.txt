@@ -1,0 +1,3 @@
+amplitude/[MeanVcal] 36129072504648.56 nan
+mean/[Col] 67.36137720339521 nan
+sigma/[Col] 0.1918777205327436 nan
