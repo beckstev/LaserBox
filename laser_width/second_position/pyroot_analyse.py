@@ -58,17 +58,18 @@ ymax = 72
 for i in range(xmin,xmax): # going thru all col
     content = []
     error = []
-    Flag = False
     x_value.append(i)
     x_error.append(0.5)
 
 
     for j in range(ymin,ymax): # going thru all rows
+        if qMap_Ag_C0_V0.GetBinContent(i,j) >2500 :
+            pass
 
         if qMap_Ag_C0_V0.GetBinContent(i,j) != 0:
             content.append( qMap_Ag_C0_V0.GetBinContent(i,j))
             error.append( qMap_Ag_C0_V0.GetBinError(i,j) ) # Is this the real error
-            Flag = True
+
 
         else:
             pass
@@ -94,7 +95,7 @@ errorbar_plot_col.GetYaxis().SetTitle("Mean Hit / Vcal")
 c1 = root.TCanvas("c1", "c1", 1980, 1080)
 errorbar_plot_col.Fit('gaus',"", "",  min( x_value )  , max(x_value) +1 )
 errorbar_plot_col.SetMinimum(0)
-errorbar_plot_col.SetMaximum( max( mean_value_col_list) + 0.25 * max(mean_value_col_list) )
+errorbar_plot_col.SetMaximum( max( mean_value_col_list) + 0.3 * max(mean_value_col_list) )
 
 errorbar_plot_col.Draw("ap")
 
@@ -148,20 +149,20 @@ for i in range(ymin,ymax): # going thru all rows
     x_error.append(0.5)
 
     for j in range(xmin,xmax): # going thru all col
-
-        if qMap_Ag_C0_V0.GetBinContent(j,i) != 0:
-            content.append( qMap_Ag_C0_V0.GetBinContent(j,i))
-            error.append( qMap_Ag_C0_V0.GetBinError(j,i)) # Is this the real error
-        else:
+        if qMap_Ag_C0_V0.GetBinContent(j,i) >2500 :
             pass
 
+        elif qMap_Ag_C0_V0.GetBinContent(j,i) != 0:
+            content.append( qMap_Ag_C0_V0.GetBinContent(j,i))
+            error.append( qMap_Ag_C0_V0.GetBinError(j,i)) # Is this the real error
+
+        else:
+            pass
     content_bin = unp.uarray( content, error)
     mean_content_row = content_bin.sum() # mean value of each bin in the col
-
     # Saving values in lists
     mean_value_row_list.append( noms(mean_content_row))
     mean_error_row_list.append( stds(mean_content_row))
-
 
 ############################# Create new errorbar plot ####################################
 errorbar_plot_rows = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_row_list), array( 'f', x_error), array( 'f', mean_error_row_list) )
@@ -174,13 +175,13 @@ c2 = root.TCanvas("c2", "c2", 1980, 1080);
 errorbar_plot_rows.GetXaxis().SetTitle("Row")
 errorbar_plot_rows.GetYaxis().SetTitle("Mean Hit / Vcal")
 errorbar_plot_rows.SetMinimum(0)
-errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.25 * max(mean_value_row_list) )
+errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.3 * max(mean_value_row_list) )
 
 
 ############################### Plot fucntion and fit #############################################
 
 
-errorbar_plot_rows.Fit('gaus', "", "", min(x_value) , max( x_value) )
+errorbar_plot_rows.Fit('gaus', "", "", min(x_value) -0.5 , max( x_value) +0.5)
 errorbar_plot_rows.Draw("ap")
 
 ##################################### create legend ################################################
