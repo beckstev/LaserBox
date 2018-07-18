@@ -50,8 +50,8 @@ x_error = []
 xmin = 18
 xmax = 26
 
-ymin = 61
-ymax = 71
+ymin = 62
+ymax = 72
 
 ####################################  calculating mean of each coloum ################################
 
@@ -159,12 +159,12 @@ for i in range(ymin,ymax): # going thru all rows
     mean_content_row = content_bin.sum() # mean value of each bin in the col
 
     # Saving values in lists
-    mean_value_row_list.append( noms(mean_content_col))
-    mean_error_row_list.append( stds(mean_content_col))
+    mean_value_row_list.append( noms(mean_content_row))
+    mean_error_row_list.append( stds(mean_content_row))
 
 
 ############################# Create new errorbar plot ####################################
-errorbar_plot_rows = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_col_list), array( 'f', x_error), array( 'f', mean_error_col_list) )
+errorbar_plot_rows = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_row_list), array( 'f', x_error), array( 'f', mean_error_row_list) )
 
 ############################### create Canvas ########################################
 c2 = root.TCanvas("c2", "c2", 1980, 1080);
@@ -174,7 +174,7 @@ c2 = root.TCanvas("c2", "c2", 1980, 1080);
 errorbar_plot_rows.GetXaxis().SetTitle("Row")
 errorbar_plot_rows.GetYaxis().SetTitle("Mean Hit / Vcal")
 errorbar_plot_rows.SetMinimum(0)
-errorbar_plot_rows.SetMaximum( max(mean_value_col_list) + 0.25 * max(mean_value_col_list) )
+errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.25 * max(mean_value_row_list) )
 
 
 ############################### Plot fucntion and fit #############################################
