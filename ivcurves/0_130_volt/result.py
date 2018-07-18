@@ -13,16 +13,18 @@ import time
 import ROOT as root
 
 
-u_bias_vanilla, i_leak_vanilla_down   = np.genfromtxt('I_V_curve_-30_200.txt', unpack = True)
+u_bias_first, I_first  = np.genfromtxt('iv_curve_first_run.txt', unpack = True)
+u_bias_second, I_second  = np.genfromtxt('iv_curve_second_run.txt', unpack = True)
 
-plt.errorbar(-u_bias_vanilla[41:] ,np.abs(i_leak_vanilla_down[41:]), xerr=u_bias_vanilla[41:] * 0.02, yerr= i_leak_vanilla_down[41:] * 0.22, fmt='x', label = 'Durchlassrichtung')
-plt.errorbar(u_bias_vanilla[:41] ,np.abs(i_leak_vanilla_down[:41]), xerr=u_bias_vanilla[:41] * 0.02, yerr= i_leak_vanilla_down[:41] * 0.035, fmt='x', label = 'Sperrichtung')
 
-plt.yscale('log')
+plt.errorbar( u_bias_first[:-10], I_first[:-10], xerr=u_bias_first[:-10] * 0.02, yerr= I_first[:-10] * 0.035, fmt='x', label = 'Erste Messung')
+plt.errorbar(u_bias_second,  I_second, xerr=u_bias_second * 0.02, yerr=  I_second * 0.035, fmt='x', label = 'Zweite Messung')
+
+#plt.yscale('log')
 plt.legend()
 plt.grid()
 plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$')
 plt.xlabel(r'$ U_{\mathrm{bias}} \, \, / \, \,  \mathrm{V}$')
 
-#plt.show()
-plt.savefig('iv_curve_forward_and_reversebias.pdf')
+plt.show()
+#lt.savefig('iv_curve_forward_and_reversebias.pdf')
