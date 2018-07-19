@@ -32,6 +32,7 @@ qMap_Ag_C0_V0.GetXaxis().SetTitle("Spalten");
 qMap_Ag_C0_V0.GetXaxis().SetTitleOffset(0.95);
 qMap_Ag_C0_V0.GetYaxis().SetTitle("Zeilen");
 qMap_Ag_C0_V0.GetYaxis().SetTitleOffset(0.85);
+qMap_Ag_C0_V0.SetMarkerSize(1.4)
 qMap_Ag_C0_V0.Draw("colz text")
 
 Canvas_1_n40.SaveAs(f'./measurment_hist_plots/{name_of_folder}_measurment_plot.pdf')
