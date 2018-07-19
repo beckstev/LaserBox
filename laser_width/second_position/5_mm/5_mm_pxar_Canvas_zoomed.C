@@ -10,7 +10,7 @@
    Canvas_1_n40->SetBorderSize(2);
    Canvas_1_n40->SetFrameBorderMode(0);
    Canvas_1_n40->SetFrameBorderMode(0);
-   
+
    TProfile2D *qMap_Ag_C0_V0 = new TProfile2D("qMap_Ag_C0_V0","qMap_Ag_C0 (V0)",52,0,52,80,0,80,0,0);
    qMap_Ag_C0_V0->SetBinEntries(3423,426);
    qMap_Ag_C0_V0->SetBinEntries(3424,14659);
@@ -153,8 +153,8 @@
    qMap_Ag_C0_V0->GetZaxis()->SetLabelSize(0.035);
    qMap_Ag_C0_V0->GetZaxis()->SetTitleSize(0.035);
    qMap_Ag_C0_V0->GetZaxis()->SetTitleFont(42);
-   qMap_Ag_C0_V0->Draw("");
-   
+   qMap_Ag_C0_V0->Draw("colz text");
+
    TPaveText *pt = new TPaveText(0.3631343,0.9310502,0.6368657,0.995,"blNDC");
    pt->SetName("title");
    pt->SetBorderSize(0);
