@@ -24,6 +24,7 @@ except IndexError:
     print('No Argument given Or other Index out of Range Er')
 
 
+print(name_of_folder)
 
 sys.path.insert(0, './' + name_of_folder + '/')
 
@@ -61,13 +62,13 @@ x_error = []
 ###############################################################################################################################
 
 
-################################## Set sum area ###############################
+################################## Set sum area, size of sensetive area ###############################
 
-xmin = 19
-xmax = 25
+xmin = 18
+xmax = 26
 
-ymin = 62
-ymax = 71
+ymin = 61
+ymax = 72
 
 ####################################  calculating mean of each coloum ################################
 
@@ -222,7 +223,7 @@ errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.3 * max(mean_value_r
 ############################### Plot fucntion and fit #############################################
 
 
-personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 5 )
+personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 4 )
 personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.5 )
 personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .5, np.std(np.array(x_value)) * 1.5 )
 

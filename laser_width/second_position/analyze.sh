@@ -12,6 +12,7 @@ then
 			echo Compile folder $folder_name
 
 			python pyroot_analyse.py $folder_name $NAME
+			python plot_canvas_files.py $folder_name
 
 	done < folder_name_list.txt
 
