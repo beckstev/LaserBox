@@ -24,7 +24,6 @@ except IndexError:
     print('No Argument given Or other Index out of Range Er')
 
 
-print(name_of_folder)
 
 sys.path.insert(0, './' + name_of_folder + '/')
 
@@ -44,8 +43,13 @@ personal_gaus =  root.TF1("personal_gaus",  " [0] * exp(  -0.5 * ( (x - [1])  / 
 name_params = [ "amplitude/[MeanVcal]", "mean/[Col]", "sigma/[Col]"]
 
 personal_gaus.SetParName(0,'Amplitude')
-personal_gaus.SetParName(1,'Mean')
 personal_gaus.SetParName(2,'Sigma')
+
+if plot_style == 'thesis':
+    personal_gaus.SetParName(1,'Mittelwert')
+else :
+    personal_gaus.SetParName(1,'Mean')
+
 
 
 ############################### Save Data in list #######################################
