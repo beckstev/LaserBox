@@ -65,7 +65,7 @@ import ROOT as root
  qMap_Ag_C0_V0.SetContourLevel(18,1110.75);
  qMap_Ag_C0_V0.SetContourLevel(19,1172.458);
 
- ci = TColor::GetColor("#000099");
+ ci = root.TColor.GetColor("#000099");
  qMap_Ag_C0_V0.SetLineColor(ci);
  qMap_Ag_C0_V0.GetXaxis().SetTitle("col");
  qMap_Ag_C0_V0.GetXaxis().SetRange(15,32);

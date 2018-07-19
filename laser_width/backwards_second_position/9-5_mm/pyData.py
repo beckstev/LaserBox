@@ -5,7 +5,7 @@ qMap_Ag_C0_V0.SetBinEntries(3425,5863);
 qMap_Ag_C0_V0.SetBinEntries(3478,14413);
 qMap_Ag_C0_V0.SetBinEntries(3479,111615);
 qMap_Ag_C0_V0.SetBinEntries(3480,3);
-qMap_Ag_C0_V0.SeFtBinEntries(3532,14429);
+qMap_Ag_C0_V0.SetBinEntries(3532,14429);
 qMap_Ag_C0_V0.SetBinEntries(3533,102646);
 qMap_Ag_C0_V0.SetBinEntries(3587,67);
 qMap_Ag_C0_V0.SetBinContent(3425,321828);
@@ -46,7 +46,6 @@ qMap_Ag_C0_V0.SetContourLevel(16,291.9845);
 qMap_Ag_C0_V0.SetContourLevel(17,310.2335);
 qMap_Ag_C0_V0.SetContourLevel(18,328.4825);
 qMap_Ag_C0_V0.SetContourLevel(19,346.7315);
-
 
 ci = root.TColor.GetColor("#000099");
 qMap_Ag_C0_V0.SetLineColor(ci);

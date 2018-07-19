@@ -1,6 +1,6 @@
 import ROOT as root
 
-qp_Ag_C0_V0 = root.TProfile2D("qMap_Ag_C0_V0","qMap_Ag_C0 (V0)",52,0,52,80,0,80,0,0);
+qMap_Ag_C0_V0 = root.TProfile2D("qMap_Ag_C0_V0","qMap_Ag_C0 (V0)",52,0,52,80,0,80,0,0);
 qMap_Ag_C0_V0.SetBinEntries(3369,14286);
 qMap_Ag_C0_V0.SetBinEntries(3370,14278);
 qMap_Ag_C0_V0.SetBinEntries(3371,14290);

@@ -15,8 +15,15 @@ import sys
 try:
     name_of_folder = sys.argv[1]
 
+    try:
+        plot_style = sys.argv[2]
+    except IndexError:
+        plot_style = None
+
 except IndexError:
-    print('No Argument given')
+    print('No Argument given Or other Index out of Range Er')
+
+
 
 sys.path.insert(0, './' + name_of_folder + '/')
 
@@ -29,6 +36,15 @@ from pyData import *
 
 root.gStyle.SetOptTitle(0)
 root.gStyle.SetOptFit(1)
+
+########################### Def Gaus function ######################
+
+personal_gaus =  root.TF1("personal_gaus",  " [0] * exp(  -0.5 * ( (x - [1])  / [2] )  * ( (x - [1])  /  [2] ) ) ")
+name_params = [ "amplitude/[MeanVcal]", "mean/[Col]", "sigma/[Col]"]
+
+personal_gaus.SetParName(0,'Amplitude')
+personal_gaus.SetParName(1,'Mean')
+personal_gaus.SetParName(2,'Sigma')
 
 
 ############################### Save Data in list #######################################
@@ -78,46 +94,65 @@ for i in range(xmin,xmax): # going thru all col
     mean_content_col = content_bin.sum() # mean value of each bin in the col
     # Saving values in lists
     mean_value_col_list.append( noms(mean_content_col))
-    mean_error_col_list.append( stds(mean_content_col))
+    mean_error_col_list.append( stds(mean_content_col) )
 
 
 ########################### Create errorbar plot #####################################
 
 errorbar_plot_col = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_col_list), array( 'f', x_error), array( 'f', mean_error_col_list) )
 
-############################## Set axis label of errobar plot ##################################
+############################## Set axis label and range of errobar plot ##################################
 
-errorbar_plot_col.GetXaxis().SetTitle("Col")
-errorbar_plot_col.GetYaxis().SetTitle("Mean Hit / Vcal")
+if plot_style == 'thesis':
+    errorbar_plot_col.GetXaxis().SetTitle("Spalte")
+    errorbar_plot_col.GetYaxis().SetTitle("Summe Hits / Vcal")
+else:
+    errorbar_plot_col.GetXaxis().SetTitle("Col")
+    errorbar_plot_col.GetYaxis().SetTitle("Mean Hit / Vcal")
 
-####################### create Canvas ##########################################
-
-c1 = root.TCanvas("c1", "c1", 1980, 1080)
-errorbar_plot_col.Fit('gaus',"", "",  min( x_value )  , max(x_value) +1 )
 errorbar_plot_col.SetMinimum(0)
 errorbar_plot_col.SetMaximum( max( mean_value_col_list) + 0.3 * max(mean_value_col_list) )
 
-errorbar_plot_col.Draw("ap")
 
 
-name_params = [ "amplitude/[MeanVcal]", "mean/[Col]", "sigma/[Col]"]
+####################### create Canvas and FIT ##########################################
+
+c1 = root.TCanvas("c1", "c1", 1980, 1080)
+
+personal_gaus.SetParLimits(0, max(mean_value_col_list) * .5, max(mean_value_col_list) * 5 )
+personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.5 )
+personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.5, np.std(np.array(x_value)) * 1.5 )
+
+errorbar_plot_col.Fit(personal_gaus, "", "", min(x_value) -0.5 , max( x_value) +0.5 )
+#errorbar_plot_col.Fit("gaus", "", "", min(x_value) -0.5 , max( x_value) +0.5 )
+
+errorbar_plot_col.Draw("ap*")
 
 ############################### Create legend ####################################
-gaus_fit_col = errorbar_plot_col.GetFunction('gaus')
-legend = root.TLegend(0.65,0.47,0.98,0.7)
-legend.SetTextSize(0.04)
-legend.AddEntry(errorbar_plot_col,"Coloumn sum hit value","lep")
-legend.AddEntry( gaus_fit_col,"Gaussian Fit","l")
-legend.Draw()
+
+if plot_style == 'thesis':
+    legend = root.TLegend(0.81,0.48,0.98,0.7)
+    legend.SetTextSize(0.04)
+    legend.AddEntry(errorbar_plot_col,"Summe Hits","lep")
+    legend.AddEntry( personal_gaus,"Gaus Fit","l")
+    legend.Draw()
+
+
+else:
+    legend = root.TLegend(0.65,0.47,0.98,0.7)
+    legend.SetTextSize(0.04)
+    legend.AddEntry(errorbar_plot_col,"Row sum hit value","lep")
+    legend.AddEntry( personal_gaus,"Gaussian Fit","l")
+    legend.Draw()
 
 ############################### Save parameter and plot ###########################################
 
 with open( f'./fit_params/{name_of_folder}_fit_parameters_col_xaxis.txt', 'w') as file:
     for i in range(0,3):
-        file.write( name_params[i] + ' ' + str( gaus_fit_col.GetParameter(i) ) + ' ' + str(gaus_fit_col.GetParError(i)) + '\n')
+        file.write( name_params[i] + ' ' + str( personal_gaus.GetParameter(i) ) + ' ' + str(personal_gaus.GetParError(i)) + '\n')
 
 with open( f'./sigma_col_xaxis.txt', 'a') as file:
-        file.write( name_params[i] + '_' + name_of_folder + ' ' + str( gaus_fit_col.GetParameter(2) ) + ' ' + str(gaus_fit_col.GetParError(2)) + '\n')
+        file.write( name_params[i] + '_' + name_of_folder + ' ' + str( personal_gaus.GetParameter(2) ) + ' ' + str(personal_gaus.GetParError(2)) + '\n')
 
 
 c1.SaveAs(f'./plots/{name_of_folder}_erorbar_plot_col.pdf')
@@ -129,6 +164,7 @@ c1.SaveAs(f'./plots/{name_of_folder}_erorbar_plot_col.pdf')
 ################################### Getting the mean hit value of all rows near the laserspot #############################
 
 ###############################################################################################################################
+
 
 
 ############################Reset lists###########################################
@@ -172,8 +208,13 @@ c2 = root.TCanvas("c2", "c2", 1980, 1080);
 
 ############################## Set axis label of errobar plot ##################################
 
-errorbar_plot_rows.GetXaxis().SetTitle("Row")
-errorbar_plot_rows.GetYaxis().SetTitle("Mean Hit / Vcal")
+if plot_style == 'thesis':
+    errorbar_plot_col.GetXaxis().SetTitle("Zeile")
+    errorbar_plot_col.GetYaxis().SetTitle("Summe Hits / Vcal")
+else:
+    errorbar_plot_rows.GetXaxis().SetTitle("Row")
+    errorbar_plot_rows.GetYaxis().SetTitle("Mean Hit / Vcal")
+
 errorbar_plot_rows.SetMinimum(0)
 errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.3 * max(mean_value_row_list) )
 
@@ -181,24 +222,38 @@ errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.3 * max(mean_value_r
 ############################### Plot fucntion and fit #############################################
 
 
-errorbar_plot_rows.Fit('gaus', "", "", min(x_value) -0.5 , max( x_value) +0.5)
-errorbar_plot_rows.Draw("ap")
+personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 5 )
+personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.5 )
+personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .5, np.std(np.array(x_value)) * 1.5 )
+
+errorbar_plot_rows.Fit( personal_gaus, "", "", min(x_value) -0.5 , max( x_value) +0.5 )
+errorbar_plot_rows.Draw("ap*")
 
 ##################################### create legend ################################################
-gaus_fit_row = errorbar_plot_rows.GetFunction('gaus')
-legend = root.TLegend(0.65,0.47,0.98,0.7)
-legend.SetTextSize(0.04)
-legend.AddEntry(errorbar_plot_col,"Row sum hit value","lep")
-legend.AddEntry( gaus_fit_col,"Gaussian Fit","l")
-legend.Draw()
+
+if plot_style == 'thesis':
+    legend = root.TLegend(0.81,0.48,0.98,0.7)
+    legend.SetTextSize(0.04)
+    legend.AddEntry(errorbar_plot_rows,"Summe Hits","lep")
+    legend.AddEntry( personal_gaus,"Gaus Fit","l")
+    legend.Draw()
+
+
+else:
+    legend = root.TLegend(0.65,0.47,0.98,0.7)
+    legend.SetTextSize(0.04)
+    legend.AddEntry(errorbar_plot_col,"Row sum hit value","lep")
+    legend.AddEntry( personal_gaus,"Gaussian Fit","l")
+    legend.Draw()
 
 ########################################### saveplot and fit params ########################################
+
 with open( f'./fit_params/{name_of_folder}_fit_parameters_row_yaxis.txt', 'w') as file:
     for i in range(0,3):
-        file.write( name_params[i] + ' ' + str( gaus_fit_row.GetParameter(i) ) + ' ' + str(gaus_fit_row.GetParError(i)) + '\n')
+        file.write( name_params[i] + ' ' + str( personal_gaus.GetParameter(i) ) + ' ' + str(personal_gaus.GetParError(i)) + '\n')
 
 with open( f'./sigma_row_yaxis.txt', 'a') as file:
-        file.write( name_params[i] +'_' + name_of_folder + ' ' + str( gaus_fit_row.GetParameter(2) ) + ' ' + str(gaus_fit_row.GetParError(2)) + '\n')
+        file.write( name_params[i] +'_' + name_of_folder + ' ' + str( personal_gaus.GetParameter(2) ) + ' ' + str(personal_gaus.GetParError(2)) + '\n')
 
 
 c2.SaveAs(f'./plots/{name_of_folder}_erorbar_plot_row.pdf')
