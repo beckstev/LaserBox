@@ -18,16 +18,20 @@ from lmfit import minimize, Parameters
 def omega(omega_0, z):
     return omega_0 * np.sqrt( 1 + ( (1060e-9 * z)/(np.pi * omega_0) )**2 )
 
-height = [ 5e-3, 6e-3, 7e-3, 8e-3, 9e-3,9.5e-3, 10e-3,10.5e-3, 12e-3, 13e-3, 14e-3, 15e-3]
+height = [ 5, 6, 7, 8, 9,9.5, 10,10.5,11, 12, 13, 14, 15]
 
-name, sigma_y, sigma_y_error = np.genfromtxt( 'sigma_row_yaxis.txt', unpack =True)
-name, sigma_x, sigma_x_error = np.genfromtxt('sigma_col_xaxis.txt', unpack = True)
+name, ysigma, ysigma_error = np.genfromtxt( 'sigma_row_yaxis.txt', unpack =True)
+name, xsigma, xsigma_error = np.genfromtxt('sigma_col_xaxis.txt', unpack = True)
 
 
+print(len(ysigma), len(ysigma_error))
+print(len(xsigma), len(xsigma_error))
 
-plt.errorbar( height, sigma_y, xerr = 5e-5, yerr = sigma_y_error , fmt ='x')
-plt.errorbar( height,sigma_x, xerr = 5e-5, yerr = sigma_x_error , fmt ='x')
+plt.errorbar( height, xsigma, xerr = 0.05, yerr = xsigma_error , fmt ='x', label = r'$\sigma_{\mathrm{x}}$')
+plt.errorbar( height,ysigma, xerr = 0.05, yerr = ysigma_error , fmt ='x', label = r'$\sigma_{\mathrm{y}}$')
+plt.legend()
+plt.xlabel(r'$\mathrm{relative \, movement \, of \, Laser} \, \, / \, \, \mathrm{mm}$')
+plt.ylabel(r'$\sigma \, \, \mathrm{in \, units \, of \,bins}$' )
+#plt.show()
 
-#plt.plot(z, omega(params[0], z))
-
-plt.show()
+plt.savefig('perfect_height.pdf')

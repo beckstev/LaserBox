@@ -124,9 +124,10 @@ errorbar_plot_col.SetMaximum( max( mean_value_col_list) + 0.3 * max(mean_value_c
 
 c1 = root.TCanvas("c1", "c1", 1980, 1080)
 
-personal_gaus.SetParLimits(0, max(mean_value_col_list) * .5, max(mean_value_col_list) * 5 )
+
+personal_gaus.SetParLimits(0, max(mean_value_col_list) * .5, max(mean_value_col_list) * 1.8 )
 personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.5 )
-personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.02, np.std(np.array(x_value)) * 1.5 )
+personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.03, np.std(np.array(x_value)) * 1.4 )
 
 errorbar_plot_col.Fit(personal_gaus, "", "", min(x_value) -0.5 , max( x_value) +0.5 )
 #errorbar_plot_col.Fit("gaus", "", "", min(x_value) -0.5 , max( x_value) +0.5 )
@@ -241,9 +242,9 @@ errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.3 * max(mean_value_r
 ############################### Plot fucntion and fit #############################################
 
 
-personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 4 )
+personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 1.8 )
 personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.5 )
-personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .5, np.std(np.array(x_value)) * 1.5 )
+personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .03, np.std(np.array(x_value)) * 1.4 )
 
 errorbar_plot_rows.Fit( personal_gaus, "", "", min(x_value) -0.5 , max( x_value) +0.5 )
 errorbar_plot_rows.Draw("ap*")
