@@ -126,7 +126,7 @@ c1 = root.TCanvas("c1", "c1", 1980, 1080)
 
 personal_gaus.SetParLimits(0, max(mean_value_col_list) * .5, max(mean_value_col_list) * 5 )
 personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.5 )
-personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.5, np.std(np.array(x_value)) * 1.5 )
+personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.02, np.std(np.array(x_value)) * 1.5 )
 
 errorbar_plot_col.Fit(personal_gaus, "", "", min(x_value) -0.5 , max( x_value) +0.5 )
 #errorbar_plot_col.Fit("gaus", "", "", min(x_value) -0.5 , max( x_value) +0.5 )
@@ -150,6 +150,16 @@ else:
     legend.AddEntry( personal_gaus,"Gaussian Fit","l")
     legend.Draw()
 
+
+######## Transfer Sigma from Bin to mumeter ############################
+
+sigma_mu_meter_col = ufloat(personal_gaus.GetParameter(2), personal_gaus.GetParError(2)) * 150 # 150 is pixel size in y direction
+
+print('Sigma COl',personal_gaus.GetParameter(2), sigma_mu_meter_col)
+
+#############################################################################
+
+
 ############################### Save parameter and plot ###########################################
 
 with open( f'./fit_params/{name_of_folder}_fit_parameters_col_xaxis.txt', 'w') as file:
@@ -158,6 +168,10 @@ with open( f'./fit_params/{name_of_folder}_fit_parameters_col_xaxis.txt', 'w') a
 
 with open( f'./sigma_col_xaxis.txt', 'a') as file:
         file.write( name_params[i] + '_' + name_of_folder + ' ' + str( personal_gaus.GetParameter(2) ) + ' ' + str(personal_gaus.GetParError(2)) + '\n')
+
+
+with open( f'./sigma_col_in_mumeter_yaxis.txt', 'a') as file:
+        file.write( name_params[i] +'_' + name_of_folder + ' ' + str( noms(sigma_mu_meter_col) ) + ' ' + str( stds(sigma_mu_meter_col) ) + '\n')
 
 
 c1.SaveAs(f'./plots/{name_of_folder}_erorbar_plot_col.pdf')
@@ -251,6 +265,14 @@ else:
     legend.AddEntry( personal_gaus,"Gaussian Fit","l")
     legend.Draw()
 
+
+######## Transfer Sigma from Bin to mumeter ############################
+
+sigma_mu_meter_row = ufloat(personal_gaus.GetParameter(2), personal_gaus.GetParError(2)) * 100 # 100 is pixel size in y direction
+
+
+#############################################################################
+
 ########################################### saveplot and fit params ########################################
 
 with open( f'./fit_params/{name_of_folder}_fit_parameters_row_yaxis.txt', 'w') as file:
@@ -259,6 +281,9 @@ with open( f'./fit_params/{name_of_folder}_fit_parameters_row_yaxis.txt', 'w') a
 
 with open( f'./sigma_row_yaxis.txt', 'a') as file:
         file.write( name_params[i] +'_' + name_of_folder + ' ' + str( personal_gaus.GetParameter(2) ) + ' ' + str(personal_gaus.GetParError(2)) + '\n')
+
+with open( f'./sigma_row_in_mumeter_yaxis.txt', 'a') as file:
+        file.write( name_params[i] +'_' + name_of_folder + ' ' + str( noms(sigma_mu_meter_row) ) + ' ' + str( stds(sigma_mu_meter_row) ) + '\n')
 
 
 c2.SaveAs(f'./plots/{name_of_folder}_erorbar_plot_row.pdf')
