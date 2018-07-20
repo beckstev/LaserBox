@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.9.19)  20 JUL 2018 15:49
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.9.19)  20 JUL 2018 16:10
  restricted system commands enabled.
 **presentation.tex
 (./presentation.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.122 seconds
+luaotfload | main : initialization completed in 0.120 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./header.tex
 (/home/sb/.local/texlive/2017/texmf-dist/tex/latex/beamer/beamer.cls
@@ -2182,6 +2182,9 @@ LaTeX Warning: Label ` fig: iv_curve_theoretical' multiply defined.
 
 LaTeX Warning: Label ` fig: iv_curve_measured' multiply defined.
 
+
+LaTeX Warning: Label ` fig: iv_curve_theoretical' multiply defined.
+
 )
 \openout1 = presentation.aux
 
@@ -2580,18 +2583,13 @@ File: ./perfect_height.pdf Graphic file (type pdf)
 <use ./perfect_height.pdf>
 Package luatex.def Info: ./perfect_height.pdf  used on input line 162. on input 
 line 162.
-Package luatex.def Info: Requested size: 418.25673pt x 313.70679pt on input line
+Package luatex.def Info: Requested size: 318.67209pt x 239.01443pt on input line
  162.
-
-Overfull \hbox (19.91814pt too wide) in paragraph at lines 162--162
- [] 
- []
-
 
 warning  (pdf backend): ignoring duplicate destination with the name '\040fig:\0
 40iv_curve_theoretical'
 
-Overfull \vbox (153.41646pt too high) detected at line 162
+Overfull \vbox (63.08418pt too high) detected at line 162
  []
 
 [10
@@ -2624,16 +2622,16 @@ Package logreq Info: Writing requests to 'presentation.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 44930 strings out of 494472
+ 44932 strings out of 494472
  100000,1648299 words of node,token memory allocated
- 2054 words of node memory still in use:
-   31 hlist, 9 vlist, 6 rule, 4 disc, 2 local_par, 47 glue, 10 kern, 25 penalty,
+ 2021 words of node memory still in use:
+   30 hlist, 9 vlist, 6 rule, 4 disc, 2 local_par, 44 glue, 10 kern, 24 penalty,
  45 glyph, 65 attribute, 86 glue_spec, 65 attribute_list, 5 write, 22 pdf_colors
 tack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:6,2:338,3:164,4:87,5:92,6:191,7:207,8:19,9:131,10:4,11:25,12:1
+   avail lists: 1:6,2:338,3:165,4:87,5:92,6:191,7:210,8:19,9:132,10:4,11:25,12:1
 
- 47384 multiletter control sequences out of 65536+600000
- 108 fonts using 34966919 bytes
+ 47386 multiletter control sequences out of 65536+600000
+ 108 fonts using 34966655 bytes
  73i,13n,99p,1829b,3152s stack positions out of 5000i,500n,10000p,200000b,100000s
 
 warning  (pdf backend): unreferenced destination with name 'cite.0@pixel_detecto
@@ -2643,7 +2641,7 @@ rn-math.otf></home/sb/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm-ma
 th/latinmodern-math.otf></home/sb/.local/texlive/2017/texmf-dist/fonts/opentype/
 public/fira/FiraSans-Light.otf></home/sb/.local/texlive/2017/texmf-dist/fonts/op
 entype/public/fira/FiraSans-Book.otf>
-Output written on presentation.pdf (10 pages, 187138 bytes).
+Output written on presentation.pdf (10 pages, 187134 bytes).
 
 PDF statistics: 621 PDF objects out of 1000 (max. 8388607)
  297 compressed objects within 3 object streams
