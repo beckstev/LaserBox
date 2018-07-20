@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.9.19)  20 JUL 2018 16:10
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.9.19)  20 JUL 2018 16:16
  restricted system commands enabled.
 **presentation.tex
 (./presentation.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.120 seconds
+luaotfload | main : initialization completed in 0.113 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./header.tex
 (/home/sb/.local/texlive/2017/texmf-dist/tex/latex/beamer/beamer.cls
@@ -2628,10 +2628,10 @@ Here is how much of LuaTeX's memory you used:
    30 hlist, 9 vlist, 6 rule, 4 disc, 2 local_par, 44 glue, 10 kern, 24 penalty,
  45 glyph, 65 attribute, 86 glue_spec, 65 attribute_list, 5 write, 22 pdf_colors
 tack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:6,2:338,3:165,4:87,5:92,6:191,7:210,8:19,9:132,10:4,11:25,12:1
+   avail lists: 1:6,2:338,3:165,4:87,5:92,6:194,7:210,8:19,9:132,10:3,11:26,12:1
 
  47386 multiletter control sequences out of 65536+600000
- 108 fonts using 34966655 bytes
+ 108 fonts using 34966743 bytes
  73i,13n,99p,1829b,3152s stack positions out of 5000i,500n,10000p,200000b,100000s
 
 warning  (pdf backend): unreferenced destination with name 'cite.0@pixel_detecto
@@ -2641,7 +2641,7 @@ rn-math.otf></home/sb/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm-ma
 th/latinmodern-math.otf></home/sb/.local/texlive/2017/texmf-dist/fonts/opentype/
 public/fira/FiraSans-Light.otf></home/sb/.local/texlive/2017/texmf-dist/fonts/op
 entype/public/fira/FiraSans-Book.otf>
-Output written on presentation.pdf (10 pages, 187134 bytes).
+Output written on presentation.pdf (10 pages, 186940 bytes).
 
 PDF statistics: 621 PDF objects out of 1000 (max. 8388607)
  297 compressed objects within 3 object streams
