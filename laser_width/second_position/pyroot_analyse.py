@@ -1,13 +1,10 @@
 import ROOT as root
 import numpy as np
-import time
 import uncertainties.unumpy as unp
 from uncertainties import ufloat
 from uncertainties.unumpy import nominal_values as noms
 from uncertainties.unumpy import std_devs as stds
-from uncertainties import correlated_values
 from array import array
-import os
 import sys
 
 ############### Readout command line argument
@@ -88,8 +85,7 @@ for i in range(xmin,xmax): # going thru all col
             pass
 
         if qMap_Ag_C0_V0.GetBinContent(i,j) != 0:
-            content.append( qMap_Ag_C0_V0.GetBinContent(i,j))
-            test_error.append( qMap_Ag_C0_V0.GetBinError(i,j) ) # Is this the real error
+            content.append( qMap_Ag_C0_V0.GetBinContent(i,j)) # Is this the real error
             N = qMap_Ag_C0_V0.GetBinEntries(  qMap_Ag_C0_V0.GetBin(i,j))
             error.append( 1/N *  np.sqrt(qMap_Ag_C0_V0.GetBinContent(i,j) *N  ) ) # Is this the real error
 
@@ -97,15 +93,11 @@ for i in range(xmin,xmax): # going thru all col
             pass
 
     content_bin = unp.uarray( content, error)
-    content_bin_test = unp.uarray( content, test_error)
 
     mean_content_col = content_bin.sum() # mean value of each bin in the col
     # Saving values in lists
     mean_value_col_list.append( noms(mean_content_col))
     mean_error_col_list.append( stds(mean_content_col) )
-    print(mean_content_col)
-    print('Sum Eroor',  stds(mean_content_col))
-    print('Sum Error Test',  stds(content_bin_test.sum()), '\n \n')
 
 ########################### Create errorbar plot #####################################
 
@@ -172,6 +164,9 @@ with open( f'./fit_params/{name_of_folder}_fit_parameters_col_xaxis.txt', 'w') a
     for i in range(0,3):
         file.write( name_params[i] + ' ' + str( personal_gaus.GetParameter(i) ) + ' ' + str(personal_gaus.GetParError(i)) + '\n')
 
+with open( f'./fit_parameters_col_xaxis.txt', 'a') as file:
+        file.write( name_of_folder + 'Amplitude/Sigma/Mean:' + ' ' + str( personal_gaus.GetParameter(0) ) + ' ' + str(personal_gaus.GetParError(0)) + ' ' + str( personal_gaus.GetParameter(1) ) + ' ' + str(personal_gaus.GetParError(1)) + ' ' + str( personal_gaus.GetParameter(2) ) + ' ' + str(personal_gaus.GetParError(2)) + '\n')
+
 with open( f'./sigma_col_xaxis.txt', 'a') as file:
         file.write( name_params[i] + '_' + name_of_folder + ' ' + str( personal_gaus.GetParameter(2) ) + ' ' + str(personal_gaus.GetParError(2)) + '\n')
 
@@ -215,8 +210,8 @@ for i in range(ymin,ymax): # going thru all rows
 
         elif qMap_Ag_C0_V0.GetBinContent(j,i) != 0:
             content.append( qMap_Ag_C0_V0.GetBinContent(j,i))
-            #error.append( qMap_Ag_C0_V0.GetBinError(j,i)) # Is this the real error
-            error.append(np.sqrt(qMap_Ag_C0_V0.GetBinContent(j,i))) # Is this the real error
+            N = qMap_Ag_C0_V0.GetBinEntries(  qMap_Ag_C0_V0.GetBin(j,i))
+            error.append( 1/N *  np.sqrt(qMap_Ag_C0_V0.GetBinContent(j,i) * N  ) )
 
         else:
             pass
@@ -291,6 +286,9 @@ with open( f'./sigma_row_yaxis.txt', 'a') as file:
 
 with open( f'./sigma_row_in_mumeter_yaxis.txt', 'a') as file:
         file.write( name_params[i] +'_' + name_of_folder + ' ' + str( noms(sigma_mu_meter_row) ) + ' ' + str( stds(sigma_mu_meter_row) ) + '\n')
+
+with open( f'./fit_parameters_row_yaxis.txt', 'a') as file:
+        file.write( name_of_folder + 'Amplitude/Sigma/Mean:' + ' ' + str( personal_gaus.GetParameter(0) ) + ' ' + str(personal_gaus.GetParError(0)) + ' ' + str( personal_gaus.GetParameter(1) ) + ' ' + str(personal_gaus.GetParError(1)) + ' ' + str( personal_gaus.GetParameter(2) ) + ' ' + str(personal_gaus.GetParError(2)) + '\n')
 
 
 c2.SaveAs(f'./plots/{name_of_folder}_erorbar_plot_row.pdf')
