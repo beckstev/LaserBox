@@ -10,7 +10,6 @@ from array import array
 import os
 from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
-import time
 
 ###### Creating colors
 
@@ -68,12 +67,25 @@ mg.GetYaxis().SetTitle(" \sigma in Einheiten von Bins")
 
 mg.Draw('ap*')
 
-legend = root.TLegend(0.13,0.66,0.43,0.87)
+################# HARD CODED
+
+chisquare_xsigma = str( int( polyx.GetChisquare()))
+NDI_xsigma =  str(polyx.GetNDF())
+
+chisquare_ysigma = str( int( polyy.GetChisquare()) )
+NDI_ysigma =  str(polyy.GetNDF())
+
+xlabel =  "Fit von \sigma_{x}(z), \chi^{2} / ndf = " + chisquare_xsigma + " / " +  NDI_xsigma
+ylabel =  "Fit von \sigma_{y}(z), \chi^{2} / ndf = " + chisquare_ysigma + " / " +  NDI_ysigma
+print(xlabel)
+
+print(str(polyx.GetChisquare()))
+legend = root.TLegend(0.13,0.66,0.50,0.87)
 legend.SetTextSize(0.04)
 legend.AddEntry(plot_xsigma," \sigma_{x}(z)", "lep")
-legend.AddEntry(polyx,"Fit von \sigma_{x}(z)", "l")
+legend.AddEntry(polyx,f"{xlabel}", "l")
 legend.AddEntry(plot_ysigma,"\sigma_{y}(z)", "lep")
-legend.AddEntry(polyy,"Fit von \sigma_{y}(z)","l")
+legend.AddEntry(polyy,f'{ylabel}',"l")
 legend.Draw()
 
 c1.SaveAs('perfect_height_root_version.pdf')
