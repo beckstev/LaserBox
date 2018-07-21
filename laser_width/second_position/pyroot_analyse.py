@@ -81,7 +81,7 @@ for i in range(xmin,xmax): # going thru all col
     error = []
     x_value.append(i)
     x_error.append(0.5)
-
+    test_error = []
 
     for j in range(ymin,ymax): # going thru all rows
         if qMap_Ag_C0_V0.GetBinContent(i,j) >2500 :
@@ -89,18 +89,23 @@ for i in range(xmin,xmax): # going thru all col
 
         if qMap_Ag_C0_V0.GetBinContent(i,j) != 0:
             content.append( qMap_Ag_C0_V0.GetBinContent(i,j))
-            error.append( qMap_Ag_C0_V0.GetBinError(i,j) ) # Is this the real error
-
+            test_error.append( qMap_Ag_C0_V0.GetBinError(i,j) ) # Is this the real error
+            N = qMap_Ag_C0_V0.GetBinEntries(  qMap_Ag_C0_V0.GetBin(i,j))
+            error.append( 1/N *  np.sqrt(qMap_Ag_C0_V0.GetBinContent(i,j) *N  ) ) # Is this the real error
 
         else:
             pass
 
     content_bin = unp.uarray( content, error)
+    content_bin_test = unp.uarray( content, test_error)
+
     mean_content_col = content_bin.sum() # mean value of each bin in the col
     # Saving values in lists
     mean_value_col_list.append( noms(mean_content_col))
     mean_error_col_list.append( stds(mean_content_col) )
-
+    print(mean_content_col)
+    print('Sum Eroor',  stds(mean_content_col))
+    print('Sum Error Test',  stds(content_bin_test.sum()), '\n \n')
 
 ########################### Create errorbar plot #####################################
 
@@ -210,7 +215,8 @@ for i in range(ymin,ymax): # going thru all rows
 
         elif qMap_Ag_C0_V0.GetBinContent(j,i) != 0:
             content.append( qMap_Ag_C0_V0.GetBinContent(j,i))
-            error.append( qMap_Ag_C0_V0.GetBinError(j,i)) # Is this the real error
+            #error.append( qMap_Ag_C0_V0.GetBinError(j,i)) # Is this the real error
+            error.append(np.sqrt(qMap_Ag_C0_V0.GetBinContent(j,i))) # Is this the real error
 
         else:
             pass
