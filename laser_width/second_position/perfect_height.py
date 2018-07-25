@@ -37,6 +37,14 @@ name, xsigma, xsigma_error = np.genfromtxt('sigma_col_xaxis.txt', unpack = True)
 xerror = np.ones(len(xsigma)) * 0.05
 ################## Plot and Fit with ROOT ############################
 
+root.gStyle.SetLabelSize(.055, "XY");
+root.gStyle.SetTitleSize(.055, "XY");
+root.gStyle.SetTitleOffset(0.875, "XY");
+root.gStyle.SetStatFontSize(.065)
+
+
+
+#######################
 polyx=  root.TF1("polyx",  " [0] * x * x + [1] * x + [2]")
 polyy=  root.TF1("polyy",  " [0] * x * x + [1] * x + [2]")
 
