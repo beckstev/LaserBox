@@ -28,12 +28,15 @@ sys.path.insert(0, './' + name_of_folder + '/')
 
 from pyData import *
 
-##################################################### Insert Data above line #############################
+##################################################### Set Cnavas Style #############################
 
 
 root.gStyle.SetOptTitle(0)
 root.gStyle.SetOptFit(1)
-
+root.gStyle.SetLabelSize(.05, "XY");
+root.gStyle.SetTitleSize(.05, "XY");
+root.gStyle.SetTitleOffset(1, "XY");
+root.gStyle.SetStatFontSize(.08)
 ########################### Def Gaus function ######################
 
 personal_gaus =  root.TF1("personal_gaus",  " [0] * exp(  -0.5 * ( (x - [1])  / [2] )  * ( (x - [1])  /  [2] ) ) ")
@@ -134,8 +137,8 @@ errorbar_plot_col.Draw("ap*")
 ############################### Create legend ####################################
 
 if plot_style == 'thesis':
-    legend = root.TLegend(0.81,0.48,0.98,0.7)
-    legend.SetTextSize(0.04)
+    legend = root.TLegend(0.15,0.71,0.37,0.93)
+    legend.SetTextSize(0.055)
     legend.AddEntry(errorbar_plot_col,"Summe Hits","lep")
     legend.AddEntry( personal_gaus,"Gaus Fit","l")
     legend.Draw()
@@ -171,7 +174,7 @@ with open( f'./sigma_col_xaxis.txt', 'a') as file:
         file.write( name_params[i] + '_' + name_of_folder + ' ' + str( personal_gaus.GetParameter(2) ) + ' ' + str(personal_gaus.GetParError(2)) + '\n')
 
 
-with open( f'./sigma_col_in_mumeter_yaxis.txt', 'a') as file:
+with open( f'./sigma_col_in_mumeter_xaxis.txt', 'a') as file:
         file.write( name_params[i] +'_' + name_of_folder + ' ' + str( noms(sigma_mu_meter_col) ) + ' ' + str( stds(sigma_mu_meter_col) ) + '\n')
 
 
@@ -253,8 +256,8 @@ errorbar_plot_rows.Draw("ap*")
 ##################################### create legend ################################################
 
 if plot_style == 'thesis':
-    legend = root.TLegend(0.81,0.48,0.98,0.7)
-    legend.SetTextSize(0.04)
+    legend = root.TLegend(0.15,0.71,0.37,0.93)
+    legend.SetTextSize(0.055)
     legend.AddEntry(errorbar_plot_rows,"Summe Hits","lep")
     legend.AddEntry( personal_gaus,"Gaus Fit","l")
     legend.Draw()

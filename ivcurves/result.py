@@ -24,11 +24,12 @@ plt.errorbar(u_bias_vanilla ,i_leak_vanilla_second_down, xerr=u_bias_vanilla * 0
 
 #plt.plot(u_bias, np.sqrt(u_bias)*0.02, 'x')
 plt.grid()
-plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$')
-plt.xlabel(r'$ U_{\mathrm{ex}} \, \, / \, \,  \mathrm{V}$')
+plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$',fontsize = 13)
+plt.xlabel(r'$ U_{\mathrm{ex}} \, \, / \, \,  \mathrm{V}$',fontsize = 13)
+plt.tick_params(axis ='both', labelsize = 13 )
 
 #plt.xlim(80, 100)
 
-plt.legend()
+plt.legend(loc = 'lower right',fontsize = 13)
 #plt.show()
 plt.savefig('iv_curve_hysterese.pdf')
