@@ -233,22 +233,32 @@ c2 = root.TCanvas("c2", "c2", 1980, 1080);
 ############################## Set axis label of errobar plot ##################################
 
 if plot_style == 'thesis':
-    errorbar_plot_col.GetXaxis().SetTitle("Zeile")
-    errorbar_plot_col.GetYaxis().SetTitle("Summe Hits / Vcal")
+    errorbar_plot_rows.GetXaxis().SetTitle("Zeile")
+    errorbar_plot_rows.GetYaxis().SetTitle("Summe Hits / Vcal")
 else:
     errorbar_plot_rows.GetXaxis().SetTitle("Row")
     errorbar_plot_rows.GetYaxis().SetTitle("Mean Hit / Vcal")
 
 errorbar_plot_rows.SetMinimum(0)
-errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.3 * max(mean_value_row_list) )
+
+if name_of_folder == '10-5_mm':
+    errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.9 * max(mean_value_row_list) )
+elif name_of_folder == '11_mm':
+    errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.9 * max(mean_value_row_list) )
+else:
+    errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.3 * max(mean_value_row_list) )
 
 
 ############################### Plot fucntion and fit #############################################
+if name_of_folder == '10-5_mm':
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 1.8 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.5 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .03, np.std(np.array(x_value)) * 1.4 )
 
-
-personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 1.8 )
-personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.5 )
-personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .03, np.std(np.array(x_value)) * 1.4 )
+else:
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 1.8 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.5 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .03, np.std(np.array(x_value)) * 1.4 )
 
 errorbar_plot_rows.Fit( personal_gaus, "", "", min(x_value) -0.5 , max( x_value) +0.5 )
 errorbar_plot_rows.Draw("ap*")

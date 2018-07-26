@@ -30,9 +30,14 @@ def omega(omega_0, z):
 
 
 height = [ 5, 6, 7, 8, 9,9.5, 10,10.5,11, 12, 13, 14, 15]
+#height = [ 5, 6, 7, 8, 9,9.5, 10,10.5, 12, 13, 14, 15]
 
-name, ysigma, ysigma_error = np.genfromtxt( 'sigma_row_yaxis.txt', unpack =True)
-name, xsigma, xsigma_error = np.genfromtxt('sigma_col_xaxis.txt', unpack = True)
+#   name, ysigma, ysigma_error = np.genfromtxt( 'sigma_row_yaxis.txt', unpack =True)
+#   name, xsigma, xsigma_error = np.genfromtxt('sigma_col_xaxis.txt', unpack = True)
+
+
+name, ysigma, ysigma_error = np.genfromtxt( 'sigma_row_in_mumeter_yaxis.txt', unpack =True)
+name, xsigma, xsigma_error = np.genfromtxt('sigma_col_in_mumeter_xaxis.txt', unpack = True)
 
 xerror = np.ones(len(xsigma)) * 0.05
 ################## Plot and Fit with ROOT ############################
@@ -70,8 +75,8 @@ plot_ysigma.Fit('polyy')
 mg.Add(plot_xsigma)
 mg.Add(plot_ysigma)
 
-mg.GetXaxis().SetTitle("Relative Verschiebung #it{z} / \mum")
-mg.GetYaxis().SetTitle(" \sigma in Einheiten von Bins")
+mg.GetXaxis().SetTitle("Relative Verschiebung #it{z} / mm")
+mg.GetYaxis().SetTitle(" \sigma / \mum")
 
 mg.Draw('ap*')
 
@@ -96,7 +101,7 @@ legend.AddEntry(plot_ysigma,"\sigma_{y}(z)", "lep")
 legend.AddEntry(polyy,f'{ylabel}',"l")
 legend.Draw()
 
-c1.SaveAs('perfect_height_root_version.pdf')
+c1.SaveAs('perfect_height_root_version_sigma_mu_meter.pdf')
 
 z = np.linspace(5,15,10000)
 
