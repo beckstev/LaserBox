@@ -11,32 +11,48 @@ from array import array
 import time
 import ROOT as root
 
-def sqrroota(a,x,c):
-    return a*np.sqrt( x ) + c
-
-def g(m,x,b):
-    return m * x + b
-
-u_bias_first, I_first  = np.genfromtxt('iv_curve_first_run.txt', unpack = True)
-u_bias_second, I_second  = np.genfromtxt('iv_curve_second_run.txt', unpack = True)
+####################################################################################################
 
 u_bias, I  = np.genfromtxt('iv_curve_0_130_V_second.txt', unpack = True)
 
-params, cov = curve_fit(sqrroota, u_bias[:21], np.log(I[:21]))
-print(u_bias)
-#plt.xscale('log')
-#plt.yscale( 'log' )
-plt.plot(u_bias[:21], np.log(I[:21]),'.')
-plt.plot(u_bias[:21], sqrroota( params[0],u_bias[:21], params[1]),'-')
-plt.show()
-
-plt.errorbar( u_bias_first, I_first, xerr=u_bias_first * 0.02, yerr= I_first * 0.035, fmt='x', label = 'Erste Messung')
-plt.errorbar(u_bias_second,  I_second, xerr=u_bias_second * 0.02, yerr=  I_second * 0.035, fmt='x', label = 'Zweite Messung')
-
-plt.legend()
+plt.errorbar( u_bias, I, xerr=u_bias * 0.02, yerr= I* 0.035, fmt='.', label = 'Pixelstrom')
+plt.legend(fontsize = 13)
 plt.grid()
-plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$')
-plt.xlabel(r'$ U_{\mathrm{ex}} \, \, / \, \,  \mathrm{V}$')
+plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$',fontsize = 13)
+plt.xlabel(r'$ U_{\mathrm{ex}} \, \, / \, \,  \mathrm{V}$',fontsize = 13)
 
-plt.show()
-#plt.savefig('iv_curve_test.pdf')
+plt.tick_params(axis ='both', labelsize = 13 )
+#plt.show()
+plt.savefig('iv_curve_0_130_V.pdf')
+
+###################################################################################
+
+plt.clf()
+
+########################################################################################
+
+u_bias_first, I_first  = np.genfromtxt('iv_curve_first_run.txt', unpack = True)
+
+plt.errorbar( u_bias_first, I_first, xerr=u_bias_first * 0.02, yerr= I_first* 0.035, fmt='.', label = 'Pixelstrom')
+plt.legend(fontsize = 13)
+plt.grid()
+plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$',fontsize = 13)
+plt.xlabel(r'$ U_{\mathrm{ex}} \, \, / \, \,  \mathrm{V}$',fontsize = 13)
+plt.tick_params(axis ='both', labelsize = 13 )
+plt.savefig('iv_curve_0_90__V_one_volt_steps.pdf')
+
+############################################################################################
+
+plt.clf()
+
+#############################################################################################
+
+u_bias_second, I_second  = np.genfromtxt('iv_curve_second_run.txt', unpack = True)
+
+plt.errorbar( u_bias_second, I_second, xerr=u_bias_second * 0.02, yerr= I_second* 0.035, fmt='.', label = 'Pixelstrom')
+plt.legend(loc = 'upper left',fontsize = 13)
+plt.grid()
+plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$',fontsize = 13)
+plt.xlabel(r'$ U_{\mathrm{ex}} \, \, / \, \,  \mathrm{V}$',fontsize = 13)
+plt.tick_params(axis ='both', labelsize = 13 )
+plt.savefig('iv_curve_90_130__V_one_volt_steps.pdf')

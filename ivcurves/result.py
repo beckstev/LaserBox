@@ -17,18 +17,19 @@ i_leak_second_down = unp.uarray( [i_leak_vanilla_second_down,  0.001])
 
 
 #plt.plot(u_bias, i_leak, 'x')
-plt.errorbar(u_bias_vanilla ,i_leak_vanilla_up, xerr=u_bias_vanilla * 0.02, yerr= i_leak_vanilla_up * 0.035, fmt='x', label = 'First Up')
-plt.errorbar(u_bias_vanilla ,i_leak_vanilla_down, xerr=u_bias_vanilla * 0.02, yerr= i_leak_vanilla_down * 0.035, fmt='x', label = 'First Down')
-plt.errorbar(u_bias_vanilla ,i_leak_vanilla_second_up, xerr=u_bias_vanilla * 0.02, yerr= i_leak_vanilla_second_up * 0.035, fmt='x', label = 'Second Up')
-plt.errorbar(u_bias_vanilla ,i_leak_vanilla_second_down, xerr=u_bias_vanilla * 0.02, yerr= i_leak_vanilla_up * 0.035, fmt='x', label = 'Second Down')
+plt.errorbar(u_bias_vanilla ,i_leak_vanilla_up, xerr=u_bias_vanilla * 0.02, yerr= i_leak_vanilla_up * 0.035, fmt='.', label = '1. Aufsteigend')
+plt.errorbar(u_bias_vanilla ,i_leak_vanilla_down, xerr=u_bias_vanilla * 0.02, yerr= i_leak_vanilla_down * 0.035, fmt='.', label = '1. Absteigend')
+plt.errorbar(u_bias_vanilla ,i_leak_vanilla_second_up, xerr=u_bias_vanilla * 0.02, yerr= i_leak_vanilla_second_up * 0.035, fmt='.', label = '2. Aufsteigend')
+plt.errorbar(u_bias_vanilla ,i_leak_vanilla_second_down, xerr=u_bias_vanilla * 0.02, yerr= i_leak_vanilla_up * 0.035, fmt='.', label = '2. Absteigend')
 
 #plt.plot(u_bias, np.sqrt(u_bias)*0.02, 'x')
 plt.grid()
-plt.ylabel(r'$ I_{\mathrm{leak}} \, \, / \, \, \mu\mathrm{A}$')
-plt.xlabel(r'$ U_{\mathrm{bias}} \, \, / \, \,  \mathrm{V}$')
+plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$',fontsize = 13)
+plt.xlabel(r'$ U_{\mathrm{ex}} \, \, / \, \,  \mathrm{V}$',fontsize = 13)
+plt.tick_params(axis ='both', labelsize = 13 )
 
 #plt.xlim(80, 100)
 
-plt.legend()
+plt.legend(loc = 'lower right',fontsize = 13)
 #plt.show()
-plt.savefig('iv_curve.pdf')
+plt.savefig('iv_curve_hysterese.pdf')

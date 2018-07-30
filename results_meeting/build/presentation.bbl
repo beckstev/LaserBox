@@ -1,0 +1,49 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{pixel_detectors}{book}{}
+      \name{editor}{1}{}{%
+        {{hash=16ec0120fe04c64c89353c3a482d7c50}{%
+           family={P.\bibnamedelimi Fischer},
+           familyi={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={N.\bibnamedelimi Wermes},
+           giveni={N\bibinitperiod\bibinitdelim W\bibinitperiod},
+           suffix={T.\bibnamedelimi Rohe},
+           suffixi={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{16ec0120fe04c64c89353c3a482d7c50}
+      \strng{fullhash}{16ec0120fe04c64c89353c3a482d7c50}
+      \strng{editornamehash}{16ec0120fe04c64c89353c3a482d7c50}
+      \strng{editorfullhash}{16ec0120fe04c64c89353c3a482d7c50}
+      \field{sortinit}{P}
+      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{Pixel Detectors - From Fundamentals to Application}
+      \field{year}{2006}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
