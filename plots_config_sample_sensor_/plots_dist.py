@@ -1,51 +1,48 @@
 import ROOT as root
 import sys
-
+import time
+import imp
 ############ INPUT FILE
-try:
-    name_of_folder = sys.argv[1]
 
-except IndexError:
-    print('No Argument given Or other Index out of Range Er')
+sys.path.insert(0, './data/' + 'after_trim_pixelmap' + '/')
+import dist_pyData
 
+file_names_list = [ 'after_trim_pixelmap', 'scurve_noise', 'scurve_threshold']
 
-sys.path.insert(0, './' + name_of_folder + '/')
+for file_name in file_names_list:
+        sys.path.insert(0, './data/' + file_name + '/')
+        dist_pyData = imp.reload(dist_pyData)
+        from dist_pyData import *
 
-############################################
-root.gStyle.SetLabelSize(.08, "XY");
-root.gStyle.SetTitleSize(.08, "XY");
-root.gStyle.SetTitleOffset(1, "XY");
+        root.gStyle.SetOptStat('RMe');
+        root.gStyle.SetOptTitle(0)
 
-Canvas_1_n40 = root.TCanvas("Canvas_1_n40", "Test",1378,105,538,321);
-root.gStyle.SetOptStat();
-Canvas_1_n40.SetHighLightColor(2);
-Canvas_1_n40.Range(13.25,51.25,30.75,78.75);
-Canvas_1_n40.SetFillColor(0);
-Canvas_1_n40.SetBorderMode(0);
-Canvas_1_n40.SetBorderSize(2);
-Canvas_1_n40.SetFrameBorderMode(0);
-Canvas_1_n40.SetFrameBorderMode(0);
-root.gStyle.SetOptTitle(0)
+        root.gStyle.SetStatW(0.35);
+        root.gStyle.SetStatH(0.2)
 
-from pyData import *
+        c1 = root.TCanvas('c1','c1',640,480)
 
+        if file_name == 'scurve_noise':
+            dist.GetXaxis().SetTitle("Rauschen / vcal");
+            dist.GetXaxis().SetRange(20,70)
 
-qMap_Ag_C0_V0.GetXaxis().SetRange(18,26);
-qMap_Ag_C0_V0.GetYaxis().SetRange(61,72);
-qMap_Ag_C0_V0.GetXaxis().SetTitle("Spalten");
-qMap_Ag_C0_V0.GetXaxis().SetTitleOffset(0.75);
-qMap_Ag_C0_V0.GetYaxis().SetTitle("Zeilen");
-qMap_Ag_C0_V0.GetYaxis().SetTitleOffset(0.75);
+        else:
+            dist.GetXaxis().SetTitle("Aktivierungsschwellwert / vcal");
+            dist.GetXaxis().SetRange(24,47);
 
-qMap_Ag_C0_V0.GetXaxis().SetTitleSize(0.06);
-qMap_Ag_C0_V0.GetXaxis().SetLabelSize(0.06);
-qMap_Ag_C0_V0.GetYaxis().SetTitleSize(0.06);
-qMap_Ag_C0_V0.GetYaxis().SetLabelSize(0.06);
+        dist.SetStats(1)
 
-qMap_Ag_C0_V0.SetMarkerSize(1.7)
+        dist.GetXaxis().SetLabelSize(0.055);
+        dist.GetXaxis().SetTitleSize(0.045);
+        dist.GetXaxis().SetTitleOffset(1.1);
 
 
+        dist.GetYaxis().SetTitle("Anzahl Pixel");
+        dist.GetYaxis().SetLabelSize(0.045);
+        dist.GetYaxis().SetTitleSize(0.045);
+        dist.GetYaxis().SetTitleOffset(1.2);
 
-qMap_Ag_C0_V0.Draw("colz text")
+        dist.Draw()
 
-Canvas_1_n40.SaveAs(f'./measurment_hist_plots/{name_of_folder}_measurment_plot.pdf')
+        c1.SaveAs('./plots/'+ file_name + '_dist.pdf')
+        c1.Clear()

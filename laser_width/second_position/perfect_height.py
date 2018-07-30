@@ -49,12 +49,13 @@ root.gStyle.SetStatFontSize(.065)
 
 
 
+
 #######################
 polyx=  root.TF1("polyx",  " [0] * x * x + [1] * x + [2]")
 polyy=  root.TF1("polyy",  " [0] * x * x + [1] * x + [2]")
 
 c1 = root.TCanvas("c1", "c1", 1980, 1080)
-
+c1.SetGrid()
 mg = root.TMultiGraph();
 plot_xsigma = root.TGraphErrors( len(xsigma), array( 'f', height), array( 'f',xsigma), array( 'f', xerror), array( 'f', xsigma_error) )
 plot_ysigma = root.TGraphErrors( len(xsigma), array( 'f', height), array( 'f',ysigma), array( 'f', xerror), array( 'f', ysigma_error) )
