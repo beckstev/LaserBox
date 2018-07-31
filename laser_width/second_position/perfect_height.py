@@ -60,6 +60,9 @@ mg = root.TMultiGraph();
 plot_xsigma = root.TGraphErrors( len(xsigma), array( 'f', height), array( 'f',xsigma), array( 'f', xerror), array( 'f', xsigma_error) )
 plot_ysigma = root.TGraphErrors( len(xsigma), array( 'f', height), array( 'f',ysigma), array( 'f', xerror), array( 'f', ysigma_error) )
 
+
+mg.GetXaxis().SetRangeUser(4,16)
+
 plot_xsigma.SetMarkerColor(1756)
 plot_xsigma.SetLineColor(1756)
 

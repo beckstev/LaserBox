@@ -8,14 +8,15 @@ sys.path.insert(0, './data/' + 'after_trim_pixelmap' + '/')
 import pyData
 
 file_names_list = [ 'after_trim_pixelmap', 'before_trim_pixelmap', 'pixel_alive', 'scurve_noise', 'scurve_threshold']
-    
+
 for file_name in file_names_list:
         sys.path.insert(0, './data/' + file_name + '/')
         pyData = imp.reload(pyData)
         from pyData import *
 
-        root.gStyle.SetOptStat(0);
-        root.gStyle.SetPalette(91)
+        root.gStyle.SetOptStat(0)
+        root.gStyle.SetOptTitle(0)
+        root.gStyle.SetPalette(1)
 
         #Canvas_1 = root.TCanvas("Canvas_1", "Canvas_1",1281,453,538,321);
         Canvas_1 = root.TCanvas("Canvas_1", "Canvas_1",1281,453,538,538);
@@ -29,29 +30,24 @@ for file_name in file_names_list:
         Canvas_1.SetFrameBorderMode(0);
 
         if file_name == 'before_trim_pixelmap':
-            pixelmap.GetZaxis().SetLabelSize(0.045)
+            pixelmap.GetZaxis().SetLabelSize(0.028)
 
         else:
-            pixelmap.GetZaxis().SetLabelSize(0.055)
+            pixelmap.GetZaxis().SetLabelSize(0.034)
 
 
 
         pixelmap.GetXaxis().SetTitle("Spalten");
-        pixelmap.GetXaxis().SetLabelSize(0.055);
-        pixelmap.GetXaxis().SetTitleSize(0.045);
-        pixelmap.GetXaxis().SetTitleOffset(1);
+        pixelmap.GetXaxis().SetLabelSize(0.05);
+        pixelmap.GetXaxis().SetTitleSize(0.05);
+        pixelmap.GetXaxis().SetTitleOffset(0.9);
 
         pixelmap.GetYaxis().SetTitle("Zeilen");
-        pixelmap.GetYaxis().SetLabelSize(0.055);
-        pixelmap.GetYaxis().SetTitleSize(0.06);
-        pixelmap.GetYaxis().SetTitleOffset(0.8);
+        pixelmap.GetYaxis().SetLabelSize(0.05);
+        pixelmap.GetYaxis().SetTitleSize(0.05);
+        pixelmap.GetYaxis().SetTitleOffset(0.98);
 
         pixelmap.GetZaxis().SetLabelOffset(0.01)
-
-
-
-        print(file_name)
-
 
         pixelmap.SetTitle(file_name)
         pixelmap.Draw("colz")
