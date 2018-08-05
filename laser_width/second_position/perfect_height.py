@@ -46,15 +46,25 @@ name, ysigma, ysigma_error = np.genfromtxt( 'sigma_row_in_mumeter_yaxis.txt', un
 xsigma  *= 1e-6
 xsigma_error  *= 1e-6
 
+usigma_x = unp.uarray( xsigma, xsigma_error)
+usigma_y = unp.uarray( ysigma, ysigma_error)
 
 
-print(xsigma)
+
+
 xerror = 1e-3 * np.ones(len(xsigma)) * 0.05
-xsigma_error =  np.ones(len(xsigma)) * 75e-6
+
+a = 1
+b = 1
+
+usigma_x = usigma_x**2 * a
+usigma_y = usigma_y**2 * a
+uheight = unp.uarray( heigh_m, xerror) *b
 
 ################## Plot and Fit with ROOT ############################
 
-root.gStyle.SetLabelSize(.055, "XY");
+root.gStyle.SetLabelSize(.03, "XY");
+root.gStyle.SetLabelFont(42, "XY");
 root.gStyle.SetTitleSize(.055, "XY");
 root.gStyle.SetTitleOffset(0.9, "XY");
 root.gStyle.SetStatFontSize(.065)
@@ -67,14 +77,17 @@ root.gStyle.SetStatFontSize(.065)
 polyx=  root.TF1("polyx",  " [0] * x * x + [1] * x + [2]") # Fitfunctions for data
 polyy=  root.TF1("polyy",  " [0] * x * x + [1] * x + [2]")
 
-omega_x = root.TF1('omega_x',  "[0] * ( 1 +  [2]*  ( (x - [1] ) / ([0]*[0]) )**2 )**0.5 ")
+omega_x = root.TF1('omega_x',  "[0]  +  [2] * (x - [1] )**2 / ( [0] )")
 #omega_x = root.TF1('omega_x',  "[0] * ( 1 +  [2]*  ( (x - [1] ) / [0] )**2 )**0.5  ")
-omega_y = root.TF1('omega_y',  "[0] * ( 1 +  [2] *  ( (x - [1] ) / ( [0] * [0] ) )**2 )**0.5 ")
+omega_y = root.TF1('omega_y',  "[0]  +  [2] * (x - [1] )**2 / ( [0] ) ")
 
-omega_x.SetParLimits(0, 0,260e-6)
-omega_x.SetParLimits(1,5e-3,15e-3)
+#omega_x.SetParLimits(0, 0, 260e-6*a )
+#omega_x.SetParLimits(1,5e-3*b,15e-3*b)
 #omega_x.SetParLimits(2, 1e-14,1e-12)
 
+omega_x.SetParameter(0,4.5e-10  )
+omega_x.SetParameter(1,0.00898)
+omega_x.SetParameter(2,(1060e-9)**2/np.pi**2)
 
 omega_y.SetParLimits(0, 0,260)
 omega_y.SetParLimits(1,5,15)
@@ -86,11 +99,13 @@ c1.SetGrid()
 
 mg = root.TMultiGraph() #Create multigraph
 
-plot_xsigma = root.TGraphErrors( len(xsigma), array( 'f', heigh_m), array( 'f',xsigma), array( 'f', xerror), array( 'f', xsigma_error) )
-plot_ysigma = root.TGraphErrors( len(xsigma), array( 'f', height), array( 'f',ysigma), array( 'f', xerror*1e3), array( 'f', ysigma_error) )
+plot_xsigma = root.TGraphErrors( len(xsigma), array( 'f', noms(uheight)), array( 'f',noms(usigma_x)), array( 'f', stds(uheight)), array( 'f',stds(usigma_x)) )
+plot_ysigma = root.TGraphErrors( len(xsigma), array( 'f', noms(uheight)), array( 'f',noms(usigma_y)), array( 'f', stds(uheight)), array( 'f',stds(usigma_y)) )
 
 
 #mg.GetXaxis().SetRangeUser(4,16) #Set xLimits
+
+
 
 plot_xsigma.SetMarkerColor(1756)
 plot_xsigma.SetLineColor(1756)
@@ -115,7 +130,23 @@ mg.Add(plot_xsigma) # Add TGraphErrors to Multigraph
 mg.GetXaxis().SetTitle("Relative Verschiebung #it{z} / mm")
 mg.GetYaxis().SetTitle(" \sigma / \mum")
 
+#plot_xsigma.GetXaxis().
+mg.GetXaxis().SetNdivisions(20)
 mg.Draw('ap*')
+
+A = ufloat( omega_x.GetParameter(0), omega_x.GetParError(0))
+B =  ufloat( omega_x.GetParameter(1), omega_x.GetParError(1))
+C =  ufloat( omega_x.GetParameter(2), omega_x.GetParError(2))
+
+c = np.sqrt(b)*C / (a**2)
+
+print('\n\n\n--------------------------------------------')
+print('A**1/2: ', unp.sqrt(A/a), A)
+print('B: ', B/ b)
+print('C:',np.sqrt(b)*C / (a**2))
+print('Lambda', unp.sqrt(c)*np.pi*1e9*3.551 )
+print('-------------------------------------------------------- ')
+print( (1060e-9)**2/np.pi**2)
 
 ################# HARD CODED - Add chisquare to legend ################################
 

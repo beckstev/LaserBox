@@ -15,6 +15,7 @@ sys.path.insert(0, './' + name_of_folder + '/')
 root.gStyle.SetLabelSize(.08, "XY");
 root.gStyle.SetTitleSize(.08, "XY");
 root.gStyle.SetTitleOffset(1, "XY");
+root.gStyle.SetPalette(91)
 
 Canvas_1_n40 = root.TCanvas("Canvas_1_n40", "Test",1378,105,538,321);
 root.gStyle.SetOptStat();

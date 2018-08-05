@@ -10,20 +10,22 @@ from scipy import odr
 from array import array
 import time
 import ROOT as root
+import siunitx_ticks as si_ticks
+
 
 ####################################################################################################
 
 u_bias, I  = np.genfromtxt('iv_curve_0_130_V_second.txt', unpack = True)
 
 plt.errorbar( u_bias, I, xerr=u_bias * 0.02, yerr= I* 0.035, fmt='.', label = 'Pixelstrom')
-plt.legend(fontsize = 13)
+plt.legend(fontsize = 16)
 plt.grid()
-plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$',fontsize = 13)
-plt.xlabel(r'$ U_{\mathrm{ex}} \, \, / \, \,  \mathrm{V}$',fontsize = 13)
-
-plt.tick_params(axis ='both', labelsize = 13 )
+plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$',fontsize = 16)
+plt.xlabel(r'$ U_{\mathrm{ex}} \, \, / \, \,  \mathrm{V}$',fontsize = 16)
+si_ticks.siunitx_ticklabels(round_number=2)
+plt.tick_params(axis ='both', labelsize = 16)
 #plt.show()
-plt.savefig('iv_curve_0_130_V.pdf')
+plt.savefig('iv_curve_0_130_V.pdf',bbox_inches='tight')
 
 ###################################################################################
 
@@ -39,7 +41,8 @@ plt.grid()
 plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$',fontsize = 13)
 plt.xlabel(r'$ U_{\mathrm{ex}} \, \, / \, \,  \mathrm{V}$',fontsize = 13)
 plt.tick_params(axis ='both', labelsize = 13 )
-plt.savefig('iv_curve_0_90__V_one_volt_steps.pdf')
+si_ticks.siunitx_ticklabels(round_number=2)
+plt.savefig('iv_curve_0_90__V_one_volt_steps.pdf',bbox_inches='tight')
 
 ############################################################################################
 
@@ -54,5 +57,6 @@ plt.legend(loc = 'upper left',fontsize = 13)
 plt.grid()
 plt.ylabel(r'$ I \, \, / \, \, \mu\mathrm{A}$',fontsize = 13)
 plt.xlabel(r'$ U_{\mathrm{ex}} \, \, / \, \,  \mathrm{V}$',fontsize = 13)
-plt.tick_params(axis ='both', labelsize = 13 )
-plt.savefig('iv_curve_90_130__V_one_volt_steps.pdf')
+plt.tick_params(axis ='both', labelsize = 12 )
+si_ticks.siunitx_ticklabels(round_number=3)
+plt.savefig('iv_curve_90_130__V_one_volt_steps.pdf',bbox_inches='tight')
