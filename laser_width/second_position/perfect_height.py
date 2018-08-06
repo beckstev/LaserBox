@@ -46,6 +46,11 @@ name, ysigma, ysigma_error = np.genfromtxt( 'sigma_row_in_mumeter_yaxis.txt', un
 xsigma  *= 1e-6
 xsigma_error  *= 1e-6
 
+ysigma  *= 1e-6
+ysigma_error  *= 1e-6
+
+
+
 usigma_x = unp.uarray( xsigma, xsigma_error)
 usigma_y = unp.uarray( ysigma, ysigma_error)
 
@@ -59,15 +64,17 @@ b = 1
 
 usigma_x = usigma_x**2 * a
 usigma_y = usigma_y**2 * a
+
 uheight = unp.uarray( heigh_m, xerror) *b
 
 ################## Plot and Fit with ROOT ############################
 
-root.gStyle.SetLabelSize(.03, "XY");
+root.gStyle.SetLabelSize(.055, "XY");
 root.gStyle.SetLabelFont(42, "XY");
 root.gStyle.SetTitleSize(.055, "XY");
 root.gStyle.SetTitleOffset(0.9, "XY");
 root.gStyle.SetStatFontSize(.065)
+root.TGaxis.SetMaxDigits(2)
 
 
 
@@ -89,21 +96,26 @@ omega_x.SetParameter(0,4.5e-10  )
 omega_x.SetParameter(1,0.00898)
 omega_x.SetParameter(2,(1060e-9)**2/np.pi**2)
 
-omega_y.SetParLimits(0, 0,260)
-omega_y.SetParLimits(1,5,15)
-#omega.SetParLimits(2, -10000,20)
-omega_y.SetParLimits(2, 100000,10000000)
+omega_y.SetParameter(0,4.5e-10  )
+omega_y.SetParameter(1,0.00898)
+omega_y.SetParameter(2,(1060e-9)**2/np.pi**2)
 
 c1 = root.TCanvas("c1", "c1", 1980, 1080)
 c1.SetGrid()
 
 mg = root.TMultiGraph() #Create multigraph
 
+
+#mg.GetXaxis.SetMaxDigits(2,'Y')
+
+
+
 plot_xsigma = root.TGraphErrors( len(xsigma), array( 'f', noms(uheight)), array( 'f',noms(usigma_x)), array( 'f', stds(uheight)), array( 'f',stds(usigma_x)) )
 plot_ysigma = root.TGraphErrors( len(xsigma), array( 'f', noms(uheight)), array( 'f',noms(usigma_y)), array( 'f', stds(uheight)), array( 'f',stds(usigma_y)) )
 
 
-#mg.GetXaxis().SetRangeUser(4,16) #Set xLimits
+plot_xsigma.GetXaxis().SetLimits(0,1) #Set xLimits
+plot_ysigma.GetXaxis().SetLimits(0,1) #Set xLimits
 
 
 
@@ -114,39 +126,58 @@ plot_ysigma.SetMarkerColor(1757)
 plot_ysigma.SetLineColor(1757)
 
 omega_x.SetLineColor(1759) #Set Linecolor xsigma
+omega_y.SetLineColor(1758) # Set Linecolor ysigma
+
 #plot_xsigma.Fit('polyx')
 plot_xsigma.Fit('omega_x', 'E')
-
-omega_y.SetLineColor(1758) # Set Linecolor ysigma
-#plot_ysigma.Fit('polyy')
 plot_ysigma.Fit('omega_y', 'E')
+
+
+#for i in range(0,10):
+#    plot_xsigma.GetX()[i]*=1e3
+#    print(plot_xsigma.GetX()[i])
+
+
+#plot_ysigma.Fit('polyy')
 
 #plot_xsigma.Draw('ap*')
 #plot_ysigma.Draw('SAME ap*')
 
 mg.Add(plot_xsigma) # Add TGraphErrors to Multigraph
-#mg.Add(plot_ysigma)
+mg.Add(plot_ysigma)
 
-mg.GetXaxis().SetTitle("Relative Verschiebung #it{z} / mm")
-mg.GetYaxis().SetTitle(" \sigma / \mum")
+mg.GetXaxis().SetTitle("Relative Verschiebung #it{z} / #{m}")
+mg.GetYaxis().SetTitle(" \sigma^2 / #mathcal{m^2}")
 
 #plot_xsigma.GetXaxis().
+mg.SetMinimum(0)
+#mg.SetMaximum(1.5e-7)
+
 mg.GetXaxis().SetNdivisions(20)
 mg.Draw('ap*')
 
-A = ufloat( omega_x.GetParameter(0), omega_x.GetParError(0))
-B =  ufloat( omega_x.GetParameter(1), omega_x.GetParError(1))
-C =  ufloat( omega_x.GetParameter(2), omega_x.GetParError(2))
 
-c = np.sqrt(b)*C / (a**2)
+A_x = ufloat( omega_x.GetParameter(0), omega_x.GetParError(0))
+B_x =  ufloat( omega_x.GetParameter(1), omega_x.GetParError(1))
+C_x =  ufloat( omega_x.GetParameter(2), omega_x.GetParError(2))
 
-print('\n\n\n--------------------------------------------')
-print('A**1/2: ', unp.sqrt(A/a), A)
-print('B: ', B/ b)
-print('C:',np.sqrt(b)*C / (a**2))
-print('Lambda', unp.sqrt(c)*np.pi*1e9*3.551 )
+print('\n\n\n------------- sigma x -----------------------')
+print('A_x: ', A_x , 'A**1/2',unp.sqrt(A_x) )
+print('B_x: ', B_x)
+print('C_x:', C_x )
+print('Lambda_x in nm', unp.sqrt(C_x)*np.pi*1e9 )
 print('-------------------------------------------------------- ')
-print( (1060e-9)**2/np.pi**2)
+
+A_y = ufloat( omega_y.GetParameter(0), omega_y.GetParError(0))
+B_y =  ufloat( omega_y.GetParameter(1), omega_y.GetParError(1))
+C_y =  ufloat( omega_y.GetParameter(2), omega_y.GetParError(2))
+
+print('\n\n\n------------- sigma y -----------------------')
+print('A_y: ', A_y , 'A**1/2',unp.sqrt(A_y) )
+print('B_y: ', B_y)
+print('C_y:', C_y )
+print('Lambda_y in nm', unp.sqrt(C_y)*np.pi*1e9 )
+print('-------------------------------------------------------- ')
 
 ################# HARD CODED - Add chisquare to legend ################################
 
