@@ -71,9 +71,12 @@ uheight = unp.uarray( heigh_m, xerror) *b
 
 root.gStyle.SetLabelSize(.055, "XY");
 root.gStyle.SetLabelFont(42, "XY");
-root.gStyle.SetTitleSize(.055, "XY");
+root.gStyle.SetTitleSize(.055, "YY");
+root.gStyle.SetTitleSize(.053, "X");
+
 root.gStyle.SetTitleOffset(0.9, "XY");
 root.gStyle.SetStatFontSize(.065)
+
 root.TGaxis.SetMaxDigits(2)
 
 
@@ -106,13 +109,14 @@ c1.SetGrid()
 mg = root.TMultiGraph() #Create multigraph
 
 
-#mg.GetXaxis.SetMaxDigits(2,'Y')
 
 
 
 plot_xsigma = root.TGraphErrors( len(xsigma), array( 'f', noms(uheight)), array( 'f',noms(usigma_x)), array( 'f', stds(uheight)), array( 'f',stds(usigma_x)) )
 plot_ysigma = root.TGraphErrors( len(xsigma), array( 'f', noms(uheight)), array( 'f',noms(usigma_y)), array( 'f', stds(uheight)), array( 'f',stds(usigma_y)) )
 
+mg.GetXaxis().SetRangeUser(2.,10.)
+plot_xsigma.GetXaxis().SetMaxDigits(2)
 
 plot_xsigma.GetXaxis().SetLimits(0,1) #Set xLimits
 plot_ysigma.GetXaxis().SetLimits(0,1) #Set xLimits
@@ -129,8 +133,8 @@ omega_x.SetLineColor(1759) #Set Linecolor xsigma
 omega_y.SetLineColor(1758) # Set Linecolor ysigma
 
 #plot_xsigma.Fit('polyx')
-plot_xsigma.Fit('omega_x', 'E')
-plot_ysigma.Fit('omega_y', 'E')
+plot_xsigma.Fit('omega_x', 'E',"",0,30)
+plot_ysigma.Fit('omega_y', 'E',"",0,30)
 
 
 #for i in range(0,10):
@@ -146,8 +150,9 @@ plot_ysigma.Fit('omega_y', 'E')
 mg.Add(plot_xsigma) # Add TGraphErrors to Multigraph
 mg.Add(plot_ysigma)
 
-mg.GetXaxis().SetTitle("Relative Verschiebung #it{z} / #{m}")
-mg.GetYaxis().SetTitle(" \sigma^2 / #mathcal{m^2}")
+
+mg.GetXaxis().SetTitle("Relative Verschiebung #it{z} / m")
+mg.GetYaxis().SetTitle(" #sigma^{2} / m^{2}")
 
 #plot_xsigma.GetXaxis().
 mg.SetMinimum(0)
@@ -200,7 +205,7 @@ legend.AddEntry(omega_y,f'{ylabel}',"l")
 legend.Draw()
 
 
-c1.SaveAs('perfect_height_root_version_sigma_mu_meter_test.pdf')
+c1.SaveAs('perfect_height_root_version_sigma_mu_meter.pdf')
 
 
 kappa_x = ufloat( omega_x.GetParameter(2), omega_x.GetParError(2))
