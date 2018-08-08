@@ -50,6 +50,10 @@ ysigma  *= 1e-6
 ysigma_error  *= 1e-6
 
 
+omega_0 = ufloat(54e-6,13e-6)
+z_0 = ufloat(9.0e-3, 0.2e-3)
+
+
 
 usigma_x = unp.uarray( xsigma, xsigma_error)
 usigma_y = unp.uarray( ysigma, ysigma_error)
@@ -66,6 +70,30 @@ usigma_x = usigma_x**2 * a
 usigma_y = usigma_y**2 * a
 
 uheight = unp.uarray( heigh_m, xerror) *b
+
+
+
+
+
+
+
+
+
+
+
+alpha = unp.arctan( (usigma_x - omega_0) / (uheight - z_0 ))
+
+x = 150e-6
+
+d_1 = x * unp.tan( unp.arcsin(1/3.551) )
+
+print(d_1)
+
+
+usigma_x -= 2*unp.sqrt(d_1**2)
+
+print(usigma_x)
+#print(alpha,uheight)
 
 ################## Plot and Fit with ROOT ############################
 
@@ -91,13 +119,14 @@ omega_x = root.TF1('omega_x',  "[0]  +  [2] * (x - [1] )**2 / ( [0] )")
 #omega_x = root.TF1('omega_x',  "[0] * ( 1 +  [2]*  ( (x - [1] ) / [0] )**2 )**0.5  ")
 omega_y = root.TF1('omega_y',  "[0]  +  [2] * (x - [1] )**2 / ( [0] ) ")
 
-#omega_x.SetParLimits(0, 0, 260e-6*a )
-#omega_x.SetParLimits(1,5e-3*b,15e-3*b)
-#omega_x.SetParLimits(2, 1e-14,1e-12)
 
-omega_x.SetParameter(0,4.5e-10  )
-omega_x.SetParameter(1,0.00898)
-omega_x.SetParameter(2,(1060e-9)**2/np.pi**2)
+omega_x.SetParLimits(0, 0, 260e-6 )
+omega_x.SetParLimits(1,5e-3,15e-3)
+omega_x.SetParLimits(2, 1e-14,1e-12)
+
+#omega_x.SetParameter(0,4.5e-10  )
+#omega_x.SetParameter(1,0.00898)
+#omega_x.SetParameter(2,(1060e-9)**2/np.pi**2)
 
 omega_y.SetParameter(0,4.5e-10  )
 omega_y.SetParameter(1,0.00898)
@@ -133,7 +162,7 @@ omega_x.SetLineColor(1759) #Set Linecolor xsigma
 omega_y.SetLineColor(1758) # Set Linecolor ysigma
 
 #plot_xsigma.Fit('polyx')
-plot_xsigma.Fit('omega_x', 'E',"",0,30)
+#plot_xsigma.Fit('omega_x', 'E',"",0,30)
 plot_ysigma.Fit('omega_y', 'E',"",0,30)
 
 
@@ -147,9 +176,8 @@ plot_ysigma.Fit('omega_y', 'E',"",0,30)
 #plot_xsigma.Draw('ap*')
 #plot_ysigma.Draw('SAME ap*')
 
-
 mg.Add(plot_xsigma) # Add TGraphErrors to Multigraph
-mg.Add(plot_ysigma)
+#mg.Add(plot_ysigma)
 
 
 mg.GetXaxis().SetTitle("Relative Verschiebung #it{z} / m")
@@ -157,8 +185,9 @@ mg.GetYaxis().SetTitle(" #sigma^{2} / m^{2}")
 
 #plot_xsigma.GetXaxis().
 mg.SetMinimum(0)
-#mg.SetMaximum(1.5e-7)
+#mg.SetMaximum(20e-6)
 
+mg.GetXaxis().SetNdivisions(20)
 mg.Draw('ap*')
 
 
@@ -202,10 +231,10 @@ legend.AddEntry(plot_xsigma," \sigma_{x}(z)", "lep")
 legend.AddEntry(omega_x,f"{xlabel}", "l")
 legend.AddEntry(plot_ysigma,"\sigma_{y}(z)", "lep")
 legend.AddEntry(omega_y,f'{ylabel}',"l")
-legend.Draw()
+#legend.Draw()
 
 
-c1.SaveAs('perfect_height_root_version_sigma_mu_meter.pdf')
+c1.SaveAs('perfect_height_root_version_sigma_mu_meter_test.pdf')
 
 
 kappa_x = ufloat( omega_x.GetParameter(2), omega_x.GetParError(2))
