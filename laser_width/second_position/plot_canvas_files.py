@@ -51,7 +51,7 @@ qMap_Ag_C0_V0.GetYaxis().SetTitleSize(0.06);
 qMap_Ag_C0_V0.GetYaxis().SetLabelSize(0.06);
 
 qMap_Ag_C0_V0.GetYaxis().SetLabelOffset(.018);
-qMap_Ag_C0_V0.GetXaxis().SetLabelOffset(.018);
+qMap_Ag_C0_V0.GetXaxis().SetLabelOffset(.0005);
 
 
 qMap_Ag_C0_V0.GetZaxis().SetLabelSize(0.055)
@@ -64,11 +64,13 @@ qMap_Ag_C0_V0.Draw("colz text")
 
 list_of_boxes = []
 color_number = 37
+alpha = 0.3
+
 for i in range(18,26):
-    b_1 = root.TBox(i,61.5,i+1,62)
-    b_2 = root.TBox(i,71,i+1,71.5)
-    b_1.SetFillColor(color_number);
-    b_2.SetFillColor(color_number);
+    b_1 = root.TBox(i,61,i+1,62)
+    b_2 = root.TBox(i,71,i+1,72)
+    b_1.SetFillColorAlpha(color_number,alpha);
+    b_2.SetFillColorAlpha(color_number,alpha);
 
     list_of_boxes.append(b_1)
     list_of_boxes.append(b_2)
@@ -77,8 +79,8 @@ for i in range(18,26):
 for i in range(62,71):
     b_3 = root.TBox(18,i,19,i+1)
     b_4 = root.TBox(25,i,26,i+1)
-    b_3.SetFillColor(color_number);
-    b_4.SetFillColor(color_number);
+    b_3.SetFillColorAlpha(color_number,alpha);
+    b_4.SetFillColorAlpha(color_number,alpha);
     list_of_boxes.append(b_3)
     list_of_boxes.append(b_4)
 
