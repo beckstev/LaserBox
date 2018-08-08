@@ -37,6 +37,8 @@ root.gStyle.SetLabelSize(.05, "XY");
 root.gStyle.SetTitleSize(.05, "XY");
 root.gStyle.SetTitleOffset(1, "XY");
 root.gStyle.SetStatFontSize(.08)
+
+
 ########################### Def Gaus function ######################
 
 personal_gaus =  root.TF1("personal_gaus",  " [0] * exp(  -0.5 * ( (x - [1])  / [2] )  * ( (x - [1])  /  [2] ) ) ")
@@ -130,6 +132,7 @@ errorbar_plot_col.SetMaximum( max( mean_value_col_list) + 0.3 * max(mean_value_c
 
 c1 = root.TCanvas("c1", "c1", 1980, 1080)
 
+c1.SetGrid()
 
 personal_gaus.SetParLimits(0, max(mean_value_col_list) * .5, max(mean_value_col_list) * 1.8 )
 personal_gaus.SetParLimits(1, np.mean(x_value) * .6, np.mean(x_value) * 1.5 )
@@ -237,8 +240,10 @@ for i in range(ymin,ymax): # going thru all rows
 ############################# Create new errorbar plot ####################################
 errorbar_plot_rows = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_row_list), array( 'f', x_error), array( 'f', mean_error_row_list) )
 
+errorbar_plot_rows.GetXaxis().SetNdivisions(20)
 ############################### create Canvas ########################################
 c2 = root.TCanvas("c2", "c2", 1980, 1080);
+c2.SetGrid()
 
 ############################## Set axis label of errobar plot ##################################
 
