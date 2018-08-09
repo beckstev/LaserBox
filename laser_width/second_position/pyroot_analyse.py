@@ -70,11 +70,14 @@ x_error = []
 
 ################################## Set sum area, size of sensetive area ###############################
 
-xmin = 18
+xmin = 20
 xmax = 26
 
-ymin = 61
+ymin = 63
 ymax = 72
+
+if name_of_folder == '15_mm':
+    ymin = 62
 
 ####################################  calculating mean of each coloum ################################
 
@@ -110,10 +113,11 @@ for i in range(xmin,xmax): # going thru all col
     mean_value_col_list.append( noms(mean_content_col))
     mean_error_col_list.append( stds(mean_content_col) )
 
+print()
 ########################### Create errorbar plot #####################################
 
-errorbar_plot_col = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_col_list), array( 'f', x_error), array( 'f', mean_error_col_list) )
-
+errorbar_plot_col = root.TGraphErrors( len(x_value), array( 'f', x_value- np.ones(len(x_value))), array( 'f', mean_value_col_list), array( 'f', x_error), array( 'f', mean_error_col_list) )
+x_value -=  np.ones(len(x_value))
 ############################## Set axis label and range of errobar plot ##################################
 
 if plot_style == 'thesis':
@@ -134,9 +138,21 @@ c1 = root.TCanvas("c1", "c1", 1980, 1080)
 
 c1.SetGrid()
 
-personal_gaus.SetParLimits(0, max(mean_value_col_list) * .5, max(mean_value_col_list) * 1.8 )
-personal_gaus.SetParLimits(1, np.mean(x_value) * .6, np.mean(x_value) * 1.5 )
-personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.03, np.std(np.array(x_value)) * 1.4 )
+
+if name_of_folder == '7_mm':
+    personal_gaus.SetParLimits(0, max(mean_value_col_list) * .2, max(mean_value_col_list) * 1.5 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .7, np.mean(x_value) * 1.2 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.03, np.std(np.array(x_value)) * 1.4 )
+
+#elif name_of_folder == '10_mm':
+#    personal_gaus.SetParLimits(0, max(mean_value_col_list) * .8, max(mean_value_col_list) * 1.5 )
+#    personal_gaus.SetParLimits(1, np.mean(x_value) * .8, np.mean(x_value) * 1.1 )
+#    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.05, np.std(np.array(x_value)) * 0.1 )
+
+else:
+    personal_gaus.SetParLimits(0, max(mean_value_col_list) * .5, max(mean_value_col_list) * 1.8 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .7, np.mean(x_value) * 1.2 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.03, np.std(np.array(x_value)) * 1.2 )
 
 errorbar_plot_col.Fit(personal_gaus, "", "", min(x_value) -0.5 , max( x_value) +0.5 )
 #errorbar_plot_col.Fit("gaus", "", "", min(x_value) -0.5 , max( x_value) +0.5 )
@@ -216,7 +232,7 @@ for i in range(ymin,ymax): # going thru all rows
     x_error.append(0.5)
 
     for j in range(xmin,xmax): # going thru all col
-        if qMap_Ag_C0_V0.GetBinContent(j,i) >2500 :
+        if qMap_Ag_C0_V0.GetBinContent(j,i) > 2500 :
             pass
 
         elif qMap_Ag_C0_V0.GetBinContent(j,i) != 0:
@@ -238,8 +254,8 @@ for i in range(ymin,ymax): # going thru all rows
     mean_error_row_list.append( stds(mean_content_row))
 
 ############################# Create new errorbar plot ####################################
-errorbar_plot_rows = root.TGraphErrors( len(x_value), array( 'f', x_value), array( 'f', mean_value_row_list), array( 'f', x_error), array( 'f', mean_error_row_list) )
-
+errorbar_plot_rows = root.TGraphErrors( len(x_value), array( 'f', x_value - np.ones(len(x_value))), array( 'f', mean_value_row_list), array( 'f', x_error), array( 'f', mean_error_row_list) )
+x_value -=  np.ones(len(x_value))
 errorbar_plot_rows.GetXaxis().SetNdivisions(20)
 ############################### create Canvas ########################################
 c2 = root.TCanvas("c2", "c2", 1980, 1080);
@@ -266,44 +282,79 @@ else:
 
 ############################### Plot fucntion and fit #############################################
 if name_of_folder == '10-5_mm':
-    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 1.8 )
-    personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.5 )
-    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .03, np.std(np.array(x_value)) * 1.4 )
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 2 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .8, np.mean(x_value) * 1.2 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .2, np.std(np.array(x_value))  )
 
-elif name_of_folder == '10_mm':
-    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 1.4 )
-    personal_gaus.SetParLimits(1, np.mean(x_value) * .6, np.mean(x_value) * 1.4 )
-    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .03, np.std(np.array(x_value)) * 1.2 )
-
-    personal_gaus.SetParameter(0, 943 )
-    personal_gaus.SetParameter(1, 66 )
-    personal_gaus.SetParameter(2, 0.5014)
+elif name_of_folder == '11_mm':
+    #personal_gaus.SetParameter(1, 66 )
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 2)
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .7, np.mean(x_value) * 1.3 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value))*2 )
 
 elif name_of_folder == '7_mm':
-    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 1.8 )
-    personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.5 )
-    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .03, np.std(np.array(x_value)) * 1.4 )
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .2, max(mean_value_row_list) * 1.2 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .65, np.mean(x_value) * 1.3)
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value)) * 1.05 )
+
+elif name_of_folder == '6_mm':
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .2, max(mean_value_row_list) * 1.31 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) -3, np.mean(x_value)+3 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value)) *1.05  )
+
+elif name_of_folder == '9-5_mm':
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 1.3 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) -1/2, np.mean(x_value)+1 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .2, np.std(np.array(x_value))  )
+
+elif name_of_folder == '9_mm':
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 1.3 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) -1/2, np.mean(x_value)+1 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value))  )
 
 elif name_of_folder == '12_mm':
-    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 1.8 )
-    personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.6 )
-    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .03, np.std(np.array(x_value)) * 1.4 )
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 1.3 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) -1/2, np.mean(x_value)+1 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value))  )
 
-elif name_of_folder == '15_mm':
-    #personal_gaus.SetParameter(0, 743 )
-    #personal_gaus.SetParameter(1, 66 )
-    #personal_gaus.SetParameter(2, 3.05)
+elif name_of_folder == '13_mm':
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 1.3 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) -1/2, np.mean(x_value)+1 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value))  )
 
-    personal_gaus.SetParLimits(0,max(mean_value_row_list) * .4, max(mean_value_row_list) * 1.2 )
-    personal_gaus.SetParLimits(1, np.mean(x_value) * .5, np.mean(x_value) * 1.4 )
-    personal_gaus.SetParLimits(2,np.std(np.array(x_value)) * .2, np.std(np.array(x_value)) * 1.6 )
+elif name_of_folder == '14_mm':
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 1.3 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) -1/2, np.mean(x_value)+1 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value))  )
 
+elif name_of_folder == '5_mm':
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 1.3 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) -1/2, np.mean(x_value)+1 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value))  )
+#
+#
+elif name_of_folder == '10_mm':
+    personal_gaus.SetParameter(0, max(mean_value_row_list) )
 
-
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 1.8)
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .7, np.mean(x_value) * 1.3 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value))*1.4  )
+#
+#elif name_of_folder == '15_mm':
+#    #personal_gaus.SetParameter(0, 743 )
+#    #personal_gaus.SetParameter(1, 66 )
+#    #personal_gaus.SetParameter(2, 3.05)
+#
+#    personal_gaus.SetParLimits(0,max(mean_value_row_list) * .4, max(mean_value_row_list) * 1.2 )
+#    personal_gaus.SetParLimits(1, np.mean(x_value) * .3, np.mean(x_value) * 1.4 )
+#    personal_gaus.SetParLimits(2,np.std(np.array(x_value)) * .2, np.std(np.array(x_value)) * 1.6 )
+#
+#
+#
 else:
-    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 1.7 )
-    personal_gaus.SetParLimits(1, np.mean(x_value) * .6, np.mean(x_value) * 1.45 )
-    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .03, np.std(np.array(x_value)) * 1.3 )
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 1.5 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .8, np.mean(x_value) * 1.2 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .2, np.std(np.array(x_value)) * 1.1 )
 
 errorbar_plot_rows.Fit( personal_gaus, "", "", min(x_value) -0.5 , max( x_value) +0.5 )
 errorbar_plot_rows.Draw("ap*")
