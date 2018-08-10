@@ -18,6 +18,16 @@ for file_name in file_names_list:
         root.gStyle.SetOptTitle(0)
         root.gStyle.SetPalette(1)
 
+        if file_name == 'scurve_noise':
+            root.gStyle.SetPadRightMargin(0.13)
+
+        elif file_name == 'before_trim_pixelmap':
+            root.gStyle.SetPadRightMargin(0.13)
+
+        else:
+            root.gStyle.SetPadRightMargin(0.11)
+
+
         #Canvas_1 = root.TCanvas("Canvas_1", "Canvas_1",1281,453,538,321);
         Canvas_1 = root.TCanvas("Canvas_1", "Canvas_1",1281,453,538,538);
 
@@ -29,11 +39,8 @@ for file_name in file_names_list:
         Canvas_1.SetBorderSize(2);
         Canvas_1.SetFrameBorderMode(0);
 
-        if file_name == 'before_trim_pixelmap':
-            pixelmap.GetZaxis().SetLabelSize(0.028)
 
-        else:
-            pixelmap.GetZaxis().SetLabelSize(0.034)
+
 
 
 
@@ -48,6 +55,7 @@ for file_name in file_names_list:
         pixelmap.GetYaxis().SetTitleOffset(0.98);
 
         pixelmap.GetZaxis().SetLabelOffset(0.01)
+        pixelmap.GetZaxis().SetLabelSize(0.045)
 
         pixelmap.SetTitle(file_name)
         pixelmap.Draw("colz")
