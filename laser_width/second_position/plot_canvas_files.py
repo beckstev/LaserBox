@@ -39,7 +39,7 @@ qMap_Ag_C0_V0.GetXaxis().SetRange(19,26);
 
 qMap_Ag_C0_V0.GetXaxis().SetNdivisions(10)
 
-qMap_Ag_C0_V0.GetYaxis().SetRange(62,72);
+qMap_Ag_C0_V0.GetYaxis().SetRange(61,72);
 qMap_Ag_C0_V0.GetXaxis().SetTitleOffset(0.8);
 qMap_Ag_C0_V0.GetYaxis().SetTitle("Zeilen");
 qMap_Ag_C0_V0.GetYaxis().SetTitleOffset(0.75);
@@ -67,7 +67,7 @@ color_number = 37
 alpha = 0.3
 
 for i in range(18,26):
-    b_1 = root.TBox(i,61,i+1,62)
+    b_1 = root.TBox(i,60,i+1,61)
     b_2 = root.TBox(i,71,i+1,72)
     b_1.SetFillColorAlpha(color_number,alpha);
     b_2.SetFillColorAlpha(color_number,alpha);
@@ -76,7 +76,7 @@ for i in range(18,26):
     list_of_boxes.append(b_2)
 
 
-for i in range(62,71):
+for i in range(61,71):
     b_3 = root.TBox(18,i,19,i+1)
     b_4 = root.TBox(25,i,26,i+1)
     b_3.SetFillColorAlpha(color_number,alpha);

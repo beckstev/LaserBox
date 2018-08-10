@@ -73,11 +73,10 @@ x_error = []
 xmin = 20
 xmax = 26
 
-ymin = 63
+ymin = 62
 ymax = 72
 
-if name_of_folder == '15_mm':
-    ymin = 62
+
 
 ####################################  calculating mean of each coloum ################################
 
@@ -89,9 +88,6 @@ for i in range(xmin,xmax): # going thru all col
     test_error = []
 
     for j in range(ymin,ymax): # going thru all rows
-        if qMap_Ag_C0_V0.GetBinContent(i,j) >2500 :
-            pass
-
         if qMap_Ag_C0_V0.GetBinContent(i,j) != 0:
             content.append( qMap_Ag_C0_V0.GetBinContent(i,j)) # Is this the real error
             N = qMap_Ag_C0_V0.GetBinEntries(  qMap_Ag_C0_V0.GetBin(i,j))
@@ -144,10 +140,10 @@ if name_of_folder == '7_mm':
     personal_gaus.SetParLimits(1, np.mean(x_value) * .7, np.mean(x_value) * 1.2 )
     personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.03, np.std(np.array(x_value)) * 1.4 )
 
-#elif name_of_folder == '10_mm':
-#    personal_gaus.SetParLimits(0, max(mean_value_col_list) * .8, max(mean_value_col_list) * 1.5 )
-#    personal_gaus.SetParLimits(1, np.mean(x_value) * .8, np.mean(x_value) * 1.1 )
-#    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.05, np.std(np.array(x_value)) * 0.1 )
+elif name_of_folder == '14_mm':
+    personal_gaus.SetParLimits(0, max(mean_value_col_list) * .4, max(mean_value_col_list) * 1.5 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .8, np.mean(x_value) * 1.1 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * 0.03, np.std(np.array(x_value))*1.1  )
 
 else:
     personal_gaus.SetParLimits(0, max(mean_value_col_list) * .5, max(mean_value_col_list) * 1.8 )
@@ -232,10 +228,8 @@ for i in range(ymin,ymax): # going thru all rows
     x_error.append(0.5)
 
     for j in range(xmin,xmax): # going thru all col
-        if qMap_Ag_C0_V0.GetBinContent(j,i) > 2500 :
-            pass
 
-        elif qMap_Ag_C0_V0.GetBinContent(j,i) != 0:
+        if qMap_Ag_C0_V0.GetBinContent(j,i) != 0:
             content.append( qMap_Ag_C0_V0.GetBinContent(j,i))
             N = qMap_Ag_C0_V0.GetBinEntries(  qMap_Ag_C0_V0.GetBin(j,i))
             if N == 1:
@@ -273,28 +267,32 @@ else:
 errorbar_plot_rows.SetMinimum(0)
 
 if name_of_folder == '10-5_mm':
-    errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.9 * max(mean_value_row_list) )
+    errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.15 * max(mean_value_row_list) )
 elif name_of_folder == '11_mm':
     errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.9 * max(mean_value_row_list) )
+elif name_of_folder == '9_mm':
+    errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.4 * max(mean_value_row_list) )
+
 else:
     errorbar_plot_rows.SetMaximum( max(mean_value_row_list) + 0.3 * max(mean_value_row_list) )
 
 
 ############################### Plot fucntion and fit #############################################
 if name_of_folder == '10-5_mm':
-    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 2 )
-    personal_gaus.SetParLimits(1, np.mean(x_value) * .8, np.mean(x_value) * 1.2 )
-    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .2, np.std(np.array(x_value))  )
+    print(np.std(np.array(x_value)))
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 1.5 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .9, np.mean(x_value) * 1.12)
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value))*0.6  )
 
 elif name_of_folder == '11_mm':
     #personal_gaus.SetParameter(1, 66 )
-    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .4, max(mean_value_row_list) * 2)
-    personal_gaus.SetParLimits(1, np.mean(x_value) * .7, np.mean(x_value) * 1.3 )
-    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value))*2 )
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .5, max(mean_value_row_list) * 1.8)
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .9, np.mean(x_value) * 1.12 )
+    personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .05, np.std(np.array(x_value))*0.8 )
 
 elif name_of_folder == '7_mm':
-    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .2, max(mean_value_row_list) * 1.2 )
-    personal_gaus.SetParLimits(1, np.mean(x_value) * .65, np.mean(x_value) * 1.3)
+    personal_gaus.SetParLimits(0, max(mean_value_row_list) * .2, max(mean_value_row_list)*1.2 )
+    personal_gaus.SetParLimits(1, np.mean(x_value) * .7, np.mean(x_value) * 1.3)
     personal_gaus.SetParLimits(2, np.std(np.array(x_value)) * .1, np.std(np.array(x_value)) * 1.05 )
 
 elif name_of_folder == '6_mm':
