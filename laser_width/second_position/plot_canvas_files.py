@@ -34,14 +34,14 @@ from pyData import *
 
 
 
-qMap_Ag_C0_V0.GetXaxis().SetTitle("Spalten");
+qMap_Ag_C0_V0.GetXaxis().SetTitle("Spalte");
 qMap_Ag_C0_V0.GetXaxis().SetRange(19,26);
 
 qMap_Ag_C0_V0.GetXaxis().SetNdivisions(10)
 
 qMap_Ag_C0_V0.GetYaxis().SetRange(61,72);
 qMap_Ag_C0_V0.GetXaxis().SetTitleOffset(0.8);
-qMap_Ag_C0_V0.GetYaxis().SetTitle("Zeilen");
+qMap_Ag_C0_V0.GetYaxis().SetTitle("Zeile");
 qMap_Ag_C0_V0.GetYaxis().SetTitleOffset(0.75);
 qMap_Ag_C0_V0.GetYaxis().SetNdivisions(20)
 
@@ -56,7 +56,7 @@ qMap_Ag_C0_V0.GetXaxis().SetLabelOffset(.0005);
 
 qMap_Ag_C0_V0.GetZaxis().SetLabelSize(0.055)
 
-qMap_Ag_C0_V0.SetMarkerSize(1.7)
+qMap_Ag_C0_V0.SetMarkerSize(2)
 
 
 

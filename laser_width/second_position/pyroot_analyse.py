@@ -109,7 +109,7 @@ for i in range(xmin,xmax): # going thru all col
     mean_value_col_list.append( noms(mean_content_col))
     mean_error_col_list.append( stds(mean_content_col) )
 
-print()
+
 ########################### Create errorbar plot #####################################
 
 errorbar_plot_col = root.TGraphErrors( len(x_value), array( 'f', x_value- np.ones(len(x_value))), array( 'f', mean_value_col_list), array( 'f', x_error), array( 'f', mean_error_col_list) )
@@ -161,7 +161,7 @@ if plot_style == 'thesis':
     legend = root.TLegend(0.15,0.71,0.37,0.93)
     legend.SetTextSize(0.055)
     legend.AddEntry(errorbar_plot_col,"Summe Hits","lep")
-    legend.AddEntry( personal_gaus,"Gaus Fit","l")
+    legend.AddEntry( personal_gaus,"Fit","l")
     legend.Draw()
 
 
@@ -363,7 +363,7 @@ if plot_style == 'thesis':
     legend = root.TLegend(0.15,0.71,0.37,0.93)
     legend.SetTextSize(0.055)
     legend.AddEntry(errorbar_plot_rows,"Summe Hits","lep")
-    legend.AddEntry( personal_gaus,"Gaus Fit","l")
+    legend.AddEntry( personal_gaus,"Fit","l")
     legend.Draw()
 
 
